@@ -8,7 +8,7 @@ export default function Login(){
     const finalRef = React.useRef(null);
   
     return(
-        <div>
+        <div className='login'>
       <Button onClick={onOpen}>Login</Button>
 
       <Modal
@@ -39,6 +39,7 @@ export default function Login(){
             </Button>
             <Button onClick={onClose}>Cancel</Button>
           </ModalFooter>
+          Don't have an account? sign up
         </ModalContent>
       </Modal>
 

@@ -6,7 +6,7 @@ export default function SignUp(){
     const initialRef = React.useRef(null);
     const finalRef = React.useRef(null);
     return(
-        <>
+        <div className="signup">
                 <Button onClick={onOpen}>Sign Up</Button>
           
                 <Modal
@@ -45,6 +45,6 @@ export default function SignUp(){
                   </ModalContent>
                 </Modal>
 
-        </>
+        </div>
     )
 }
