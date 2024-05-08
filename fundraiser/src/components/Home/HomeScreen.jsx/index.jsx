@@ -7,11 +7,11 @@ import { ChakraProvider, Divider } from '@chakra-ui/react'
 export default function Home(){
     return(
         <ChakraProvider>  
-        <div>
+        <div className="homescreen">
             <Navbar/>
             <HomeSection/>
             <Testimonial/>
-            <Divider/>
+            <Divider className="testimonial-divider"/>
             <Footer/>
         </div>
         </ChakraProvider>

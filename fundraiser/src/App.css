@@ -1,11 +1,94 @@
-/* app.css */
+/* home.css */
+
+/* Apply styles to the container */
+/* .homescreen {
+  padding: 20px; /* Add padding around the content */
+ */
+
+/* Style for Navbar */
+.navbar {
+  margin-bottom: 20px; /* Add space below the navbar */
+}
+
+/* Style for HomeSection */
+.homesection {
+  margin-bottom: 20px; /* Add space below the home section */
+}
+
+/* Style for Testimonial */
+.testimonial {
+  margin-bottom: 20px; /* Add space below the testimonial section */
+}
+
+/* Style for Divider */
+.divider {
+  margin-bottom: 20px; /* Add space below the divider */
+}
+
+/* Style for Footer */
+.footer {
+  margin-top: 20px; /* Add space above the footer */
+}
+/* home.css */
+
+/* Apply padding top between Testimonial and Divider */
+.testimonial-divider {
+  padding-top: 20px;
+}
+/* Home.css */
+
+.home-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://c8.alamy.com/comp/TRK6K4/fresh-air-in-parkgreen-area-create-a-good-environment-in-the-city-for-people-to-have-outdoor-activities-TRK6K4.jpg');
+  background-position: center;
+  opacity: 1.0; /* Adjust opacity as needed */
+  z-index: -1;
+}
+
+.content {
+  text-align: center;
+  color: white;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  justify-content:right;
+  justify-content: right;
   align-items: center;
-  background-color: #333;
+  background-color: transparent;
   padding: 10px 20px;
+  z-index: 1000;
 }
 
 .right-section {
@@ -20,12 +103,50 @@
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  margin-left: 10px; /* Add margin between buttons */
+  min-width: 100px; /* Set minimum width for buttons */
 }
 
 .login button:hover,
 .signup button:hover {
   background-color: #0056b3;
 }
+/* footer.css */
 
-/* Style for the modals */
-/* Add your modal styles here if needed */
+.footer {
+  display: flex;
+  justify-content: left; /* Align items horizontally */
+  align-items: center;
+}
+
+.footer h1 {
+  margin-right: 20px; /* Adjust spacing between title and icons */
+}
+
+.footer ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footer li {
+  margin-right: 10px; /* Adjust spacing between icons */
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Style for social media icons */
+.footer svg {
+  width: 32px;
+  height: 32px;
+  fill: black;
+  transition: fill 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer svg:hover {
+  fill: blue; /* Change color on hover */
+}
