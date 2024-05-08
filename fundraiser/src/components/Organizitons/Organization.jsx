@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Donor() {
-  const [selectedOrganization, setSelectedOrganization] = useState(null);
-  const [donationAmount, setDonationAmount] = useState(0);
-  const [isAnonymous, setIsAnonymous] = useState(false);
-  const [reminder, setReminder] = useState(false);
+  // const [selectedOrganization, setSelectedOrganization] = useState(null);
 
   const organizations = [
     {
-      id: 1,
+      id: 10,
       name: 'Organization 1',
       logo: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww',
       description: 'This is organization 1 description.',
@@ -69,34 +67,22 @@ function Donor() {
     },
   ];
 
-  const handleOrganizationSelect = (organization) => {
-    setSelectedOrganization(organization);
-  };
-
-  const handleDonationAmountChange = (event) => {
-    setDonationAmount(event.target.value);
-  };
-
-  const handleAnonymousChange = (event) => {
-    setIsAnonymous(event.target.checked);
-  };
-
-  const handleReminderChange = (event) => {
-    setReminder(event.target.checked);
-  };
-
-  const handleDonate = () => {
-    console.log(`Donating to ${selectedOrganization.name} in the amount of $${donationAmount} with the following options:
-      Anonymous: ${isAnonymous}
-      Reminder: ${reminder}
-    `);
-  };
-
+  // const handleOrganizationSelect = (organization) => {
+  //   setSelectedOrganization(organization);
+  // };
   return (
     <div className='container mx-auto mt-8 p-4'>
       <main className='flex flex-col justify-center'>
-        <h1 className='text-3xl font-bold mb-4'>Donate to a Cause</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis soluta molestiae itaque eveniet delectus, dolore possimus repellendus enim nulla sit reprehenderit natus corrupti nisi veniam adipisci quo laborum cum qui? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus excepturi quidem minima suscipit molestiae! Neque, aliquam dolorem obcaecati dicta perspiciatis illum, quisquam ab excepturi nihil sit sed, vitae alias. Eaque.</p>
+        <h1 className='text-3xl font-bold mb-4 mx-auto'>Donate to a Cause</h1>
+        <p className='mx-auto text-center'>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
+          soluta molestiae itaque eveniet delectus, dolore possimus repellendus
+          enim nulla sit reprehenderit natus corrupti nisi veniam adipisci quo
+          laborum cum qui? Lorem ipsum dolor sit amet consectetur, adipisicing
+          elit. Necessitatibus excepturi quidem minima suscipit molestiae!
+          Neque, aliquam dolorem obcaecati dicta perspiciatis illum, quisquam ab
+          excepturi nihil sit sed, vitae alias. Eaque.
+        </p>
         <div className='flex flex-wrap justify-center mb-4'>
           {organizations.map((organization, index) => (
             <div
@@ -110,53 +96,13 @@ function Donor() {
               <p className='text-gray-600'>{organization.description}</p>
               <button
                 className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
-                onClick={() => handleOrganizationSelect(organization)}
+                // onClick={() => handleOrganizationSelect(organization)}
               >
-                Select
+                <Link to='/donation-form'>Select</Link>
               </button>
             </div>
           ))}
         </div>
-        {selectedOrganization && (
-          <div className='flex flex-col justify-center mb-4'>
-            <h2 className='text-lg font-bold'>Donation Details</h2>
-            <form className='flex flex-col justify-center'>
-              <label className='block mb-2'>
-                Donation Amount:
-                <input
-                  type='number'
-                  value={donationAmount}
-                  onChange={handleDonationAmountChange}
-                  className='w-full p-2 pl-10 text-sm text-gray-700'
-                />
-              </label>
-              <label className='block mb-2'>
-                Anonymous Donation:
-                <input
-                  type='checkbox'
-                  checked={isAnonymous}
-                  onChange={handleAnonymousChange}
-                  className='w-full p-2 pl-10 text-smtext-gray-700'
-                />
-              </label>
-              <label className='block mb-2'>
-                Reminder:
-                <input
-                  type='checkbox'
-                  checked={reminder}
-                  onChange={handleReminderChange}
-                  className='w-full p-2 pl-10 text-sm text-gray-700'
-                />
-              </label>
-              <button
-                className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
-                onClick={handleDonate}
-              >
-                Donate
-              </button>
-            </form>
-          </div>
-        )}
       </main>
       {/* <Footer /> */}
     </div>

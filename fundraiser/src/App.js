@@ -1,11 +1,18 @@
 import './App.css';
 import Donor from './components/Organizitons/Organization';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes component
+
+import DonationForm from './components/DonationForm/DonationForm';
 
 function App() {
   return (
-    <div className="App">
-   <Donor/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Donor />} />
+        <Route path='/donation-form' element={<DonationForm />} />
+      </Routes>
+    </Router>
   );
 }
 
