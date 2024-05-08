@@ -1,7 +1,8 @@
 import HomeSection from "../homesection"
 import Footer from "../footer"
 import Navbar from "../navbar"
-import { ChakraProvider } from '@chakra-ui/react'
+import Testimonial from "../testimonials"
+import { ChakraProvider, Divider } from '@chakra-ui/react'
 
 export default function Home(){
     return(
@@ -9,6 +10,8 @@ export default function Home(){
         <div>
             <Navbar/>
             <HomeSection/>
+            <Testimonial/>
+            <Divider/>
             <Footer/>
         </div>
         </ChakraProvider>
