@@ -1,6 +1,6 @@
 // Components/DonationPage/DonationPage.jsx
 import React from 'react';
-import DonationForm from './DonationForm';
+import DonationForm from '../DonationsPay/DonationForm';
 import Testimonials from './Testimonials';
 import OrganizationDetails from '../Organizitons/OrganizationDetails';
 
