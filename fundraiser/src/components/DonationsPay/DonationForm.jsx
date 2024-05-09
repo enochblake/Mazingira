@@ -22,7 +22,6 @@ function DonationForm() {
   };
 
   const handleDonateClick = () => {
-    // Show PayPal component when Donate button is clicked
     setShowPaypal(true);
   };
 
@@ -31,47 +30,44 @@ function DonationForm() {
       <main className='flex flex-col justify-center'>
         <div className='bg-white shadow-md rounded-lg p-8 max-w-sm w-full mx-auto'>
           <h1 className='text-3xl font-bold mb-4 text-center'>Donation Form</h1>
-          {showPaypal ? (
-            // Render PayPal component if showPaypal is true
-            <PayPal donationAmount={donationAmount} />
-          ) : (
-            // Render donation form otherwise
-            <form className='flex flex-col justify-center'>
-              <label className='block mb-2'>
-                Donation Amount:
-                <input
-                  type='number'
-                  value={donationAmount}
-                  onChange={handleDonationAmountChange}
-                  className='w-full p-2 pl-10 text-sm text-gray-700 border rounded'
-                />
-              </label>
-              <label className='block mb-2'>
-                Anonymous Donation:
-                <input
-                  type='checkbox'
-                  checked={isAnonymous}
-                  onChange={handleAnonymousChange}
-                  className='w-full p-2 pl-10 text-sm text-gray-700 border rounded'
-                />
-              </label>
-              <label className='block mb-2'>
-                Reminder:
-                <input
-                  type='checkbox'
-                  checked={reminder}
-                  onChange={handleReminderChange}
-                  className='w-full p-2 pl-10 text-sm text-gray-700 border rounded'
-                />
-              </label>
-              <button
-                onClick={handleDonateClick} // Call handleDonateClick when button is clicked
-                className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded'
-              >
-                Donate
-              </button>
-            </form>
-          )}
+          <form className='flex flex-col justify-center'>
+            <label className='block mb-2'>
+              Donation Amount:
+              <input
+                type='number'
+                value={donationAmount}
+                onChange={handleDonationAmountChange}
+                className='w-full p-2 pl-10 text-sm text-gray-700 border rounded'
+              />
+            </label>
+            <label className='block mb-2'>
+              Anonymous Donation:
+              <input
+                type='checkbox'
+                checked={isAnonymous}
+                onChange={handleAnonymousChange}
+                className='w-full p-2 pl-10 text-sm text-gray-700 border rounded'
+              />
+            </label>
+            <label className='block mb-2'>
+              Reminder:
+              <input
+                type='checkbox'
+                checked={reminder}
+                onChange={handleReminderChange}
+                className='w-full p-2 pl-10 text-sm text-gray-700 border rounded'
+              />
+            </label>
+            <button
+              onClick={handleDonateClick} 
+              className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 mb-5 rounded'
+            >
+              Donate
+            </button>
+            {showPaypal && (
+              <PayPal donationAmount={donationAmount} />
+            )}
+          </form>
         </div>
       </main>
     </div>
@@ -79,3 +75,4 @@ function DonationForm() {
 }
 
 export default DonationForm;
+
