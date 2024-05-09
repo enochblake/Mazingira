@@ -62,7 +62,7 @@ function Organization() {
   return (
     <div className='container rounded-xl border border-black-600 mx-auto mt-8 p-4'>
       <main className='flex flex-col justify-center'>
-        <h1 className='text-3xl font-bold mb-4 mx-auto'>Donate to a Cause</h1>
+        <h1 className='text-4xl text-orange-700 font-bold mb-4 mx-auto'>Donate to a Cause</h1>
         <p className='mx-auto text-center'>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
           soluta molestiae itaque eveniet delectus, dolore possimus repellendus
@@ -77,7 +77,7 @@ function Organization() {
             <Link
               key={organization.id}
               to={`/donation-page/${organization.id}`}
-              className='w-full md:w-1/3 lg:w-1/4 p-4 rounded-xl border'
+              className='w-full md:w-1/3 lg:w-1/4 p-4 rounded-xl border border-orange-200'
             >
               <div className='flex flex-col items-center'>
                 <img src={organization.logo} alt={organization.name} />

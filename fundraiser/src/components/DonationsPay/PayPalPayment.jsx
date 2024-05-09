@@ -13,7 +13,7 @@ function PayPalPayment({ defaultAmount = 0, onSuccess, onCancel }) {
       purchase_units: [
         {
           amount: {
-            value: defaultAmount, // Use default amount here
+            value: defaultAmount, 
           },
         },
       ],
@@ -28,7 +28,8 @@ function PayPalPayment({ defaultAmount = 0, onSuccess, onCancel }) {
 
   return (
     <PayPalScriptProvider options={paypalOptions}>
-      <PayPalButtons
+          <PayPalButtons
+              className='rounded-xl mx-auto '
         createOrder={createOrder}
         onApprove={onApprove}
         onCancel={onCancel}
