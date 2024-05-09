@@ -90,10 +90,11 @@ function Organization() {
               <img src={organization.logo} alt={organization.name} />
               <h2 className='text-lg font-bold'>{organization.name}</h2>
               <p className='text-gray-600'>{organization.description}</p>
-              
+              <Link to={`/donation-page/${organization.id}`}>
                 <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
-                  <Link to={`/organization/${organization.id}`}>Select</Link>
+                  Select
                 </button>
+              </Link>
             </div>
           ))}
         </div>
