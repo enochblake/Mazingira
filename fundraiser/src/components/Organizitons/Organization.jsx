@@ -1,10 +1,8 @@
+//components/organization/Organization.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function Donor() {
-  // const [selectedOrganization, setSelectedOrganization] = useState(null);
-
-  const organizations = [
+  export const organizations = [
     {
       id: 10,
       name: 'Organization 1',
@@ -12,7 +10,7 @@ function Donor() {
       description: 'This is organization 1 description.',
     },
     {
-      id: 2,
+      id: 12,
       name: 'Organization 2',
       logo: 'https://plus.unsplash.com/premium_photo-1663089162887-403fb53108cd?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww',
       description: 'This is organization 2 description.',
@@ -66,10 +64,8 @@ function Donor() {
       description: 'This is organization 3 description.',
     },
   ];
-
-  // const handleOrganizationSelect = (organization) => {
-  //   setSelectedOrganization(organization);
-  // };
+function Donor() {
+  
   return (
     <div className='container mx-auto mt-8 p-4'>
       <main className='flex flex-col justify-center'>
@@ -94,12 +90,10 @@ function Donor() {
               <img src={organization.logo} alt={organization.name} />
               <h2 className='text-lg font-bold'>{organization.name}</h2>
               <p className='text-gray-600'>{organization.description}</p>
-              <button
-                className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
-                // onClick={() => handleOrganizationSelect(organization)}
-              >
-                <Link to='/donation-form'>Select</Link>
-              </button>
+              
+                <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+                  <Link to={`/organization/${organization.id}`}>Select</Link>
+                </button>
             </div>
           ))}
         </div>
