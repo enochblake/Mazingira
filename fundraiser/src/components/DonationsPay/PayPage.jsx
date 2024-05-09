@@ -1,4 +1,4 @@
-//components/DonationPay/PayPage
+//components/DonationPay/PayPage.jsx
 import React from 'react';
 
 function PayPage({ donationAmount, isAnonymous, reminder }) {
