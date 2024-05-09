@@ -12,11 +12,11 @@ function OrganizationDetails() {
   }
 
   return (
-    <div className='container mx-auto mt-8 p-4'>
+    <div className='container mx-auto mt-2 p-4'>
       <main className='flex flex-col justify-center'>
-        <div className='w-full'>
+        <div className='w-1/2 mx-auto'>
           <img
-            className='w-full h-[400px]'
+            className='w-full '
             src={organization.logo}
             alt={organization.name}
           />
