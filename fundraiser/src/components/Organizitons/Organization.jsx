@@ -64,7 +64,7 @@ import { Link } from 'react-router-dom';
       description: 'This is organization 3 description.',
     },
   ];
-function Donor() {
+function Organization() {
   
   return (
     <div className='container mx-auto mt-8 p-4'>
@@ -103,4 +103,4 @@ function Donor() {
   );
 }
 
-export default Donor;
+export default Organization;
