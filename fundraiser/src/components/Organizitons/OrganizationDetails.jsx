@@ -1,6 +1,6 @@
 // Components/Organization/OrganizationDetails.jsx
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,Link } from 'react-router-dom';
 import { organizations } from './Organization';
 
 function OrganizationDetails() {
@@ -22,7 +22,12 @@ function OrganizationDetails() {
           />
           <h2 className='text-lg font-bold pt-5'>{organization.name}</h2>
           <p className='text-balck-600 pt-5'>{organization.description}</p>
-          <p className="text-lg pb-5">{organization.history}</p>
+          <p className='text-lg pb-5'>{organization.history}</p>
+          <Link to='/pay-page'>
+            <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mx-auto'>
+              Donate
+            </button>
+          </Link>
         </div>
       </main>
     </div>

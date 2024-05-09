@@ -1,5 +1,6 @@
-//Components/DonationPage/DonationForm.jsx
+//Components/DonationPay/DonationForm.jsx
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function DonationForm() {
   const [donationAmount, setDonationAmount] = useState(0);
@@ -16,10 +17,6 @@ function DonationForm() {
 
   const handleReminderChange = (event) => {
     setReminder(event.target.checked);
-  };
-
-  const handleDonate = () => {
-    // Handle donation logic
   };
 
   return (
@@ -55,12 +52,20 @@ function DonationForm() {
                 className='w-full p-2 pl-10 text-sm text-gray-700 border rounded'
               />
             </label>
-            <button
-              className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mt-4'
-              onClick={handleDonate}
+            <Link
+              to={{
+                pathname: '/pay-page',
+                state: {
+                  donationAmount: donationAmount,
+                  isAnonymous: isAnonymous,
+                  reminder: reminder,
+                },
+              }}
             >
-              Donate
-            </button>
+              <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded'>
+                Donate
+              </button>
+            </Link>
           </form>
         </div>
       </main>
