@@ -1,6 +1,5 @@
-// components/DonationPay/PayPage.jsx
 import React from 'react';
-import DonationForm from './DonationForm';
+import DonationForm from './DonationForm'; 
 
 function PayPage() {
   return (
