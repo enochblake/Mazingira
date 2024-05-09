@@ -1,4 +1,4 @@
-//Components/DonationPage/DonationPage.jsx
+// Components/DonationPage/DonationPage.jsx
 import React from 'react';
 import DonationForm from './DonationForm';
 import Testimonials from './Testimonials';
@@ -6,12 +6,16 @@ import OrganizationDetails from '../Organizitons/OrganizationDetails';
 
 function DonationPage({ organization }) {
   return (
-    <div className='flex'>
-      <div className='w-1/2'>
-        <DonationForm />
+    <div className='pl-5'>
+      <div className='grid lg:grid-cols-3'>
+        <div className=' lg:col-span-2 bg-gray-500 flex flex-col items-center justify-center'>
+          <OrganizationDetails organization={organization} />
+        </div>
+        <div className='col-span-1 '>
+          <DonationForm />
+        </div>
       </div>
-      <div className='w-1/2 p-4'>
-        <OrganizationDetails organization={organization} />
+      <div className='w-full p-4 mt-4'>
         <Testimonials organization={organization} />
       </div>
     </div>

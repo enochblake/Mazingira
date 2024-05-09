@@ -89,9 +89,10 @@ import { Link } from 'react-router-dom';
       name: 'Organization 3',
       logo: 'https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww',
       description: 'This is organization 3 description.',
-      history: `The Green Earth Initiative was founded in 2005 by a group of passionate environmentalists who were concerned about the rapid degradation of the planet.
+     history:
+          `The Green Earth Initiative was founded in 2005 by a group of passionate environmentalists who were concerned about the rapid degradation of the planet.
          Our founders, led by Sarah Johnson, a renowned environmental scientist, were determined to make a difference and create a sustainable future for generations to come.In the early years, our organization focused on raising awareness about environmental issues through educational programs, community outreach, and advocacy campaigns.
-         We partnered with local schools, community groups, and businesses to promote sustainable practices and reduce waste.`,
+         We partnered with local schools, community groups, and businesses to promote sustainable practices and reduce waste.`
     },
   ];
 function Organization() {
