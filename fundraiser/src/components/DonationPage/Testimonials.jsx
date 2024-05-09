@@ -6,7 +6,6 @@ const testimonials = [
     id: 1,
     name: 'John Doe',
     message: `Working with ABC Company has been an absolute pleasure. Their professionalism 
-      and attention to detail are unmatched. The team went above and beyond to ensure our project was completed on time and within budget.
       I highly recommend ABC Company to anyone in need of their services`,
     image:
       'https://images.unsplash.com/photo-1712847333453-740d9665aa5d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fHww',
@@ -15,7 +14,6 @@ const testimonials = [
     id: 2,
     name: 'Jane Doe',
     message: `Working with ABC Company has been an absolute pleasure. Their professionalism 
-      and attention to detail are unmatched. The team went above and beyond to ensure our project was completed on time and within budget.
       I highly recommend ABC Company to anyone in need of their services`,
     image:
       'https://plus.unsplash.com/premium_photo-1683141202259-ee13ddd953fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D',
@@ -24,7 +22,6 @@ const testimonials = [
     id: 3,
     name: 'Jane Doe',
     message: `Working with ABC Company has been an absolute pleasure. Their professionalism 
-      and attention to detail are unmatched. The team went above and beyond to ensure our project was completed on time and within budget.
       I highly recommend ABC Company to anyone in need of their services`,
     image:
       'https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D',
@@ -33,29 +30,11 @@ const testimonials = [
     id: 4,
     name: 'Jane Doe',
     message: `Working with ABC Company has been an absolute pleasure. Their professionalism 
-      and attention to detail are unmatched. The team went above and beyond to ensure our project was completed on time and within budget.
       I highly recommend ABC Company to anyone in need of their services`,
     image:
       'https://images.unsplash.com/photo-1543807535-eceef0bc6599?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D',
   },
-  {
-    id: 7,
-    name: 'Jane Doe',
-    message: `Working with ABC Company has been an absolute pleasure. Their professionalism 
-      and attention to detail are unmatched. The team went above and beyond to ensure our project was completed on time and within budget.
-      I highly recommend ABC Company to anyone in need of their services`,
-    image:
-      'https://images.unsplash.com/photo-1563995103864-d87d3c1fdd39?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJsYWNrJTIwcGVvcGxlfGVufDB8fDB8fHww',
-  },
-  {
-    id: 5,
-    name: 'Jane Doe',
-    message: `Working with ABC Company has been an absolute pleasure. Their professionalism 
-      and attention to detail are unmatched. The team went above and beyond to ensure our project was completed on time and within budget.
-      I highly recommend ABC Company to anyone in need of their services`,
-    image:
-      'https://images.unsplash.com/photo-1572224384995-f9529873f379?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJsYWNrJTIwcGVvcGxlfGVufDB8fDB8fHww',
-  },
+ 
 ];
 
 function Testimonials() {
