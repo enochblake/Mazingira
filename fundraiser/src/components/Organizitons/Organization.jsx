@@ -1,10 +1,12 @@
 //components/organization/Organization.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import CategoryBar from './CategoryBar';
 
 export const organizations = [
   {
     id: 10,
+    category: 'soil',
     name: 'Organization 1',
     logo: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww',
     description: 'This is organization 1 description.',
@@ -14,6 +16,7 @@ export const organizations = [
   },
   {
     id: 12,
+    category: 'water',
     name: 'Organization 2',
     logo: 'https://plus.unsplash.com/premium_photo-1663089162887-403fb53108cd?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww',
     description: 'This is organization 2 description.',
@@ -23,6 +26,7 @@ export const organizations = [
   },
   {
     id: 1,
+    category: 'soil',
     name: 'Organization 1',
     logo: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww',
     description: 'This is organization 1 description.',
@@ -32,6 +36,7 @@ export const organizations = [
   },
   {
     id: 2,
+    category: 'water',
     name: 'Organization 2',
     logo: 'https://plus.unsplash.com/premium_photo-1663089162887-403fb53108cd?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww',
     description: 'This is organization 2 description.',
@@ -41,6 +46,7 @@ export const organizations = [
   },
   {
     id: 3,
+    category: 'air',
     name: 'Organization 1',
     logo: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww',
     description: 'This is organization 1 description.',
@@ -50,6 +56,7 @@ export const organizations = [
   },
   {
     id: 4,
+    category: 'air',
     name: 'Organization 2',
     logo: 'https://plus.unsplash.com/premium_photo-1663089162887-403fb53108cd?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww',
     description: 'This is organization 2 description.',
@@ -59,10 +66,25 @@ export const organizations = [
   },
 ];
 function Organization() {
+    const [activeCategory, setActiveCategory] = useState('all');
+    const categories = ['all', 'soil', 'water', 'air'];
+
+    const filteredOrganizations =
+      activeCategory === 'all'
+        ? organizations
+        : organizations.filter((org) => org.category === activeCategory);
+
   return (
-    <div className='container rounded-xl border border-black-600 mx-auto mt-8 p-4'>
-      <main className='flex flex-col justify-center'>
-        <h1 className='text-4xl text-orange-700 font-bold mb-4 mx-auto'>Donate to a Cause</h1>
+    <div className='container flex rounded-xl border border-black-600 mx-auto mt-8 p-4'>
+      <CategoryBar
+        categories={categories}
+        activeCategory={activeCategory}
+        setActiveCategory={setActiveCategory}
+      />
+      <main className='flex-1 flex-col justify-center'>
+        <h1 className='text-4xl text-orange-700 font-bold mb-4 mx-auto'>
+          Donate to a Cause
+        </h1>
         <p className='mx-auto text-center text-lg'>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
           soluta molestiae itaque eveniet delectus, dolore possimus repellendus
@@ -72,8 +94,9 @@ function Organization() {
           Neque, aliquam dolorem obcaecati dicta perspiciatis illum, quisquam ab
           excepturi nihil sit sed, vitae alias. Eaque.
         </p>
+
         <div className='flex flex-wrap justify-center gap-4 mb-4 mt-3'>
-          {organizations.map((organization, index) => (
+          {filteredOrganizations.map((organization, index) => (
             <Link
               key={organization.id}
               to={`/donation-page/${organization.id}`}
