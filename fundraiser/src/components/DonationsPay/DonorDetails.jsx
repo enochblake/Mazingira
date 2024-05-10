@@ -10,17 +10,16 @@ function DonorDetailsForm({ onSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform validation if needed
     onSubmit({ firstName, lastName, email, address, message });
   };
 
   return (
     <form onSubmit={handleSubmit} className='mt-4'>
-      <div className='grid grid-cols-2 gap-4'>
+      <div className='grid grid-cols-2  gap-4'>
         <div className='mb-4'>
           <label
             htmlFor='firstName'
-            className='block text-gray-700 font-bold mb-2'
+            className='block text-gray-700 font-bold text-lg mb-2'
           >
             First Name
           </label>
@@ -36,7 +35,7 @@ function DonorDetailsForm({ onSubmit }) {
         <div className='mb-4'>
           <label
             htmlFor='lastName'
-            className='block text-gray-700 font-bold mb-2'
+            className='block text-gray-700 font-bold text-lg mb-2'
           >
             Last Name
           </label>
@@ -51,7 +50,10 @@ function DonorDetailsForm({ onSubmit }) {
         </div>
       </div>
       <div className='mb-4'>
-        <label htmlFor='email' className='block text-gray-700 font-bold mb-2'>
+        <label
+          htmlFor='email'
+          className='block text-gray-700 font-bold text-lg mb-2'
+        >
           Email Address
         </label>
         <input
@@ -64,7 +66,10 @@ function DonorDetailsForm({ onSubmit }) {
         />
       </div>
       <div className='mb-4'>
-        <label htmlFor='address' className='block text-gray-700 font-bold mb-2'>
+        <label
+          htmlFor='address'
+          className='block text-gray-700 font-bold text-lg mb-2'
+        >
           Physical Address
         </label>
         <textarea
@@ -77,7 +82,10 @@ function DonorDetailsForm({ onSubmit }) {
         ></textarea>
       </div>
       <div className='mb-4'>
-        <label htmlFor='message' className='block text-gray-700 font-bold mb-2'>
+        <label
+          htmlFor='message'
+          className='block text-gray-700 font-bold text-lg mb-2'
+        >
           Message
         </label>
         <textarea
