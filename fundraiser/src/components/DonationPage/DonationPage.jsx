@@ -15,10 +15,13 @@ function DonationPage({ organization }) {
           <div className='lg:col-span-2 bg-gray-500 flex flex-col items-center justify-center'>
             <OrganizationDetails organization={organization} />
           </div>
+          <div className='container flex rounded-xl border border-black-600 mx-auto mt-8 p-4'>
           <div className='col-span-1 '>
+            <h1 className='text-orange-700 font-bold text-1xl mx-auto '>Blogs.</h1>
             {blogs.map((blog, index) => (
               <BlogPreview key={index} {...blog} />
             ))}
+          </div>
           </div>
         </div>
         <div className='w-full p-4 mt-4'>
