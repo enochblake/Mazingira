@@ -9,7 +9,7 @@ function DonationPage({ organization }) {
     <>
       <div className='pl-5'>
       <h1 className='text-center text-orange-700 font-bold text-5xl mx-auto mt-4'>
-        Latest News
+        Organization 
       </h1>
         <div className='grid lg:grid-cols-3 gap-4'>
           <div className='lg:col-span-2 bg-gray-500 flex flex-col items-center justify-center'>
