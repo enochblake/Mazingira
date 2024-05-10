@@ -63,7 +63,7 @@ function Organization() {
     <div className='container rounded-xl border border-black-600 mx-auto mt-8 p-4'>
       <main className='flex flex-col justify-center'>
         <h1 className='text-4xl text-orange-700 font-bold mb-4 mx-auto'>Donate to a Cause</h1>
-        <p className='mx-auto text-center'>
+        <p className='mx-auto text-center text-lg'>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
           soluta molestiae itaque eveniet delectus, dolore possimus repellendus
           enim nulla sit reprehenderit natus corrupti nisi veniam adipisci quo
@@ -72,16 +72,16 @@ function Organization() {
           Neque, aliquam dolorem obcaecati dicta perspiciatis illum, quisquam ab
           excepturi nihil sit sed, vitae alias. Eaque.
         </p>
-        <div className='flex flex-wrap justify-center gap-4 mb-4'>
+        <div className='flex flex-wrap justify-center gap-4 mb-4 mt-3'>
           {organizations.map((organization, index) => (
             <Link
               key={organization.id}
               to={`/donation-page/${organization.id}`}
               className='w-full md:w-1/3 lg:w-1/4 p-4 rounded-xl border border-orange-200'
             >
-              <div className='flex flex-col items-center'>
+              <div className='flex flex-col'>
                 <img src={organization.logo} alt={organization.name} />
-                <h2 className='text-lg font-bold'>{organization.name}</h2>
+                <h2 className='text-lg font-bold mt- '>{organization.name}</h2>
                 <p className='text-gray-600'>{organization.description}</p>
               </div>
             </Link>
