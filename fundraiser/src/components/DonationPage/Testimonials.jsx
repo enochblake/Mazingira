@@ -40,7 +40,7 @@ const testimonials = [
 function Testimonials() {
   return (
     <div className='container'>
-      <h1 className='text-lg font-bold mb-4'>Testimonials</h1>
+      <h1 className='font-bold text-3xl font-orange-500 mb-4'>Testimonials</h1>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         {testimonials.map((testimonial) => (
           <div
