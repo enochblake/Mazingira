@@ -82,7 +82,7 @@ function Organization() {
         setActiveCategory={setActiveCategory}
       />
       <main className='flex-1 flex-col justify-center'>
-        <h1 className='text-4xl text-orange-700 font-bold mb-4 mx-auto'>
+        <h1 className='text-4xl text-orange-700 font-bold mb-4 mx-auto text-center '>
           Donate to a Cause
         </h1>
         <p className='mx-auto text-center text-lg'>
@@ -94,7 +94,6 @@ function Organization() {
           Neque, aliquam dolorem obcaecati dicta perspiciatis illum, quisquam ab
           excepturi nihil sit sed, vitae alias. Eaque.
         </p>
-
         <div className='flex flex-wrap justify-center gap-4 mb-4 mt-3'>
           {filteredOrganizations.map((organization, index) => (
             <Link
