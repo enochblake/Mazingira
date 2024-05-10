@@ -1,7 +1,7 @@
 // Components/DonationPay/DonationForm.jsx
 import React, { useState } from 'react';
 import PayPalPayment from './PayPalPayment';
-import DonorDetailsForm from './DonorDetails';
+import DonorDetailsForm from './DonorDetailsForm';
 
 function DonationForm() {
   const defaultAmount = 10;
