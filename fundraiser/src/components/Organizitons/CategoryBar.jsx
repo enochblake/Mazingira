@@ -4,14 +4,14 @@ const CategoryBar = ({ categories, activeCategory, setActiveCategory }) => {
   const getCategoryButtonClass = (category) => {
     return `block w-full text-left ${
       activeCategory === category
-        ? 'text-blue-500'
-        : 'text-gray-800 hover:text-blue-500'
-    } px-2 py-1`;
+        ? 'text-orange-500 border-b-2 border-orange-500'
+        : 'text-gray-800 hover:text-orange-500 hover:border-orange-500'
+    } px-2 py-1 pt-4 rounded-md transition duration-300 ease-in-out`;
   };
 
   return (
     <aside className='w-64 bg-gray-100 p-4'>
-      <h2 className='text-lg font-bold mb-4'>Categories</h2>
+      <h2 className='text-2xl font-bold mb-4'>Categories</h2>
       <nav aria-label='Categories'>
         {categories.map((category, categoryId) => (
           <a
@@ -24,7 +24,7 @@ const CategoryBar = ({ categories, activeCategory, setActiveCategory }) => {
             }}
             aria-current={activeCategory === category ? 'page' : undefined}
           >
-            {category}
+            {category === 'all' ? 'All' : category.toUpperCase()}
           </a>
         ))}
       </nav>
