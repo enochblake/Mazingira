@@ -57,7 +57,7 @@ const OrganizationDetails = () => {
                 View
               </button>
             </Link>
-            <Link to='/blog-page'>
+            <Link to='/blogList-page'>
               <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
                 Blog
               </button>

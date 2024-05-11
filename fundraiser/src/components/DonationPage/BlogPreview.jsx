@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const BlogPreview = ({ title, image, timeToRead, description }) => {
+const BlogPreview = ({ title, image, timeToRead, description, index }) => {
+  const isEven = index % 2 === 0; // Check if the index is even
+
   return (
-    <div className='bg-white shadow-md rounded-lg p-6 mb-6 flex flex-row-reverse'>
-      <div className='w-20 h-20  mb-4'>
-        <img src={image} alt='Blog' />
+    <div className={`bg-white shadow-md rounded-lg p-6 mb-6 flex ${isEven ? 'flex-row-reverse' : 'flex-row'}`}>
+      <div className=' mb-4'>
+        <img src={image} alt='Blog' className='w-[370px] h-[250px]' />
       </div>
-      <div className='flex-1'>
+      <div className='flex-1 mt-7 m-7'>
         <h2 className='text-2xl font-bold mb-2'>{title}</h2>
         <p className='text-gray-600 text-sm mb-4'>
           Read time:
@@ -15,9 +17,7 @@ const BlogPreview = ({ title, image, timeToRead, description }) => {
         </p>
         <p className='text-gray-700 mb-4'>{description.slice(0, 150)}...</p>
         <Link to={`/blog/${title.replace(/\s+/g, '-').toLowerCase()}`}>
-          <a className=' text-orange-500 font-bold py-2 px-4 rounded'>
-            Read More
-          </a>
+          <a className='text-orange-500 font-bold py-2 px-4 rounded'>Read More</a>
         </Link>
       </div>
     </div>

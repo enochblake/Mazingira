@@ -7,7 +7,7 @@ import DonationPage from './components/DonationPage/DonationPage';
 import OrganizationDetails from './components/Organizitons/OrganizationDetails';
 import PayPage from './components/DonationsPay/PayPage';
 import TestimonialsTwo from './components/StoriesFromUsers/Stories.jsx'
-import BlogPreview from './components/DonationPage/Blogs'
+import BlogList from './components/DonationPage/BlogList'
 function App() {
   return (
     <Router>
@@ -17,7 +17,7 @@ function App() {
         <Route path='/organization/:id' element={<OrganizationDetails />} />
         <Route path='/pay-page' element={<PayPage />} />
         <Route path='/testimonials-page' element={<TestimonialsTwo />} />
-        <Route path='/blog-page' element={<BlogPreview />} />
+        <Route path='/blogList-page' element={<BlogList />} />
 
       </Routes>
     </Router>
