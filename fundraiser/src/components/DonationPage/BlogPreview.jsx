@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom';
 const BlogPreview = ({ title, image, timeToRead, description, index }) => {
   const isEven = index % 2 === 0; // Check if the index is even
   const [expanded, setExpanded] = useState(false);
+  const [prevDescription, setPrevDescription] = useState(description);
 
   const toggleExpanded = () => {
     setExpanded(!expanded);
+    if (!expanded) {
+      setPrevDescription(description);
+    }
   };
 
   return (
-    <div
-      className={`bg-white shadow-md rounded-lg p-6 mb-6 flex ${
-        isEven ? 'flex-row-reverse' : 'flex-row'
-      }`}
-    >
+    <div className={`bg-white shadow-md rounded-lg p-6 mb-6 flex ${isEven ? 'flex-row-reverse' : 'flex-row'}`}>
       <div className=' mb-4'>
         <img src={image} alt='Blog' className='w-[370px] h-[250px]' />
       </div>
@@ -24,34 +24,24 @@ const BlogPreview = ({ title, image, timeToRead, description, index }) => {
           Read time:
           <span className='text-orange-500'>{` ${timeToRead} min`}</span>
         </p>
-        <p className='text-gray-700 mb-4'>
-          {expanded ? description : `${description.slice(0, 150)}...`}
-        </p>
+        <p className='text-gray-700 mb-4'>{expanded ? description : `${prevDescription.slice(0, 150)}...`}</p>
         {!expanded && (
-          <button
-            onClick={toggleExpanded}
-            className='text-orange-500 font-bold py-2 px-4 rounded'
-          >
+          <button onClick={toggleExpanded} className='text-orange-500 font-bold py-2 px-4 rounded'>
             Read More
           </button>
         )}
-        <Link
-          to={`/blog/${title.replace(/\s+/g, '-').toLowerCase()}`}
-          onClick={() => setExpanded(false)}
-        >
-          {expanded && (
-            <span
-              className='text-orange-500 font-bold py-2 px-4 rounded cursor-pointer'
-              onClick={toggleExpanded}
-            >
-              Read Less
-            </span>
-          )}
-        </Link>
+        {expanded && (
+          <span className='text-orange-500 font-bold py-2 px-4 rounded cursor-pointer' onClick={toggleExpanded}>
+            Read Less
+          </span>
+        )}
+       
       </div>
     </div>
   );
 };
+
+
 
 export const blogs = [
   {
