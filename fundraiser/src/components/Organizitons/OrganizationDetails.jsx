@@ -28,6 +28,11 @@ function OrganizationDetails() {
               Donate
             </button>
           </Link>
+          <Link to='/testimonials-page'>
+            <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mx-auto'>
+              View
+            </button>
+          </Link>
         </div>
       </main>
     </div>

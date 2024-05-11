@@ -2,21 +2,20 @@
 import React, { useState } from 'react';
 import PayPalPayment from './PayPalPayment';
 import DonorDetailsForm from './DonorDetailsForm';
-import { toast } from 'react-toastify'; // Add toastify
+import { toast } from 'react-toastify'; 
 
 function DonationForm() {
   const defaultAmount = 10;
   const [repeatDonation, setRepeatDonation] = useState(false);
   const [anonymousDonation, setAnonymousDonation] = useState(false);
   const [donorDetails, setDonorDetails] = useState(null);
-  const [paymentMade, setPaymentMade] = useState(false); // Add paymentMade state
+  const [paymentMade, setPaymentMade] = useState(false); 
 
   const handlePaymentSuccess = (details, data) => {
-    setPaymentMade(true); // Set paymentMade to true
-    toast.success('Payment successful!'); // Add toast notification
+    setPaymentMade(true); 
+    toast.success('Payment successful!'); 
     console.log('Payment successful', details, data);
     if (repeatDonation) {
-      // Handle repeat donation logic
     }
   };
 
@@ -39,10 +38,8 @@ function DonationForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!paymentMade) {
-      toast.error('Please make a payment before submitting'); // Add toast error
-      return;
+      toast.error('Please make a payment before submitting'); 
     }
-    // Handle form submission logic
   };
 
   return (
@@ -82,7 +79,7 @@ function DonationForm() {
             <button
               type='submit'
               className='w-[130px]  bg-orange-500 hover:bg-orange-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline'
-              disabled={!paymentMade} // Disable submit button until payment is made
+              disabled={!paymentMade} 
             >
               Submit
             </button>

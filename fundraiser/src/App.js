@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Im
 import DonationPage from './components/DonationPage/DonationPage'; // Import DonationPage component
 import OrganizationDetails from './components/Organizitons/OrganizationDetails';
 import PayPage from './components/DonationsPay/PayPage';
+import TestimonialsTwo from './components/StoriesFromUsers/Stories.jsx'
 function App() {
   return (
     <Router>
@@ -14,6 +15,8 @@ function App() {
         <Route path='/donation-page/:id' element={<DonationPage />} />
         <Route path='/organization/:id' element={<OrganizationDetails />} />
         <Route path='/pay-page' element={<PayPage />} />
+        <Route path='/testimonials-page' element={<TestimonialsTwo />} />
+
       </Routes>
     </Router>
   );
