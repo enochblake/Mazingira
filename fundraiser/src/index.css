@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+/* .blur-custom {
+  @apply backdrop-blur-lg;
+} */
+
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
