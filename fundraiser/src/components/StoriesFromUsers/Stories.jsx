@@ -7,10 +7,48 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import Container from '@mui/material/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import Hero from './Hero';
+
+
+const testimonials = [
+  {
+    id: 1,
+    name: 'John Doe',
+    logo:'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BvdGlmeSUyMGxvZ298ZW58MHx8MHx8fDA%3D',
+    message: `Working with ABC Company has been an absolute pleasure. Their professionalism 
+      I highly recommend ABC Company to anyone in need of their services`,
+    image:'https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    id: 2,
+    name: 'Jane Doe',
+    logo:'https://images.unsplash.com/photo-1705988142466-e468bc654eeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2xhY2slMjBsb2dvfGVufDB8fDB8fHww',
+    message: `Working with ABC Company has been an absolute pleasure. Their professionalism 
+      I highly recommend ABC Company to anyone in need of their services`,
+    image:
+      'https://plus.unsplash.com/premium_photo-1683141202259-ee13ddd953fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    id: 3,
+    name: 'Jane Doe',
+        logo:'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BvdGlmeSUyMGxvZ298ZW58MHx8MHx8fDA%3D',
+
+    message: `Working with ABC Company has been an absolute pleasure. Their professionalism 
+      I highly recommend ABC Company to anyone in need of their services`,
+    image:'https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    id: 4,
+    name: 'Jane Doe',
+        logo:'https://images.unsplash.com/photo-1705988142466-e468bc654eeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2xhY2slMjBsb2dvfGVufDB8fDB8fHww',
+
+    message: `Working with ABC Company has been an absolute pleasure. Their professionalism 
+      I highly recommend ABC Company to anyone in need of their services`,
+    image:'https://images.unsplash.com/photo-1543807535-eceef0bc6599?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D',
+  },
+ 
+];
 
 SwiperCore.use([Autoplay, Navigation]);
 
@@ -42,16 +80,9 @@ function TestimonialsTwo() {
     return () => swiper.destroy();
   }, []);
 
-  const review1 =
-    'https://images.unsplash.com/photo-1543807535-eceef0bc6599?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D';
-  const review2 =
-    'https://images.unsplash.com/photo-1543807535-eceef0bc6599?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D';
-  const logoSpotify =
-    'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BvdGlmeSUyMGxvZ298ZW58MHx8MHx8fDA%3D';
-  const logoSlack =
-    'https://images.unsplash.com/photo-1705988142466-e468bc654eeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2xhY2slMjBsb2dvfGVufDB8fDB8fHww';
-
   return (
+    <div className='bg-gray-700 min-h-screen'>
+      <Hero />
       <div className='py-8 relative'>
         <Swiper
           className='swiper-container'
@@ -61,80 +92,45 @@ function TestimonialsTwo() {
           slidesPerView={1}
           loop
         >
-          <SwiperSlide>
-            <Container>
-              <div className='border border-gray-200 p-4 rounded-lg shadow-md flex mx-auto items-center  '>
-                <img
-                  src={review1}
-                  alt='Review 1'
-                  className='w-1/4 h-1/2 rounded-lg'
-                />
-                <div className='w-1/2 ml-7'>
-                  <p className='text-gray-400 italic text-2xl font-bold mb-4'>
-                    ~ Donor Story
-                  </p>
-                  <h2 className='text-3xl font-semibold mb-2 text-gray-500 '>
-                    Excellent payment service. You guys are the best!
-                  </h2>
-                  <p className='text-gray-800 italic text-lg mb-4'>
-                    "Let the brain, muscles, nerves, every part of your body, be
-                    full of that idea, and just leave every other idea alone.
-                    This is the way to success."
-                  </p>
-                  <div className='flex items-center mt-3'>
-                    <img
-                      src={logoSpotify}
-                      alt='Spotify Logo'
-                      className='w-12 h-12 mr-2 rounded-full'
-                    />
-                    <div>
-                      <p className='text-lg font-semibold '>Mathew Glock</p>
-                      <p className='text-sm text-gray-500'>
-                        Marketing Manager - Spotify
-                      </p>
+          {testimonials.map((testimonial) => (
+            <SwiperSlide key={testimonial.id}>
+              <Container>
+                <div className='bg-gray-100 border border-gray-200 p-4 rounded-lg shadow-md flex mx-auto items-center mr-5'>
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className='w-1/4 rounded-lg'
+                  />
+                  <div className='w-1/2 ml-[130px]'>
+                    <p className='text-gray-400 italic text-2xl font-bold mb-4'>
+                      ~ {testimonial.name}
+                    </p>
+                    <h2 className='text-3xl font-semibold mb-2 text-gray-600'>
+                      {testimonial.message}
+                    </h2>
+                    <p className='text-gray-800 italic text-lg mt-5 mb-4'>
+                      "Let the brain, muscles, nerves, every part of your body,
+                      be full of that idea, and just leave every other idea
+                      alone. This is the way to success."
+                    </p>
+                    <div className='flex items-center mt-3'>
+                      <img
+                        src={testimonial.logo}
+                        alt='Company Logo'
+                        className='w-12 h-12 mr-2 rounded-full'
+                      />
+                      <div>
+                        <p className='text-lg font-semibold'>{testimonial.name}</p>
+                        <p className='text-sm text-gray-500'>
+                          Marketing Manager - ABC Company
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Container>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Container>
-              <div className='border border-gray-200 p-4 rounded-lg shadow-md flex mx-auto items-center mr-5 '>
-                <img
-                  src={review1}
-                  alt='Review 1'
-                  className='w-1/4 rounded-lg'
-                />
-                <div className='w-1/2 ml-5'>
-                  <p className='text-gray-400 italic text-2xl font-bold mb-4'>
-                    ~ Donor Story
-                  </p>
-                  <h2 className='text-3xl font-semibold mb-2 text-gray-500 '>
-                    Excellent payment service. You guys are the best!
-                  </h2>
-                  <p className='text-gray-800 italic text-lg mb-4'>
-                    "Let the brain, muscles, nerves, every part of your body, be
-                    full of that idea, and just leave every other idea alone.
-                    This is the way to success."
-                  </p>
-                  <div className='flex items-center mt-3'>
-                    <img
-                      src={logoSpotify}
-                      alt='Spotify Logo'
-                      className='w-12 h-12 mr-2 rounded-full'
-                    />
-                    <div>
-                      <p className='text-lg font-semibold '>Mathew Glock</p>
-                      <p className='text-sm text-gray-500'>
-                        Marketing Manager - Spotify
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Container>
-          </SwiperSlide>
+              </Container>
+            </SwiperSlide>
+          ))}
         </Swiper>
         <div className={`${navigationStyles} left-0`} ref={navigationPrevRef}>
           <FontAwesomeIcon icon={faChevronLeft} />
@@ -143,6 +139,7 @@ function TestimonialsTwo() {
           <FontAwesomeIcon icon={faChevronRight} />
         </div>
       </div>
+    </div>
   );
 }
 

@@ -2,11 +2,12 @@
 import './App.css';
 import Donor from './components/Organizitons/Organization';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes component
-import DonationPage from './components/DonationPage/DonationPage'; // Import DonationPage component
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
+import DonationPage from './components/DonationPage/DonationPage'; 
 import OrganizationDetails from './components/Organizitons/OrganizationDetails';
 import PayPage from './components/DonationsPay/PayPage';
 import TestimonialsTwo from './components/StoriesFromUsers/Stories.jsx'
+import BlogPreview from './components/DonationPage/Blogs'
 function App() {
   return (
     <Router>
@@ -16,6 +17,7 @@ function App() {
         <Route path='/organization/:id' element={<OrganizationDetails />} />
         <Route path='/pay-page' element={<PayPage />} />
         <Route path='/testimonials-page' element={<TestimonialsTwo />} />
+        <Route path='/blog-page' element={<BlogPreview />} />
 
       </Routes>
     </Router>
