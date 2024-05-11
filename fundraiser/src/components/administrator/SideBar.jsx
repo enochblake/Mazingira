@@ -90,7 +90,7 @@ function SideBar({ThemeStyles}) {
       <Box>
       <Item
         icon={<GroupIcon/>}
-        title="Manage Team"
+        title="Organizations"
         to="/Team"
       />
 </Box>
@@ -104,7 +104,7 @@ function SideBar({ThemeStyles}) {
      <Box>
         <Item
         icon={<ReceiptIcon/>}
-        title="Materials"
+        title="Donations"
         to="/Item"
       />
      </Box>

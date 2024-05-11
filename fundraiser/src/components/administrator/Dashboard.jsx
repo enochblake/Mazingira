@@ -3,7 +3,7 @@ import MarkEmailReadOutlinedIcon from '@mui/icons-material/MarkEmailReadOutlined
 import PointOfSaleOutlinedIcon from '@mui/icons-material/PointOfSaleOutlined';
 import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
 import PersonAddOutlinedIcon from '@mui/icons-material/PersonAddOutlined';
-// import TrafficOutlinedIcon from '@mui/icons-material/TrafficOutlined';
+
 import DonutLargeIcon from '@mui/icons-material/DonutLarge';
 import { Box, Button } from '@mui/material';
 
@@ -38,7 +38,7 @@ const Dashboard = ({ThemeStyles}) => {
           <PointOfSaleOutlinedIcon className="w-8 h-8 text-green-500 mr-4" />
           <div>
             <h1 className="text-2xl font-semibold text-slate-300">431,22</h1>
-            <h2 className='text-green-500'>Sales Obtained +21%</h2>
+            <h2 className='text-green-500'>Donations Obtained +21%</h2>
           </div>
         </div>
 
@@ -69,26 +69,14 @@ const Dashboard = ({ThemeStyles}) => {
     <Box class="p-2 bg-sky-950 m-3 w-3/4 h-60 overflow-hidden">
     <div className="flex  justify-between text-center"> 
     <h5 className="text-center text-emerald-400 font-extrabold"><span className='text-slate-300'>Donations Received</span>: $644736848</h5>
-{/*       
-  <Link to="/Line">
-<IconButton class="text-emerald-500">
-<Link to={DownloadPDF}>
-  <DownloadOutlinedIcon/>
-</Link>
 
-</IconButton> 
-  </Link>  
-
-</div>
-  <div className="w-75 -mt-10  h-80">
-           {/* <Line/> */}
         </div>
         
     </Box>
     <Box class="p-5 mr-2 overflow-y-scroll h-60 w-1/3 position-fixed scroll-">
         <div className="bg-cyan-950 text-center justify-center flex h-12 align-middle">
         <h2 class="text-slate-100 p-3  w-100">
-            Recent Transactions
+            Recent Donations
         </h2>
         </div>
         <div className="flex mt-2 align-middle p-4 justify-between w-100 bg-sky-950">
@@ -190,22 +178,7 @@ const Dashboard = ({ThemeStyles}) => {
         </div>
       </Box> 
 
-      {/* Sales Quantity
-      <Box className="ml-3 h-fit p-3  w-full bg-sky-950">
-        <h1 className="text-xl text-center font-semibold">Sales Quantity</h1>
-       <div className="w-75 h-72 -mt-8"><Bar/></div> 
-      </Box>
-      
-      <Box className="flex p-3 h-fit w-full bg-sky-950 ml-3">
-        <div className="">
-          <h1 className="text-xl text-center font-semibold">PIE Chart</h1>
-         <div className='w-75 h-72 -mt-8'><Pie/></div> 
-        </div>
-      </Box>
-
-      </Box>
-
-      */}
+   
       </Box>
     </div>
     

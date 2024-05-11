@@ -6,10 +6,10 @@ const Item = ({ThemeStyles}) => {
   const [input, setInput]=useState("")
   const [newItem, setNewItem] = useState({
     material: '',
-    price: '',
+    donation: '',
     quantity: '',
-    stock_in: '',
-    stock_out: '',
+    approve: '',
+    reject: '',
     avatar: '',
     
   });
