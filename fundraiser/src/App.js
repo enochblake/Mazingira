@@ -10,6 +10,7 @@ import TestimonialsTwo from './components/StoriesFromUsers/Stories.jsx'
 import BlogList from './components/DonationPage/BlogList'
 import AddOrganization from './components/AddProduct/AddOrganizationPage.jsx';
 import RegistrationPage from './components/AddProduct/RegistrationPage.jsx';
+import DonationAmount from './components/AddProduct/DonationAmount.jsx';
 function App() {
   return (
     <Router>
@@ -21,7 +22,8 @@ function App() {
         <Route path='/testimonials-page' element={<TestimonialsTwo />} />
         <Route path='/blogList-page' element={<BlogList />} />
         <Route path='/add_org-page' element={<AddOrganization />} />
-        <Route path='//register_org-page' element={<RegistrationPage />} />
+        <Route path='/register_org-page' element={<RegistrationPage />} />
+        <Route path='/amounts-page' element={<DonationAmount />} />
       </Routes>
     </Router>
   );

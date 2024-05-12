@@ -96,15 +96,7 @@ function DonorDetailsForm({ onSubmit }) {
           rows='3'
         ></textarea>
       </div>
-      {/* <div className='flex justify-center mb-4'>
-        <button
-          type='submit'
-          className='w-[130px]  bg-orange-500 hover:bg-orange-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline'
-          disabled={disabled}
-        >
-          Submit
-        </button>
-      </div> */}
+ 
     </form>
   );
 }
