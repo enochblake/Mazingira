@@ -11,7 +11,8 @@ import BlogList from './components/DonationPage/BlogList'
 import AddOrganization from './components/AddProduct/AddOrganizationPage.jsx';
 import RegistrationPage from './components/AddProduct/RegistrationPage.jsx';
 import DonationAmount from './components/AddProduct/DonationAmount.jsx';
-import BeneficiaryStory from './components/AddProduct/BeneficiaryStories.jsx';
+import AddBeneficiaryStory from './components/AddProduct/AddBeneficiaryStories.jsx';
+import BeneficiaryStories from './components/AddProduct/BeneficiaryStories.jsx';
 function App() {
   return (
     <Router>
@@ -25,7 +26,8 @@ function App() {
         <Route path='/add_org-page' element={<AddOrganization />} />
         <Route path='/register_org-page' element={<RegistrationPage />} />
         <Route path='/amounts-page' element={<DonationAmount />} />
-        <Route path='/b_stories-page' element={<BeneficiaryStory />} />
+        <Route path='/create_stories-page' element={<AddBeneficiaryStory />} />
+        <Route path='/b_stories-page' element={<BeneficiaryStories />} />
       </Routes>
     </Router>
   );
