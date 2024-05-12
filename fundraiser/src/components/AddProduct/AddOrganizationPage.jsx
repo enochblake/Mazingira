@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
 
 const AddOrganization = () => {
-  const [organizationName, setOrganizationName] = useState('');
-  const [description, setDescription] = useState('');
-  const [contactEmail, setContactEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [websiteURL, setWebsiteURL] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
-  const [image, setImage] = useState(null);
-  const [imagePreview, setImagePreview] = useState(null);
+  const [formData, setFormData] = useState({
+    organizationName: '',
+    description: '',
+    contactEmail: '',
+    phoneNumber: '',
+    websiteURL: '',
+    selectedCategory: '',
+    image: null,
+    imagePreview: null,
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  };
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
-    setImage(file);
-    setImagePreview(URL.createObjectURL(file)); 
-  };
-
-  const handleCategoryChange = (e) => {
-    setSelectedCategory(e.target.value);
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      image: file,
+      imagePreview: URL.createObjectURL(file),
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -27,169 +33,157 @@ const AddOrganization = () => {
 
   return (
     <div className='container mx-auto py-8'>
-      <h1 className='text-2xl font-bold mb-4'>Add Organization</h1>
-      <div className='mb-4'>
-        <img
-          className='mb-2'
-          src={imagePreview || 'https://via.placeholder.com/200'}
-          alt='Organization Preview'
-          style={{ maxWidth: '200px' }}
-        />
-        <label className='block text-gray-700 font-bold mb-2' htmlFor='image'>
-          Organization Image
-        </label>
-        <input
-          className='appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-          id='image'
-          type='file'
-          accept='image/*'
-          onChange={handleImageUpload}
-          required
-        />
+      <h1 className='text-2xl font-bold mb-5 mx-auto text-center text-orange-700 '>
+        ADD ORGANIZATION
+      </h1>
+      <div className='flex flex-wrap -mx-4'>
+        <div className='w-1/2 px-4'>
+          <ImagePreview imagePreview={formData.imagePreview} />
+          <ImageInput handleImageUpload={handleImageUpload} />
+          <CategorySelection
+            selectedCategory={formData.selectedCategory}
+            handleCategoryChange={(e) => handleInputChange(e)}
+          />
+        </div>
+        <div className='w-1/2 px-4'>
+          <form onSubmit={handleSubmit}>
+            <FormField
+              label='Organization Name'
+              name='organizationName'
+              value={formData.organizationName}
+              onChange={handleInputChange}
+            />
+            <FormField
+              label='Description'
+              name='description'
+              value={formData.description}
+              onChange={handleInputChange}
+            />
+            <FormField
+              label='Contact Email'
+              name='contactEmail'
+              value={formData.contactEmail}
+              onChange={handleInputChange}
+            />
+            <FormField
+              label='Phone Number'
+              name='phoneNumber'
+              value={formData.phoneNumber}
+              onChange={handleInputChange}
+            />
+            <FormField
+              label='Website URL'
+              name='websiteURL'
+              value={formData.websiteURL}
+              onChange={handleInputChange}
+            />
+            <div className='flex items-center justify-between'>
+              <button
+                className='bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                type='button'
+                onClick={() => {} /* Handle cancel action */}
+              >
+                Cancel
+              </button>
+              <button
+                className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                type='submit'
+              >
+                Save
+              </button>
+              <button
+                className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                type='submit'
+              >
+                Save & Submit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
+    </div>
+  );
+};
 
-      <form onSubmit={handleSubmit}>
-        <div className='mb-4'>
-          <label
-            className='block text-gray-700 font-bold mb-2'
-            htmlFor='organizationName'
-          >
-            Organization Name
-          </label>
+const ImagePreview = ({ imagePreview }) => {
+  return (
+    <img
+      className='border-4 border-gray-500 rounded-md mb-2 w-1/2'
+      src={imagePreview || 'https://via.placeholder.com/200'}
+      alt='Organization Preview'
+      // style={{ maxWidth: '500px' }}
+    />
+  );
+};
+
+const ImageInput = ({ handleImageUpload }) => {
+  return (
+    <input
+      className='shadow appearance-none border rounded w-2/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+      id='image'
+      type='file'
+      accept='image/*'
+      onChange={handleImageUpload}
+      required
+    />
+  );
+};
+
+const CategorySelection = ({ selectedCategory, handleCategoryChange }) => {
+  return (
+    <div>
+      <label className='block text-gray-700 font-bold mb-2 mt-5 text-lg'>Category</label>
+      <div>
+        <label className='inline-flex items-center mr-4'>
           <input
-            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-            id='organizationName'
-            type='text'
-            placeholder='Enter organization name'
-            value={organizationName}
-            onChange={(e) => setOrganizationName(e.target.value)}
-            required
+            type='radio'
+            className='form-radio text-indigo-600'
+            value='air'
+            checked={selectedCategory === 'air'}
+            onChange={(e) => handleCategoryChange(e)}
           />
-        </div>
-        <div className='mb-4'>
-          <label
-            className='block text-gray-700 font-bold mb-2'
-            htmlFor='description'
-          >
-            Description
-          </label>
-          <textarea
-            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-            id='description'
-            placeholder='Enter organization description'
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            required
-          />
-        </div>
-        <div className='mb-4'>
-          <label
-            className='block text-gray-700 font-bold mb-2'
-            htmlFor='contactEmail'
-          >
-            Contact Email
-          </label>
+          <span className='ml-2'>Air</span>
+        </label>
+        <label className='inline-flex items-center mr-4'>
           <input
-            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-            id='contactEmail'
-            type='email'
-            placeholder='Enter contact email'
-            value={contactEmail}
-            onChange={(e) => setContactEmail(e.target.value)}
-            required
+            type='radio'
+            className='form-radio text-indigo-600'
+            value='water'
+            checked={selectedCategory === 'water'}
+            onChange={(e) => handleCategoryChange(e)}
           />
-        </div>
-        <div className='mb-4'>
-          <label
-            className='block text-gray-700 font-bold mb-2'
-            htmlFor='phoneNumber'
-          >
-            Phone Number
-          </label>
+          <span className='ml-2'>Water</span>
+        </label>
+        <label className='inline-flex items-center'>
           <input
-            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-            id='phoneNumber'
-            type='tel'
-            placeholder='Enter phone number'
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            required
+            type='radio'
+            className='form-radio text-indigo-600'
+            value='soil'
+            checked={selectedCategory === 'soil'}
+            onChange={(e) => handleCategoryChange(e)}
           />
-        </div>
-        <div className='mb-4'>
-          <label
-            className='block text-gray-700 font-bold mb-2'
-            htmlFor='websiteURL'
-          >
-            Website URL
-          </label>
-          <input
-            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-            id='websiteURL'
-            type='url'
-            placeholder='Enter website URL'
-            value={websiteURL}
-            onChange={(e) => setWebsiteURL(e.target.value)}
-            required
-          />
-        </div>
-        <div className='mb-4'>
-          <label className='block text-gray-700 font-bold mb-2'>Category</label>
-          <div>
-            <label className='inline-flex items-center mr-4'>
-              <input
-                type='radio'
-                className='form-radio text-indigo-600'
-                value='air'
-                checked={selectedCategory === 'air'}
-                onChange={handleCategoryChange}
-              />
-              <span className='ml-2'>Air</span>
-            </label>
-            <label className='inline-flex items-center mr-4'>
-              <input
-                type='radio'
-                className='form-radio text-indigo-600'
-                value='water'
-                checked={selectedCategory === 'water'}
-                onChange={handleCategoryChange}
-              />
-              <span className='ml-2'>Water</span>
-            </label>
-            <label className='inline-flex items-center'>
-              <input
-                type='radio'
-                className='form-radio text-indigo-600'
-                value='soil'
-                checked={selectedCategory === 'soil'}
-                onChange={handleCategoryChange}
-              />
-              <span className='ml-2'>Soil</span>
-            </label>
-          </div>
-        </div>
-        <div className='flex items-center justify-between'>
-          <button
-            className='bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-            type='button'
-            onClick={() => {} /* Handle cancel action */}
-          >
-            Cancel
-          </button>
-          <button
-            className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-            type='submit'
-          >
-            Save
-          </button>
-          <button
-            className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-            type='submit'
-          >
-            Save & Submit
-          </button>
-        </div>
-      </form>
+          <span className='ml-2'>Soil</span>
+        </label>
+      </div>
+    </div>
+  );
+};
+
+const FormField = ({ label, name, value, onChange }) => {
+  return (
+    <div className='mb-4'>
+      <label className='block text-gray-700 font-bold mb-2' htmlFor={name}>
+        {label}
+      </label>
+      <input
+        className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-5'
+        id={name}
+        type='text'
+        placeholder={`Enter ${label}`}
+        value={value}
+        onChange={onChange}
+        required
+      />
     </div>
   );
 };
