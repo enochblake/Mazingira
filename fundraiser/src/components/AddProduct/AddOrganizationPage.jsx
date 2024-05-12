@@ -82,7 +82,7 @@ const AddOrganization = () => {
               <Button
                 className='bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
                 type='button'
-                onClick={() => {} /* Handle cancel action */}
+                onClick={() => {}}
               >
                 Cancel
               </Button>
@@ -109,7 +109,7 @@ const AddOrganization = () => {
 const ImagePreview = ({ imagePreview }) => {
   return (
     <img
-      className='border-4 border-gray-500 rounded-md mb-2 w-1/2'
+      className='border-4 border-gray-500 rounded-md mb-2'
       src={imagePreview || 'https://via.placeholder.com/200'}
       alt='Organization Preview'
     />
