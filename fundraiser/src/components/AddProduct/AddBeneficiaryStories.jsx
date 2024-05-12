@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const BeneficiaryStory = () => {
+const CreateBeneficiaryStory = () => {
   const [formData, setFormData] = useState({
     organizationName: '',
     description: '',
@@ -32,74 +32,76 @@ const BeneficiaryStory = () => {
   };
 
   return (
-    <div className='container mx-auto py-8'>
-      <h1 className='text-2xl font-bold mb-5 mx-auto text-center text-orange-700'>
-        BENEFICIARY STORIES
-      </h1>
-      <div className='flex flex-wrap -mx-4'>
-        <div className='w-1/2 px-4'>
-          <ImagePreview imagePreview={formData.imagePreview} />
-          <ImageInput handleImageUpload={handleImageUpload} />
-          <CategorySelection
-            selectedCategory={formData.selectedCategory}
-            handleCategoryChange={handleInputChange}
-          />
-        </div>
-        <div className='w-1/2 px-4 text-lg'>
-          <form onSubmit={handleSubmit}>
-            <InputField
-              label='Organization Name'
-              name='organizationName'
-              value={formData.organizationName}
-              onChange={handleInputChange}
+    <div className='bg-gray-700 mt-5 min-h-screen'>
+      <div className='container mx-auto py-8 bg-gray-100 rounded shadow-md p-5 mb-5'>
+        <h1 className='text-2xl font-bold mb-5 mx-auto text-center text-orange-700'>
+          CREATE BENEFICIARY STORIES
+        </h1>
+        <div className='flex flex-wrap -mx-4'>
+          <div className='w-1/2 px-4'>
+            <ImagePreview imagePreview={formData.imagePreview} />
+            <ImageInput handleImageUpload={handleImageUpload} />
+            <CategorySelection
+              selectedCategory={formData.selectedCategory}
+              handleCategoryChange={handleInputChange}
             />
-            <InputField
-              label='Contact Email'
-              name='contactEmail'
-              value={formData.contactEmail}
-              onChange={handleInputChange}
-            />
-            <InputField
-              label='Phone Number'
-              name='phoneNumber'
-              value={formData.phoneNumber}
-              onChange={handleInputChange}
-            />
-            <InputField
-              label='Website URL'
-              name='websiteURL'
-              value={formData.websiteURL}
-              onChange={handleInputChange}
-            />
-            <TextareaField
-              label='Description'
-              name='description'
-              value={formData.description}
-              onChange={handleInputChange}
-              maxLength={500}
-            />
-            <div className='flex items-center justify-between'>
-              <Button
-                className='bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-                type='button'
-                onClick={() => {}}
-              >
-                Cancel
-              </Button>
-              <Button
-                className='bg-white hover:bg-orange-700 text-black text-lg font-bold py-1 px-4 rounded-md focus:outline-none focus:shadow-outline border-4 border-orange-500'
-                type='submit'
-              >
-                Save
-              </Button>
-              <Button
-                className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-                type='submit'
-              >
-                Save & Submit
-              </Button>
-            </div>
-          </form>
+          </div>
+          <div className='w-1/2 px-4 text-lg'>
+            <form onSubmit={handleSubmit}>
+              <InputField
+                label='Organization Name'
+                name='organizationName'
+                value={formData.organizationName}
+                onChange={handleInputChange}
+              />
+              <InputField
+                label='Contact Email'
+                name='contactEmail'
+                value={formData.contactEmail}
+                onChange={handleInputChange}
+              />
+              <InputField
+                label='Phone Number'
+                name='phoneNumber'
+                value={formData.phoneNumber}
+                onChange={handleInputChange}
+              />
+              <InputField
+                label='Website URL'
+                name='websiteURL'
+                value={formData.websiteURL}
+                onChange={handleInputChange}
+              />
+              <TextareaField
+                label='Description'
+                name='description'
+                value={formData.description}
+                onChange={handleInputChange}
+                maxLength={500}
+              />
+              <div className='flex items-center justify-between'>
+                <Button
+                  className='bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                  type='button'
+                  onClick={() => {}}
+                >
+                  Cancel
+                </Button>
+                <Button
+                  className='bg-white hover:bg-orange-700 text-black text-lg font-bold py-1 px-4 rounded-md focus:outline-none focus:shadow-outline border-4 border-orange-500'
+                  type='submit'
+                >
+                  Save
+                </Button>
+                <Button
+                  className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                  type='submit'
+                >
+                  Save & Submit
+                </Button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -227,4 +229,4 @@ const Button = ({
   );
 };
 
-export default BeneficiaryStory;
+export default CreateBeneficiaryStory;
