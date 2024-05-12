@@ -19,7 +19,7 @@ const BlogList = () => {
   }, []); 
 
   return (
-    <div className='bg-gray-200 '>
+    <div className='bg-gray-700 p-6'>
       <h1 className='text-orange-700 text-4xl font-bold mx-auto text-center'>
         BLOGS.
       </h1>

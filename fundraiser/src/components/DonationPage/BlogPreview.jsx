@@ -16,7 +16,7 @@ const BlogPreview = ({ title, image, timeToRead, description, index }) => {
 
   return (
     <div
-      className={`bg-gray-50 shadow-md rounded-lg p-6 mb-6 ${
+      className={`bg-gray-100 shadow-md rounded-lg p-6 mb-6 ${
         index === 0
           ? 'flex justify-center w-full'
           : 'w-1/2 md:w-1/3 lg:w-1/4 m-5'
