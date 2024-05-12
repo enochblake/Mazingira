@@ -67,6 +67,11 @@ const OrganizationDetails = () => {
                 ADD_ORG
               </button>
             </Link>
+            <Link to='/register_org-page'>
+              <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
+                REGISTER_ORG
+              </button>
+            </Link>
           </div>
         </div>
       </main>
