@@ -21,7 +21,7 @@ function DonationPage() {
         <div className='flex justify-center my-4'>
           <Link
             to='#'
-            className={`mx-4 text-black ${
+            className={`mx-4 text-black  font-bold text-lg ${
               selectedContent === 'details'
                 ? 'border-b-4 border-orange-500'
                 : ''
@@ -32,7 +32,7 @@ function DonationPage() {
           </Link>
           <Link
             to='#'
-            className={`mx-4 text-black ${
+            className={`mx-4 text-black font-bold text-lg ${
               selectedContent === 'testimonials'
                 ? 'border-b-4 border-orange-500'
                 : ''
@@ -43,7 +43,7 @@ function DonationPage() {
           </Link>
           <Link
             to='#'
-            className={`mx-4 text-black  ${
+            className={`mx-4 text-black font-bold text-lg ${
               selectedContent === 'blogs' ? 'border-b-4 border-orange-500' : ''
             }`}
             onClick={() => handleContentChange('blogs')}
