@@ -14,6 +14,10 @@ const AddOrganization = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    if (name === 'description' && value.length > 500) {
+      // Limiting the description to 500 words
+      return;
+    }
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
 
@@ -54,12 +58,6 @@ const AddOrganization = () => {
               onChange={handleInputChange}
             />
             <FormField
-              label='Description'
-              name='description'
-              value={formData.description}
-              onChange={handleInputChange}
-            />
-            <FormField
               label='Contact Email'
               name='contactEmail'
               value={formData.contactEmail}
@@ -77,6 +75,24 @@ const AddOrganization = () => {
               value={formData.websiteURL}
               onChange={handleInputChange}
             />
+            <div className='mb-4'>
+              <label
+                className='block text-gray-700 font-bold mb-2'
+                htmlFor='description'
+              >
+                Description
+              </label>
+              <textarea
+                className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-48'
+                id='description'
+                placeholder='Enter Description'
+                value={formData.description}
+                onChange={handleInputChange}
+                maxLength={500} // Enforce word limit
+                required
+              />
+              <p className='text-sm text-gray-500'>{`${formData.description.length}/500 words`}</p>
+            </div>
             <div className='flex items-center justify-between'>
               <button
                 className='bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
@@ -86,13 +102,13 @@ const AddOrganization = () => {
                 Cancel
               </button>
               <button
-                className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                className='bg-white hover:bg-orange-700 text-black text-lg font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline border-4 border-orange-500'
                 type='submit'
               >
                 Save
               </button>
               <button
-                className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
                 type='submit'
               >
                 Save & Submit
@@ -132,7 +148,9 @@ const ImageInput = ({ handleImageUpload }) => {
 const CategorySelection = ({ selectedCategory, handleCategoryChange }) => {
   return (
     <div>
-      <label className='block text-gray-700 font-bold mb-2 mt-5 text-lg'>Category</label>
+      <label className='block text-gray-700 font-bold mb-2 mt-5 text-lg'>
+        Category
+      </label>
       <div>
         <label className='inline-flex items-center mr-4'>
           <input
