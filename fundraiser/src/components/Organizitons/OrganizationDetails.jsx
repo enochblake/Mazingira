@@ -77,6 +77,11 @@ const OrganizationDetails = () => {
                 AMOUNTS
               </button>
             </Link>
+            <Link to='/b_stories-page'>
+              <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
+                B-STORIES
+              </button>
+            </Link>
           </div>
         </div>
       </main>
