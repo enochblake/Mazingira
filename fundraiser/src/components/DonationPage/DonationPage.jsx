@@ -19,27 +19,40 @@ function DonationPage() {
           ORGANIZATION
         </h1>
         <div className='flex justify-center my-4'>
-          <button
-            className='mx-4 text-blue-600 hover:underline'
+          <Link
+            to='#'
+            className={`mx-4 text-black ${
+              selectedContent === 'details'
+                ? 'border-b-4 border-orange-500'
+                : ''
+            }`}
             onClick={() => handleContentChange('details')}
           >
             Details
-          </button>
-          <button
-            className='mx-4 text-blue-600 hover:underline'
+          </Link>
+          <Link
+            to='#'
+            className={`mx-4 text-black ${
+              selectedContent === 'testimonials'
+                ? 'border-b-4 border-orange-500'
+                : ''
+            }`}
             onClick={() => handleContentChange('testimonials')}
           >
             Testimonials
-          </button>
-          <button
-            className='mx-4 text-blue-600 hover:underline'
+          </Link>
+          <Link
+            to='#'
+            className={`mx-4 text-black  ${
+              selectedContent === 'blogs' ? 'border-b-4 border-orange-500' : ''
+            }`}
             onClick={() => handleContentChange('blogs')}
           >
             Blogs
-          </button>
+          </Link>
         </div>
         {selectedContent === 'details' && (
-          <div className='bg-gray-500 mt-20 w-full  p-4'>
+          <div className='bg-gray-500 mt-20 w-full p-4'>
             <div className='flex flex-col lg:flex-row justify-between'>
               <div className='lg:w-3/4 w-full pr-4'>
                 <OrganizationDetails />
