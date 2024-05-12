@@ -1,32 +1,518 @@
 {
   "donationAmount": [
     {
+      "amount": 9027.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
+      "donor_first_name": "Christopher",
+      "donor_last_name": "Hurst",
       "id": 1,
-      "firstName": "John",
-      "lastName": "Doe",
-      "anonymous": false,
-      "amount": 100,
-      "date": "2024-05-12"
+      "organization_id": 9
     },
     {
+      "amount": 6614.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
+      "donor_first_name": "Jordan",
+      "donor_last_name": "Morgan",
       "id": 2,
-      "firstName": "Jane",
-      "lastName": "Smith",
-      "anonymous": false,
-      "amount": 50,
-      "date": "2024-05-10"
+      "organization_id": 3
     },
     {
+      "amount": 2284.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
+      "donor_first_name": "Kelly",
+      "donor_last_name": "Hart",
       "id": 3,
-      "anonymous": true,
-      "amount": 200,
-      "date": "2024-05-08"
+      "organization_id": 2
     },
     {
+      "amount": 9297.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
+      "donor_first_name": "Austin",
+      "donor_last_name": "Kelley",
       "id": 4,
-      "anonymous": true,
-      "amount": 75,
-      "date": "2024-05-06"
+      "organization_id": 4
+    },
+    {
+      "amount": 2753.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
+      "donor_first_name": "William",
+      "donor_last_name": "May",
+      "id": 5,
+      "organization_id": 1
+    },
+    {
+      "amount": 8098.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
+      "donor_first_name": "Abigail",
+      "donor_last_name": "Frost",
+      "id": 6,
+      "organization_id": 8
+    },
+    {
+      "amount": 9904.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
+      "donor_first_name": "Daniel",
+      "donor_last_name": "Walker",
+      "id": 7,
+      "organization_id": 3
+    },
+    {
+      "amount": 1265.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
+      "donor_first_name": "Jordan",
+      "donor_last_name": "Morgan",
+      "id": 8,
+      "organization_id": 3
+    },
+    {
+      "amount": 8680.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
+      "donor_first_name": "Jennifer",
+      "donor_last_name": "Bolton",
+      "id": 9,
+      "organization_id": 2
+    },
+    {
+      "amount": 3992.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
+      "donor_first_name": "Anthony",
+      "donor_last_name": "Roberts",
+      "id": 10,
+      "organization_id": 5
+    },
+    {
+      "amount": 8045.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
+      "donor_first_name": "Daniel",
+      "donor_last_name": "Turner",
+      "id": 11,
+      "organization_id": 2
+    },
+    {
+      "amount": 4512.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
+      "donor_first_name": "Amy",
+      "donor_last_name": "Chandler",
+      "id": 12,
+      "organization_id": null
+    },
+    {
+      "amount": 4792.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Nicole",
+      "donor_last_name": "Stout",
+      "id": 13,
+      "organization_id": 8
+    },
+    {
+      "amount": 8045.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Stephanie",
+      "donor_last_name": "Whitney",
+      "id": 14,
+      "organization_id": 10
+    },
+    {
+      "amount": 8106.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Elizabeth",
+      "donor_last_name": "Patel",
+      "id": 15,
+      "organization_id": 4
+    },
+    {
+      "amount": 6298.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Amy",
+      "donor_last_name": "Mullen",
+      "id": 16,
+      "organization_id": 9
+    },
+    {
+      "amount": 4616.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Amy",
+      "donor_last_name": "Mullen",
+      "id": 17,
+      "organization_id": 10
+    },
+    {
+      "amount": 6888.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Victor",
+      "donor_last_name": "Duran",
+      "id": 18,
+      "organization_id": null
+    },
+    {
+      "amount": 7966.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Amy",
+      "donor_last_name": "Williams",
+      "id": 19,
+      "organization_id": null
+    },
+    {
+      "amount": 5577.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Amy",
+      "donor_last_name": "Mullen",
+      "id": 20,
+      "organization_id": null
+    },
+    {
+      "amount": 4035.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Stephanie",
+      "donor_last_name": "Whitney",
+      "id": 21,
+      "organization_id": 3
+    },
+    {
+      "amount": 4321.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Victor",
+      "donor_last_name": "Duran",
+      "id": 22,
+      "organization_id": 6
+    },
+    {
+      "amount": 7690.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Sandra",
+      "donor_last_name": "Hobbs",
+      "id": 23,
+      "organization_id": 4
+    },
+    {
+      "amount": 7153.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Amanda",
+      "donor_last_name": "Ritter",
+      "id": 24,
+      "organization_id": 3
+    },
+    {
+      "amount": 7802.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Megan",
+      "donor_last_name": "Booth",
+      "id": 25,
+      "organization_id": 8
+    },
+    {
+      "amount": 7380.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Richard",
+      "donor_last_name": "Reed",
+      "id": 26,
+      "organization_id": null
+    },
+    {
+      "amount": 8869.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Elizabeth",
+      "donor_last_name": "Johnson",
+      "id": 27,
+      "organization_id": 5
+    },
+    {
+      "amount": 1637.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Amy",
+      "donor_last_name": "Mullen",
+      "id": 28,
+      "organization_id": 5
+    },
+    {
+      "amount": 1514.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Justin",
+      "donor_last_name": "Smith",
+      "id": 29,
+      "organization_id": 8
+    },
+    {
+      "amount": 6498.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Austin",
+      "donor_last_name": "Kelley",
+      "id": 30,
+      "organization_id": 5
+    },
+    {
+      "amount": 5409.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Daniel",
+      "donor_last_name": "Turner",
+      "id": 31,
+      "organization_id": 3
+    },
+    {
+      "amount": 6937.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Jennifer",
+      "donor_last_name": "Bolton",
+      "id": 32,
+      "organization_id": 1
+    },
+    {
+      "amount": 1455.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Stephanie",
+      "donor_last_name": "Whitney",
+      "id": 33,
+      "organization_id": 9
+    },
+    {
+      "amount": 2730.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Elizabeth",
+      "donor_last_name": "Patel",
+      "id": 34,
+      "organization_id": 1
+    },
+    {
+      "amount": 7891.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Michael",
+      "donor_last_name": "Clark",
+      "id": 35,
+      "organization_id": 6
+    },
+    {
+      "amount": 3862.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Sara",
+      "donor_last_name": "Lambert",
+      "id": 36,
+      "organization_id": 8
+    },
+    {
+      "amount": 9337.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Devin",
+      "donor_last_name": "Barry",
+      "id": 37,
+      "organization_id": 5
+    },
+    {
+      "amount": 534.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Megan",
+      "donor_last_name": "Booth",
+      "id": 38,
+      "organization_id": 9
+    },
+    {
+      "amount": 9411.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Michael",
+      "donor_last_name": "Clark",
+      "id": 39,
+      "organization_id": 4
+    },
+    {
+      "amount": 4293.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Austin",
+      "donor_last_name": "Kelley",
+      "id": 40,
+      "organization_id": 6
+    },
+    {
+      "amount": 4534.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "William",
+      "donor_last_name": "May",
+      "id": 41,
+      "organization_id": 2
+    },
+    {
+      "amount": 7791.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Sara",
+      "donor_last_name": "Lambert",
+      "id": 42,
+      "organization_id": 4
+    },
+    {
+      "amount": 6646.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Amy",
+      "donor_last_name": "Mullen",
+      "id": 43,
+      "organization_id": 3
+    },
+    {
+      "amount": 9748.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Elizabeth",
+      "donor_last_name": "Patel",
+      "id": 44,
+      "organization_id": null
+    },
+    {
+      "amount": 9136.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Nicole",
+      "donor_last_name": "Stout",
+      "id": 45,
+      "organization_id": 9
+    },
+    {
+      "amount": 8904.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Daniel",
+      "donor_last_name": "Walker",
+      "id": 46,
+      "organization_id": 9
+    },
+    {
+      "amount": 5672.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Megan",
+      "donor_last_name": "Booth",
+      "id": 47,
+      "organization_id": 9
+    },
+    {
+      "amount": 8404.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Kelly",
+      "donor_last_name": "Hart",
+      "id": 48,
+      "organization_id": 8
+    },
+    {
+      "amount": 8238.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Amy",
+      "donor_last_name": "Chandler",
+      "id": 49,
+      "organization_id": null
+    },
+    {
+      "amount": 1617.0,
+      "anonymous_status": false,
+      "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
+      "donor_first_name": "Austin",
+      "donor_last_name": "Kelley",
+      "id": 50,
+      "organization_id": 9
+    },
+    {
+      "amount": 200.0,
+      "anonymous_status": true,
+      "donated_on": "Sat, 11 May 2024 11:26:57 GMT",
+
+      "id": 51,
+      "organization_id": 3
+    },
+    {
+      "amount": 200.0,
+      "anonymous_status": true,
+      "donated_on": "Sat, 11 May 2024 11:40:33 GMT",
+      "id": 52,
+      "organization_id": 3
+    },
+    {
+      "amount": 500.0,
+      "anonymous_status": true,
+      "donated_on": "Sat, 11 May 2024 11:40:45 GMT",
+      "id": 53,
+      "organization_id": 3
+    },
+    {
+      "amount": 500.0,
+      "anonymous_status": true,
+      "donated_on": "Sat, 11 May 2024 11:40:45 GMT",
+      "id": 54,
+      "organization_id": 3
+    },
+    {
+      "amount": 400.0,
+      "anonymous_status": true,
+      "donated_on": "Sat, 11 May 2024 11:40:50 GMT",
+      "id": 55,
+      "organization_id": 3
+    },
+    {
+      "amount": 400.0,
+      "anonymous_status": true,
+      "donated_on": "Sat, 11 May 2024 11:51:40 GMT",
+      "id": 56,
+      "organization_id": 5
+    },
+    {
+      "amount": 400.0,
+      "anonymous_status": true,
+      "donated_on": "Sat, 11 May 2024 11:51:45 GMT",
+      "id": 57,
+      "organization_id": 9
+    },
+    {
+      "amount": 400.0,
+      "anonymous_status": true,
+      "donated_on": "Sat, 11 May 2024 11:51:50 GMT",
+      "id": 58,
+      "organization_id": 10
+    },
+    {
+      "amount": 400.0,
+      "anonymous_status": true,
+      "donated_on": "Sat, 11 May 2024 11:51:53 GMT",
+      "id": 59,
+      "organization_id": 11
     }
   ],
   "beneficiaryStories": [
@@ -151,62 +637,60 @@
       "title": "John Kimani"
     }
   ],
-   "blogs": [
-     {
-       "title": "Combating Environmental Degradation: Encouraging Repeat Donations",
-       "image": "https://source.unsplash.com/random/600x400",
-       "timeToRead": "5",
-       "description": "Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts."
-     },
-     {
-       "title": "Combating Environmental Degradation: Encouraging Repeat Donations",
-       "image": "https://source.unsplash.com/random/600x400",
-       "timeToRead": "5",
-       "description": "Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts."
-     },
-     {
-       "title": "Another Blog Post",
-       "image": "https://source.unsplash.com/random/600x400",
-       "timeToRead": "3",
-       "description": "This is another blog post. It's about something else."
-     },
-     {
-       "title": "Combating Environmental Degradation: Encouraging Repeat Donations",
-       "image": "https://source.unsplash.com/random/600x400",
-       "timeToRead": "5",
-       "description": "Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts."
-     }
-   ],
-   "testimonials":[
-     {
-       "id": 1,
-       "name": "John Doe",
-       "logo": "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BvdGlmeSUyMGxvZ298ZW58MHx8MHx8fDA%3D",
-       "message": "Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services",
-       "image": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D"
-     },
-     {
-       "id": 2,
-       "name": "Jane Doe",
-       "logo": "https://images.unsplash.com/photo-1705988142466-e468bc654eeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2xhY2slMjBsb2dvfGVufDB8fDB8fHww",
-       "message": "Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services",
-       "image": "https://plus.unsplash.com/premium_photo-1683141202259-ee13ddd953fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D"
-     },
-     {
-       "id": 3,
-       "name": "Jane Doe",
-       "logo": "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BvdGlmeSUyMGxvZ298ZW58MHx8MHx8fDA%3D",
-       "message": "Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services",
-       "image": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D"
-     },
-     {
-       "id": 4,
-       "name": "Jane Doe",
-       "logo": "https://images.unsplash.com/photo-1705988142466-e468bc654eeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2xhY2slMjBsb2dvfGVufDB8fDB8fHww",
-       "message": "Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services",
-       "image": "https://images.unsplash.com/photo-1543807535-eceef0bc6599?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D"
-     }
-   ]
-
-
+  "blogs": [
+    {
+      "title": "Combating Environmental Degradation: Encouraging Repeat Donations",
+      "image": "https://source.unsplash.com/random/600x400",
+      "timeToRead": "5",
+      "description": "Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts."
+    },
+    {
+      "title": "Combating Environmental Degradation: Encouraging Repeat Donations",
+      "image": "https://source.unsplash.com/random/600x400",
+      "timeToRead": "5",
+      "description": "Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts."
+    },
+    {
+      "title": "Another Blog Post",
+      "image": "https://source.unsplash.com/random/600x400",
+      "timeToRead": "3",
+      "description": "This is another blog post. It's about something else."
+    },
+    {
+      "title": "Combating Environmental Degradation: Encouraging Repeat Donations",
+      "image": "https://source.unsplash.com/random/600x400",
+      "timeToRead": "5",
+      "description": "Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts."
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "logo": "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BvdGlmeSUyMGxvZ298ZW58MHx8MHx8fDA%3D",
+      "message": "Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services",
+      "image": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "logo": "https://images.unsplash.com/photo-1705988142466-e468bc654eeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2xhY2slMjBsb2dvfGVufDB8fDB8fHww",
+      "message": "Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services",
+      "image": "https://plus.unsplash.com/premium_photo-1683141202259-ee13ddd953fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": 3,
+      "name": "Jane Doe",
+      "logo": "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BvdGlmeSUyMGxvZ298ZW58MHx8MHx8fDA%3D",
+      "message": "Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services",
+      "image": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": 4,
+      "name": "Jane Doe",
+      "logo": "https://images.unsplash.com/photo-1705988142466-e468bc654eeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2xhY2slMjBsb2dvfGVufDB8fDB8fHww",
+      "message": "Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services",
+      "image": "https://images.unsplash.com/photo-1543807535-eceef0bc6599?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D"
+    }
+  ]
 }

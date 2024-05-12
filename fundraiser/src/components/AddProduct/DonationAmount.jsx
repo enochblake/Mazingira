@@ -36,9 +36,9 @@ const DonationAmount = () => {
 
   const filteredDonors = donors.filter((donor) => {
     if (activeType === 'non-anonymous') {
-      return !donor.anonymous;
+      return !donor.anonymous_status;
     }
-    return donor.anonymous;
+    return donor.anonymous_status;
   });
 
   const totalAmountForType = filteredDonors.reduce(
@@ -86,13 +86,14 @@ const DonationAmount = () => {
                 <li className='flex items-center py-4'>
                   <div>
                     <p className='text-lg'>
-                      {donor.anonymous
+                      {donor.anonymous_status ||
+                      (!donor.donor_first_name && !donor.donor_last_name)
                         ? 'Anonymous'
-                        : `${donor.firstName} ${donor.lastName}`}
+                        : `${donor.donor_first_name} ${donor.donor_last_name}`}
                     </p>
                     <p className='text-gray-400 text-lg'>
-                      Donated on: {donor.date}
-                    </p>{' '}
+                      Donated on: {donor.donated_on}
+                    </p>
                   </div>
                   <div className='text-orange-500 text-xl font-bold ml-auto'>
                     ${donor.amount}
