@@ -5,6 +5,7 @@ const DonationAmount = () => {
   const [donors, setDonors] = useState([]);
   const [activeType, setActiveType] = useState('non-anonymous');
   const [totalAmount, setTotalAmount] = useState(0);
+  const [totalOrganizationAmount, setTotalOrganizationAmount] = useState(0);
 
   useEffect(() => {
     fetchData();
@@ -15,7 +16,13 @@ const DonationAmount = () => {
       const response = await axios.get('http://localhost:5000/donationAmount');
       const data = response.data;
       setDonors(data);
-      setTotalAmount(data.reduce((acc, donor) => acc + donor.amount, 0));
+      const totalAmount = data.reduce((acc, donor) => acc + donor.amount, 0);
+      setTotalAmount(totalAmount);
+      const totalOrganizationAmount = data.reduce(
+        (acc, donor) => acc + donor.amount,
+        0
+      );
+      setTotalOrganizationAmount(totalOrganizationAmount);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -80,9 +87,13 @@ const DonationAmount = () => {
           </ul>
         </div>
         <div className='w-1/2'>
-          <div className='bg-white p-4 rounded shadow-md'>
+          <div className='bg-white p-4 rounded shadow-md mb-4'>
             <h2 className='text-lg font-bold'>Total Amount</h2>
             <p className='text-2xl'>${totalAmountForType}</p>
+          </div>
+          <div className='bg-white p-4 rounded shadow-md'>
+            <h2 className='text-lg font-bold'>Total Organization Amount</h2>
+            <p className='text-2xl'>${totalOrganizationAmount}</p>
           </div>
         </div>
       </div>
