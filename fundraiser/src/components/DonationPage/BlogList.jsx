@@ -1,4 +1,4 @@
-// bloglist.jsx
+// DonatePage/bloglist.jsx
 import React from 'react';
 import BlogPreview, { blogs } from './BlogPreview';
 
