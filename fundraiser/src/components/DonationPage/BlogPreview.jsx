@@ -1,10 +1,9 @@
-//blogpreview.jsx
+//components/DonationPage/BlogPreview.jsx
 import React, { useState } from 'react';
-import '../../index.css'
-
+import '../../index.css';
 
 const BlogPreview = ({ title, image, timeToRead, description, index }) => {
-  const isEven = index % 2 === 0; 
+  const isEven = index % 2 === 0;
   const [expanded, setExpanded] = useState(false);
   const [prevDescription, setPrevDescription] = useState(description);
 
@@ -18,7 +17,9 @@ const BlogPreview = ({ title, image, timeToRead, description, index }) => {
   return (
     <div
       className={`bg-gray-50 shadow-md rounded-lg p-6 mb-6 ${
-        index === 0 ? 'flex justify-center w-full' : 'w-1/2 md:w-1/3 lg:w-1/4 m-5'
+        index === 0
+          ? 'flex justify-center w-full'
+          : 'w-1/2 md:w-1/3 lg:w-1/4 m-5'
       }`}
     >
       {index === 0 ? (
@@ -94,43 +95,10 @@ const BlogPreview = ({ title, image, timeToRead, description, index }) => {
               </span>
             )}
           </div>
-          </div>
+        </div>
       )}
     </div>
   );
 };
-
-
-
-
-export const blogs = [
-  {
-    title: 'Combating Environmental Degradation: Encouraging Repeat Donations',
-    image: 'https://source.unsplash.com/random/600x400',
-    timeToRead: '5',
-    description:
-      'Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts.',
-  },
-  {
-    title: 'Combating Environmental Degradation: Encouraging Repeat Donations',
-    image: 'https://source.unsplash.com/random/600x400',
-    timeToRead: '5',
-    description:
-      'Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts.',
-  },
-  {
-    title: 'Another Blog Post',
-    image: 'https://source.unsplash.com/random/600x400',
-    timeToRead: '3',
-    description: "This is another blog post. It's about something else.",
-  },
-  {
-    title: 'Combating Environmental Degradation: Encouraging Repeat Donations',
-    image: 'https://source.unsplash.com/random/600x400',
-    timeToRead: '5',
-    description:
-      'Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts.',
-  },
-];
 
 export default BlogPreview;
