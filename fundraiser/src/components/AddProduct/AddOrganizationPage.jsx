@@ -7,6 +7,14 @@ const AddOrganization = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [websiteURL, setWebsiteURL] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
+  const [image, setImage] = useState(null);
+  const [imagePreview, setImagePreview] = useState(null);
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    setImage(file);
+    setImagePreview(URL.createObjectURL(file)); 
+  };
 
   const handleCategoryChange = (e) => {
     setSelectedCategory(e.target.value);
@@ -20,6 +28,26 @@ const AddOrganization = () => {
   return (
     <div className='container mx-auto py-8'>
       <h1 className='text-2xl font-bold mb-4'>Add Organization</h1>
+      <div className='mb-4'>
+        <img
+          className='mb-2'
+          src={imagePreview || 'https://via.placeholder.com/200'}
+          alt='Organization Preview'
+          style={{ maxWidth: '200px' }}
+        />
+        <label className='block text-gray-700 font-bold mb-2' htmlFor='image'>
+          Organization Image
+        </label>
+        <input
+          className='appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+          id='image'
+          type='file'
+          accept='image/*'
+          onChange={handleImageUpload}
+          required
+        />
+      </div>
+
       <form onSubmit={handleSubmit}>
         <div className='mb-4'>
           <label
