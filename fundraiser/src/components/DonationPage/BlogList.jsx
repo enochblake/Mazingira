@@ -1,25 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import BlogPreview from './BlogPreview';
-import axios from 'axios'; // Import axios for making HTTP requests
+import axios from 'axios'; 
 
 const BlogList = () => {
-  const [blogs, setBlogs] = useState([]); // State to store fetched blogs
+  const [blogs, setBlogs] = useState([]); 
 
   useEffect(() => {
-    // Function to fetch blogs when component mounts
     const fetchBlogs = async () => {
       try {
-        // Make GET request to fetch blogs from the endpoint
         const response = await axios.get('http://localhost:5000/blogs');
-        // Set the fetched blogs to state
         setBlogs(response.data);
       } catch (error) {
         console.error('Error fetching blogs:', error);
       }
     };
 
-    fetchBlogs(); // Call the fetchBlogs function
-  }, []); // Empty dependency array to run the effect only once on mount
+    fetchBlogs(); 
+  }, []); 
 
   return (
     <div className='bg-gray-200 '>
