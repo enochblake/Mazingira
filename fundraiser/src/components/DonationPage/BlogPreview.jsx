@@ -70,11 +70,11 @@ const BlogPreview = ({ title, image, timeToRead, description, index }) => {
           <div className='absolute top-0 left-0 w-full h-full blur mt-8'></div>
           <div className='p-4 text-black absolute top-0 left-0'>
             <h2 className='text-2xl font-bold mb-2'>{title}</h2>
-            <p className='text-gray-700 text-sm mb-4'>
+            <p className='text-white text-sm font-bold mb-4'>
               Read time:
-              <span className='text-orange-500'>{` ${timeToRead} min`}</span>
+              <span className='text-orange-700 font-bold text-lg'>{` ${timeToRead} min`}</span>
             </p>
-            <p className='text-gray-700 mb-4'>
+            <p className='text-white mb-4'>
               {expanded ? description : `${prevDescription.slice(0, 150)}...`}
             </p>
             {!expanded && (
