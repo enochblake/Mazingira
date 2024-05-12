@@ -45,7 +45,7 @@ const AddOrganization = () => {
             handleCategoryChange={handleInputChange}
           />
         </div>
-        <div className='w-1/2 px-4'>
+        <div className='w-1/2 px-4 text-lg'>
           <form onSubmit={handleSubmit}>
             <InputField
               label='Organization Name'
@@ -87,7 +87,7 @@ const AddOrganization = () => {
                 Cancel
               </Button>
               <Button
-                className='bg-white hover:bg-orange-700 text-black text-lg font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline border-4 border-orange-500'
+                className='bg-white hover:bg-orange-700 text-black text-lg font-bold py-1 px-4 rounded-md focus:outline-none focus:shadow-outline border-4 border-orange-500'
                 type='submit'
               >
                 Save
@@ -137,7 +137,6 @@ const CategorySelection = ({ selectedCategory, handleCategoryChange }) => {
       </label>
       <div>
         <RadioOption
-          className='form-radio text-orange-600'
           value='air'
           checked={selectedCategory === 'air'}
           onChange={handleCategoryChange}
@@ -145,7 +144,6 @@ const CategorySelection = ({ selectedCategory, handleCategoryChange }) => {
           Air
         </RadioOption>
         <RadioOption
-          className='form-radio text-orange-600'
           value='water'
           checked={selectedCategory === 'water'}
           onChange={handleCategoryChange}
@@ -153,7 +151,6 @@ const CategorySelection = ({ selectedCategory, handleCategoryChange }) => {
           Water
         </RadioOption>
         <RadioOption
-          className='form-radio text-orange-600'
           value='land'
           checked={selectedCategory === 'land'}
           onChange={handleCategoryChange}
@@ -170,19 +167,22 @@ const RadioOption = ({ value, checked, onChange, children }) => {
     <label className='inline-flex items-center mr-6 cursor-pointer'>
       <input
         type='radio'
-        className='form-radio h-5 w-5 text-orange-500'
+        className='form-radio h-5 w-5 text-orange-500 border-orange-500'
         value={value}
         checked={checked}
-        onChange={onChange}
+        onChange={() =>
+          onChange({ target: { name: 'selectedCategory', value } })
+        }
       />
       <span className='ml-2 text-gray-700'>{children}</span>
     </label>
   );
 };
 
+
 const InputField = ({ label, name, value, onChange }) => {
   return (
-    <div className='mb-4'>
+    <div className='mb-2'>
       <label className='block text-gray-700 font-bold mb-2'>{label}</label>
       <input
         className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
