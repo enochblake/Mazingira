@@ -54,12 +54,17 @@ const OrganizationDetails = () => {
             </Link>
             <Link to='/testimonials-page'>
               <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
-                View
+                TESTIMONIALS
               </button>
             </Link>
             <Link to='/blogList-page'>
               <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
                 Blog
+              </button>
+            </Link>
+            <Link to='/add_org-page'>
+              <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
+                ADD_ORG
               </button>
             </Link>
           </div>

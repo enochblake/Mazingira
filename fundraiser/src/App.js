@@ -8,6 +8,7 @@ import OrganizationDetails from './components/Organizitons/OrganizationDetails';
 import PayPage from './components/DonationsPay/PayPage';
 import TestimonialsTwo from './components/StoriesFromUsers/Stories.jsx'
 import BlogList from './components/DonationPage/BlogList'
+import AddOrganization from './components/AddProduct/AddOrganizationPage.jsx';
 function App() {
   return (
     <Router>
@@ -18,6 +19,7 @@ function App() {
         <Route path='/pay-page' element={<PayPage />} />
         <Route path='/testimonials-page' element={<TestimonialsTwo />} />
         <Route path='/blogList-page' element={<BlogList />} />
+        <Route path='/add_org-page' element={<AddOrganization />} />
 
       </Routes>
     </Router>
