@@ -80,7 +80,7 @@ const DonationAmount = () => {
               ? 'Non-Anonymous Donors'
               : 'Anonymous Donors'}
           </h2>
-          <ul className='w-1/2'>
+          <ul className='w-3/4'>
             {filteredDonors.map((donor, index) => (
               <React.Fragment key={donor.id}>
                 <li className='flex items-center py-4'>
