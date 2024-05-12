@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DonationPage from './components/DonationPage/DonationPage'; 
 import OrganizationDetails from './components/Organizitons/OrganizationDetails';
 import PayPage from './components/DonationsPay/PayPage';
-import TestimonialsTwo from './components/StoriesFromUsers/Stories.jsx'
+import TestimonialsTwo from './components/StoriesFromUsers/TetimonialsTwo.jsx'
 import BlogList from './components/DonationPage/BlogList'
 import AddOrganization from './components/AddProduct/AddOrganizationPage.jsx';
 import RegistrationPage from './components/AddProduct/RegistrationPage.jsx';
