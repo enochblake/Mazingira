@@ -1,7 +1,8 @@
 //blogpreview.jsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import '../../index.css'
+
+
 const BlogPreview = ({ title, image, timeToRead, description, index }) => {
   const isEven = index % 2 === 0; 
   const [expanded, setExpanded] = useState(false);
@@ -17,7 +18,7 @@ const BlogPreview = ({ title, image, timeToRead, description, index }) => {
   return (
     <div
       className={`bg-white shadow-md rounded-lg p-6 mb-6 ${
-        index === 0 ? 'flex justify-center w-full' : 'w-1/2 md:w-1/3 lg:w-1/4'
+        index === 0 ? 'flex justify-center w-full' : 'w-1/2 md:w-1/3 lg:w-1/4 m-5'
       }`}
     >
       {index === 0 ? (
@@ -93,7 +94,7 @@ const BlogPreview = ({ title, image, timeToRead, description, index }) => {
               </span>
             )}
           </div>
-        </div>
+          </div>
       )}
     </div>
   );
