@@ -61,6 +61,19 @@ function Navbar() {
             AuthForm
           </Link>
         </li>
+        <li>
+          <Link
+            to='/all_organizations'
+            className={`mx-4 text-white font-bold text-lg ${
+              selectedContent === 'AllOrganizations'
+                ? 'border-b-4 border-orange-500'
+                : ''
+            }`}
+            onClick={() => handleContentChange('AllOrganizations')}
+          >
+            All Organizations
+          </Link>
+        </li>
       </ul>
     </div>
   );

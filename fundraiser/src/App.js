@@ -17,6 +17,7 @@ import Home from './components/Pages/Home.jsx';
 import AboutUs from './components/Pages/AboutUs.jsx';
 import ContactUs from './components/Pages/ContactUs.jsx';
 import Navbar from './components/Pages/Navbar.jsx'
+import Organization from './components/Organizitons/Organization';
 function App() {
   return (
     <Router>
@@ -26,6 +27,7 @@ function App() {
         <Route path='/donor' element={<Donor />} />
         <Route path='/' element={<Home />} />
         <Route path='/about-us' element={<AboutUs />} />
+        <Route path='/all_organizations' element={<Organization />} />
         <Route path='/contact-us' element={<ContactUs />} />
         <Route path='/donation-page/:id' element={<DonationPage />} />
         <Route path='/organization/:id' element={<OrganizationDetails />} />

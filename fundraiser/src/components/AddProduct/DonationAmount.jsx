@@ -46,11 +46,11 @@ const DonationAmount = () => {
   );
 
   return (
-    <div className='bg-gray-100'>
+    <div className='bg-gray-100 '>
         <h1 className='text-4xl font-bold text-center mb-4 text-orange-700'>
           Donation Amount Page
         </h1>
-      <div className='bg-gray-700 min-h-screen w-3/4 p-16 mx-auto'>
+      <div className='bg-gray-700 min-h-screen  p-16 mx-10 mb-2'>
         <div className='container mx-auto border shadow-md mt-4 bg-gray-100 w-4/7 justify-center text-center p-4 pl-5'>
           <div className='flex mb-4 mt-7'>
             <span
@@ -85,9 +85,9 @@ const DonationAmount = () => {
                 <ul className='w-3/4'>
                   {filteredDonors.map((donor, index) => (
                     <React.Fragment key={donor.id}>
-                      <li className='flex items-center py-4'>
+                      <li className='flex  py-4'>
                         <div>
-                          <p className='text-lg'>
+                          <p className='text-lg flex justify-start font-semibold'>
                             {donor.anonymous_status ||
                             (!donor.donor_first_name && !donor.donor_last_name)
                               ? 'Anonymous'

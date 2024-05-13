@@ -156,7 +156,7 @@ function ContactUs() {
                       value={formData.firstName}
                       onChange={handleChange}
                       placeholder='First Name'
-                      className='w-full border-b border-gray-300 focus:outline-none text-lg'
+                      className='w-full border-b border-gray-300 focus:outline-none text-lg text-gray-500'
                     />
                     <input
                       type='text'

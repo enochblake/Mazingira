@@ -10,7 +10,7 @@ const CategoryBar = ({ categories, activeCategory, setActiveCategory }) => {
   };
 
   return (
-    <aside className='w-64 bg-gray-100 p-4'>
+    <aside className='w-64 bg-gray-200 p-4'>
       <h2 className='text-2xl font-bold mb-4'>Categories</h2>
       <nav aria-label='Categories'>
         {categories.map((category, categoryId) => (

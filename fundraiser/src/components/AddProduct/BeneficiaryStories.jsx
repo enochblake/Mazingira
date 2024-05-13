@@ -54,8 +54,8 @@ const BeneficiaryStories = () => {
       {activeTab === 'create' ? (
         <CreateBeneficiaryStory />
       ) : (
-        <div className='bg-gray-700 min-h-screen'>
-          <div className='grid grid-cols-1 rounded border shadow-md p-7 md:grid-cols-3 gap-6 bg-white w-3/4 mx-auto'>
+        <div className='bg-gray-700  mb-5 pt-10 mx-10'>
+          <div className='grid grid-cols-1 rounded border shadow-md p-7 md:grid-cols-3 gap-6 bg-white w-3/4 mx-auto  justify-center'>
             {currentStories.map((story) => (
               <div key={story.id} className='flex flex-col'>
                 <img
@@ -94,12 +94,12 @@ const Pagination = ({ storiesPerPage, totalStories, paginate }) => {
   }
 
   return (
-    <ul className='flex justify-center mt-6'>
+    <ul className='flex justify-center mt-3 '>
       {pageNumbers.map((number) => (
         <li key={number}>
           <button
             onClick={() => paginate(number)}
-            className='bg-orange-500 hover:bg-orange-700 text-white font-bold text-lg py-1 px-5 rounded m-4'
+            className='bg-orange-500 hover:bg-orange-700 text-white font-bold text-xl py-1 px-5 rounded m-2'
           >
             {number}
           </button>
