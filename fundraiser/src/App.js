@@ -13,11 +13,20 @@ import RegistrationPage from './components/AddProduct/RegistrationPage.jsx';
 import DonationAmount from './components/AddProduct/DonationAmount.jsx';
 import AddBeneficiaryStory from './components/AddProduct/AddBeneficiaryStories.jsx';
 import BeneficiaryStories from './components/AddProduct/BeneficiaryStories.jsx';
+import Home from './components/Pages/Home.jsx';
+import AboutUs from './components/Pages/AboutUs.jsx';
+import ContactUs from './components/Pages/ContactUs.jsx';
+import Navbar from './components/Pages/Navbar.jsx'
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
-        <Route path='/' element={<Donor />} />
+
+        <Route path='/donor' element={<Donor />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/about-us' element={<AboutUs />} />
+        <Route path='/contact-us' element={<ContactUs />} />
         <Route path='/donation-page/:id' element={<DonationPage />} />
         <Route path='/organization/:id' element={<OrganizationDetails />} />
         <Route path='/pay-page' element={<PayPage />} />
@@ -29,7 +38,7 @@ function App() {
         <Route path='/create_stories-page' element={<AddBeneficiaryStory />} />
         <Route path='/b_stories-page' element={<BeneficiaryStories />} />
       </Routes>
-    </Router>
+      </Router>
   );
 }
 
