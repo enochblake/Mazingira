@@ -9,7 +9,8 @@ import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     message: '',
   });
@@ -63,32 +64,42 @@ function Contact() {
                 <h1 className='font-bold text-white text-4xl'>
                   Get in Touch With Us
                 </h1>
-                <p className='text-2xl text-white'>
+                <p className='text-xl text-white mt-3 italic mb-5'>
                   Reach out to Mazingira, our platform for positive change! Your
                   donations fuel our mission to create a greener, brighter
                   future. Join us today in making a difference for our planet.
                 </p>
-                <p className='font-bold text-xl text-white'>
+                <p className='font-bold text-2xl text-white'>
                   <FontAwesomeIcon
                     icon={faLocationPin}
                     className='text-3xl text-orange-500 mr-3'
                   />
                   Find us at the office
-                  <p>Bld Mihail Kogalniceanu, nr. 8</p>
-                  <p>7652 Bucharest</p>
-                  <p>Romania</p>
+                  <p className='text-lg text-gray-100 ml-10'>
+                    {' '}
+                    ~ Bld Mihail Kogalniceanu, nr. 8
+                  </p>
+                  <p className='text-lg text-gray-100 ml-10'>
+                    {' '}
+                    ~ 7652 Bucharest
+                  </p>
+                  <p className='text-lg text-gray-100 ml-10'> ~ Romania</p>
                 </p>
 
-                <p className='font-bold text-2xl text-white'>
+                <p className='font-bold text-2xl text-white mt-5 '>
                   <FontAwesomeIcon
                     icon={faPhone}
                     className='text-3xl
-                    text-orange-700'
+                    text-orange-500'
                   />{' '}
                   Give us a ring
-                  <p className='text-lg text-gray-100'>Michael Jordan </p>
-                  <p>+40 762 321 762 </p>
-                  <p>Mon - Fri, 8:00-22:00</p>
+                  <p className='text-lg text-gray-100 ml-10'>
+                    ~ Michael Jordan
+                  </p>
+                  <p className='text-lg text-gray-100 ml-10'>
+                    ~ +40 762 321 762{' '}
+                  </p>
+                  <p className='text-lg text-gray-100 ml-10'> ~ Mon - Fri, 8:00-22:00</p>
                 </p>
               </div>
             </div>
@@ -104,64 +115,83 @@ function Contact() {
             justifyContent='center'
             alignItems='center'
           >
-              <div className='signup-container  bg-orange-500  rounded-lg mx-2 -mt-12 p-2 mb-1 text-center relative z-10 w-[70%] h-[80%]'>
-                <h4 className='text-white font-medium mt-1'>Sign in</h4>
-                <Grid
-                  container
-                  spacing={3}
-                  justifyContent='center'
-                  className='mt-1 mb-2 '
-                >
-                  <Grid item xs={2}>
-                    <a href='#' className='text-white'>
-                      <FacebookIcon />
-                    </a>
-                  </Grid>
-                  <Grid item xs={2}>
-                    <a href='#' className='text-white'>
-                      <GitHubIcon />
-                    </a>
-                  </Grid>
-                  <Grid item xs={2}>
-                    <a href='#' className='text-white'>
-                      <GoogleIcon />
-                    </a>
-                  </Grid>
+            <div className='signup-container  bg-orange-400  rounded-lg mx-2 -mt-12 p-2 mb-1 text-center relative z-10 w-[70%] h-[80%]'>
+              <h4 className='text-white font-medium mt-1'>Sign in</h4>
+              <Grid
+                container
+                spacing={3}
+                justifyContent='center'
+                className='mt-1 mb-2 '
+              >
+                <Grid item xs={2}>
+                  <a href='#' className='text-white'>
+                    <FacebookIcon />
+                  </a>
                 </Grid>
-              </div>
+                <Grid item xs={2}>
+                  <a href='#' className='text-white'>
+                    <GitHubIcon />
+                  </a>
+                </Grid>
+                <Grid item xs={2}>
+                  <a href='#' className='text-white'>
+                    <GoogleIcon />
+                  </a>
+                </Grid>
+              </Grid>
+            </div>
             <div className='mx-auto text-center'>
               <Grid item xs={11} sm={9} md={5} lg={4} xl={3}>
-                <form className=' p-5 w-[80vh] h-[70vh] mt-5'>
+                <form
+                  onSubmit={handleSubmit}
+                  className=' p-5 w-[80vh] h-[70vh] mt-5'
+                >
+                  <div className='mb-10 mt-5 grid grid-cols-2 gap-4 '>
+                    <input
+                      type='text'
+                      name='firstName'
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      placeholder='First Name'
+                      className='w-full border-b border-gray-300 focus:outline-none'
+                    />
+                    <input
+                      type='text'
+                      name='lastName'
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      placeholder='Last Name'
+                      className='w-full border-b border-gray-300 focus:outline-none'
+                    />
+                  </div>
                   <div className='mb-2'>
                     <input
                       type='email'
+                      name='email'
+                      value={formData.email}
+                      onChange={handleChange}
                       placeholder='Email'
-                      className='w-full p-2 border border-gray-300 rounded'
+                      className='w-full border-b border-gray-300 focus:outline-none mt-5'
                     />
                   </div>
                   <div className='mb-2'>
-                    <input
-                      type='password'
-                      placeholder='Password'
-                      className='w-full p-2 border border-gray-300 rounded'
-                    />
+                    <textarea
+                      name='message'
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder='Your Message'
+                      rows='4'
+                      className='w-full border-b border-gray-300 focus:outline-none mt-7'
+                    ></textarea>
                   </div>
 
-                  <div className='mb-1'>
-                    <button className='w-full bg-gradient-to-r from-blue-600 to-blue-400 text-white p-2 rounded hover:bg-blue-500'>
-                      Sign in
+                  <div className='mb-1 flex justify-end '>
+                    <button
+                      type='submit'
+                      className='w-1/4 bg-orange-400  text-white p-3 rounded hover:bg-orange-500 mt-10 '
+                    >
+                      SEND MESSAGE
                     </button>
-                  </div>
-                  <div className='text-center'>
-                    <p className='text-sm text-gray-600'>
-                      Don't have an account?{' '}
-                      <Link
-                        to='/authentication/sign-up/cover'
-                        className='text-blue-600'
-                      >
-                        Sign up
-                      </Link>
-                    </p>
                   </div>
                 </form>
               </Grid>
