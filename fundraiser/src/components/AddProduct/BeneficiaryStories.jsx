@@ -29,7 +29,7 @@ const BeneficiaryStories = () => {
   };
 
   return (
-    <div className=''>
+    <div className='bg-gray-100'>
       <h2 className='text-4xl font-bold text-orange-700 text-center mb-4'>
         BENEFICIARIES STORIES
       </h2>
