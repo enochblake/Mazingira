@@ -104,7 +104,7 @@ function Contact() {
             justifyContent='center'
             alignItems='center'
           >
-              <div className='signup-container bg-gradient-to-r from-orange-600 to-green-400 rounded-lg mx-2 -mt-12 p-2 mb-1 text-center relative z-10 w-[70%] h-[80%]'>
+              <div className='signup-container  bg-orange-500  rounded-lg mx-2 -mt-12 p-2 mb-1 text-center relative z-10 w-[70%] h-[80%]'>
                 <h4 className='text-white font-medium mt-1'>Sign in</h4>
                 <Grid
                   container
@@ -131,7 +131,7 @@ function Contact() {
               </div>
             <div className='mx-auto text-center'>
               <Grid item xs={11} sm={9} md={5} lg={4} xl={3}>
-                <form className=' p-5 w-[70vh] h-[70vh]'>
+                <form className=' p-5 w-[80vh] h-[70vh] mt-5'>
                   <div className='mb-2'>
                     <input
                       type='email'
