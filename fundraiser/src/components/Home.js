@@ -11,7 +11,9 @@ function Home() {
       >
         <div className='container mx-auto'>
           <div className='text-center text-white'>
-            <h1 className='text-4xl lg:text-5xl mb-3 font-bold text-orange-500'>Mazingira</h1>
+            <h1 className='text-4xl lg:text-5xl mb-3 font-bold text-orange-500'>
+              Mazingira
+            </h1>
             <p className='opacity-75 pr-6 mr-6 text-lg text-black font-bold'>
               The time is now for it be okay to be great. People in this world
               shun people for being nice.
