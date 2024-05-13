@@ -1,257 +1,114 @@
-// // import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Card from '@mui/material/Card';
+import Switch from '@mui/material/Switch';
+import Grid from '@mui/material/Grid';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import GoogleIcon from '@mui/icons-material/Google';
+// import bgImage from 'assets/images/bg-sign-in-basic.jpeg';
 
-// // const About = () => {
-// //   return (
-// //     <div className="about-container">
-// //       <h1>About Mazingira: Empowering Environmental Preservation</h1>
-      
-// //       <div className="problem-statement">
-// //         <h2>Problem Statement</h2>
-// //         <p>
-// //           Mazingira addresses the pressing issue of environmental degradation, which poses a significant threat to our planet. Environmental degradation encompasses the deterioration of the earth's natural resources, including air, water, soil, and habitats, leading to the loss of biodiversity and endangering ecosystems worldwide. The lack of sustainable practices and resources exacerbates this problem, threatening the well-being of current and future generations.
-// //         </p>
-// //         <p>
-// //           Furthermore, traditional funding models for environmental conservation efforts often fall short in meeting the escalating demands for urgent action. Many environmental organizations struggle to secure consistent funding, hindering their ability to implement long-term solutions and respond effectively to environmental challenges. Thus, there is a critical need for innovative approaches to empower both organizations and individuals to contribute meaningfully to environmental preservation.
-// //         </p>
-// //       </div>
-      
-// //       <div className="solution">
-// //         <h2>Solution</h2>
-// //         <p>
-// //           Mazingira offers a comprehensive solution by empowering individuals and organizations to contribute to environmental preservation efforts effectively. Our platform facilitates regular donations to environmental organizations, enabling them to implement vital conservation projects, mitigate environmental damage, and protect endangered species. By fostering a community-driven approach to environmental stewardship, Mazingira aims to combat environmental degradation and promote sustainability on a global scale.
-// //         </p>
-// //         <p>
-// //           Through Mazingira, donors can make a tangible impact by supporting their chosen environmental causes with recurring donations. This sustained support enables organizations to plan and execute projects more effectively, fostering long-term environmental sustainability. Additionally, our platform provides transparency and accountability, allowing donors to track the impact of their contributions and stay informed about the progress of conservation efforts.
-// //         </p>
-// //       </div>
-      
-// //       <div className="team">
-// //         <h2>Team</h2>
-// //         <p>
-// //           The Mazingira project is driven by a dedicated team of professionals passionate about environmental conservation and technology innovation. Our interdisciplinary team combines expertise in full-stack development, environmental science, and sustainability to create a robust platform that empowers users to make a positive impact on the planet.
-// //         </p>
-// //         <p>
-// //           We are committed to leveraging our collective knowledge and skills to develop innovative solutions that address the complex challenges of environmental degradation. Through collaboration and creativity, we strive to build a platform that not only meets the needs of our users but also drives positive change in the global environmental landscape.
-// //         </p>
-// //       </div>
-      
-// //       <div className="users">
-// //         <h2>Users</h2>
-// //         <p>
-// //           Mazingira caters to three primary user categories:
-// //         </p>
-// //         <ul>
-// //           <li><strong>Environmental Preservation Organizations:</strong> Non-profit organizations dedicated to environmental conservation. These organizations rely on Mazingira to secure funding for their projects and engage with donors effectively.</li>
-// //           <li><strong>Donors:</strong> Individuals and entities interested in supporting environmental causes through donations. Donors can explore a variety of organizations and causes on Mazingira, make contributions, and track the impact of their donations over time.</li>
-// //           <li><strong>Administrators:</strong> Platform administrators responsible for managing organization applications and overseeing platform operations. Administrators play a crucial role in maintaining the integrity and functionality of Mazingira, ensuring a seamless experience for all users.</li>
-// //         </ul>
-// //       </div>
-      
-// //       <div className="user-stories">
-// //         <h2>User Stories</h2>
-// //         <p>
-// //           Mazingira prioritizes user-centric design and functionality to ensure a seamless experience for all users. Key user stories include:
-// //         </p>
-// //         {/* User stories can be listed here */}
-// //         <ul>
-// //           <li>As a donor, I want to easily discover and support environmental organizations aligned with my values.</li>
-// //           <li>As an environmental preservation organization, I want to efficiently communicate my mission and projects to potential donors.</li>
-// //           <li>As an administrator, I want to streamline the organization approval process and maintain transparency in platform operations.</li>
-// //           {/* Additional user stories can be added */}
-// //         </ul>
-// //       </div>
-      
-// //       <div className="technical-expectations">
-// //         <h2>Technical Expectations</h2>
-// //         <p>
-// //           Mazingira leverages cutting-edge technologies to deliver a robust and user-friendly platform. Technical expectations include:
-// //         </p>
-// //         <ul>
-// //           <li><strong>Backend:</strong> Developed using Python Flask for efficient server-side operations and API endpoints. Flask provides flexibility and scalability, allowing for seamless integration with various databases and third-party services.</li>
-// //           <li><strong>Database:</strong> Utilizes PostgreSQL to store and manage data securely. PostgreSQL offers advanced features for data integrity and performance, ensuring reliable storage and retrieval of user and organizational information.</li>
-// //           <li><strong>Frontend:</strong> Built with ReactJS and Redux Toolkit for responsive and interactive user interfaces. ReactJS enables dynamic rendering of content, while Redux Toolkit manages state efficiently, enhancing the overall user experience.</li>
-// //           <li><strong>Wireframes:</strong> Designed using Figma to ensure a mobile-friendly and intuitive user experience. Figma allows for collaborative prototyping and iteration, resulting in well-designed and accessible interface designs.</li>
-// //           <li><strong>Testing Framework:</strong> Implements Jest and Pytest for comprehensive unit and integration testing to maintain code quality and reliability. Automated testing ensures that new features and updates are thoroughly evaluated before deployment, minimizing the risk of bugs and issues.</li>
-// //         </ul>
-// //       </div>
-      
-// //     </div>
-// //   );
-// // };
+function About() {
+  const [rememberMe, setRememberMe] = useState(false);
 
-// // export default About;
-
-
-
-// import React from 'react';
-// import './about.css';
-
-// const About = () => {
-//   const imageUrl = "https://media.istockphoto.com/id/956240592/photo/abstract-watercolor-on-paper-texture-use-as-background.jpg?s=612x612&w=0&k=20&c=AppTJgUDIvwza-uRDc-lJ7uStLJHuJfQwBZGk9X_3Ws=";
-
-//   return (
-//     <div className="about-container" style={{ backgroundImage: `url(${imageUrl})` }}>
-//       <h1>About Mazingira: Empowering Environmental Preservation</h1>
-      
-//       <div className="problem-statement">
-//         <h2>Problem Statement</h2>
-//         <p>
-//           Mazingira addresses the pressing issue of environmental degradation, which poses a significant threat to our planet. Environmental degradation encompasses the deterioration of the earth's natural resources, including air, water, soil, and habitats, leading to the loss of biodiversity and endangering ecosystems worldwide. The lack of sustainable practices and resources exacerbates this problem, threatening the well-being of current and future generations.
-//         </p>
-//         <p>
-//           Furthermore, traditional funding models for environmental conservation efforts often fall short in meeting the escalating demands for urgent action. Many environmental organizations struggle to secure consistent funding, hindering their ability to implement long-term solutions and respond effectively to environmental challenges. Thus, there is a critical need for innovative approaches to empower both organizations and individuals to contribute meaningfully to environmental preservation.
-//         </p>
-//       </div>
-      
-//       <div className="solution">
-//         <h2>Solution</h2>
-//         <p>
-//           Mazingira offers a comprehensive solution by empowering individuals and organizations to contribute to environmental preservation efforts effectively. Our platform facilitates regular donations to environmental organizations, enabling them to implement vital conservation projects, mitigate environmental damage, and protect endangered species. By fostering a community-driven approach to environmental stewardship, Mazingira aims to combat environmental degradation and promote sustainability on a global scale.
-//         </p>
-//         <p>
-//           Through Mazingira, donors can make a tangible impact by supporting their chosen environmental causes with recurring donations. This sustained support enables organizations to plan and execute projects more effectively, fostering long-term environmental sustainability. Additionally, our platform provides transparency and accountability, allowing donors to track the impact of their contributions and stay informed about the progress of conservation efforts.
-//         </p>
-//       </div>
-      
-//       <div className="team">
-//         <h2>Team</h2>
-//         <p>
-//           The Mazingira project is driven by a dedicated team of professionals passionate about environmental conservation and technology innovation. Our interdisciplinary team combines expertise in full-stack development, environmental science, and sustainability to create a robust platform that empowers users to make a positive impact on the planet.
-//         </p>
-//         <p>
-//           We are committed to leveraging our collective knowledge and skills to develop innovative solutions that address the complex challenges of environmental degradation. Through collaboration and creativity, we strive to build a platform that not only meets the needs of our users but also drives positive change in the global environmental landscape.
-//         </p>
-//       </div>
-      
-//       <div className="users">
-//         <h2>Users</h2>
-//         <p>
-//           Mazingira caters to three primary user categories:
-//         </p>
-//         <ul>
-//           <li><strong>Environmental Preservation Organizations:</strong> Non-profit organizations dedicated to environmental conservation. These organizations rely on Mazingira to secure funding for their projects and engage with donors effectively.</li>
-//           <li><strong>Donors:</strong> Individuals and entities interested in supporting environmental causes through donations. Donors can explore a variety of organizations and causes on Mazingira, make contributions, and track the impact of their donations over time.</li>
-//           <li><strong>Administrators:</strong> Platform administrators responsible for managing organization applications and overseeing platform operations. Administrators play a crucial role in maintaining the integrity and functionality of Mazingira, ensuring a seamless experience for all users.</li>
-//         </ul>
-//       </div>
-      
-//       <div className="user-stories">
-//         <h2>User Stories</h2>
-//         <p>
-//           Mazingira prioritizes user-centric design and functionality to ensure a seamless experience for all users. Key user stories include:
-//         </p>
-//         {/* User stories can be listed here */}
-//         <ul>
-//           <li>As a donor, I want to easily discover and support environmental organizations aligned with my values.</li>
-//           <li>As an environmental preservation organization, I want to efficiently communicate my mission and projects to potential donors.</li>
-//           <li>As an administrator, I want to streamline the organization approval process and maintain transparency in platform operations.</li>
-//           {/* Additional user stories can be added */}
-//         </ul>
-//       </div>
-      
-//       <div className="technical-expectations">
-//         <h2>Technical Expectations</h2>
-//         <p>
-//           Mazingira leverages cutting-edge technologies to deliver a robust and user-friendly platform. Technical expectations include:
-//         </p>
-//         <ul>
-//           <li><strong>Backend:</strong> Developed using Python Flask for efficient server-side operations and API endpoints. Flask provides flexibility and scalability, allowing for seamless integration with various databases and third-party services.</li>
-//           <li><strong>Database:</strong> Utilizes PostgreSQL to store and manage data securely. PostgreSQL offers advanced features for data integrity and performance, ensuring reliable storage and retrieval of user and organizational information.</li>
-//           <li><strong>Frontend:</strong> Built with ReactJS and Redux Toolkit for responsive and interactive user interfaces. ReactJS enables dynamic rendering of content, while Redux Toolkit manages state efficiently, enhancing the overall user experience.</li>
-//           <li><strong>Wireframes:</strong> Designed using Figma to ensure a mobile-friendly and intuitive user experience. Figma allows for collaborative prototyping and iteration, resulting in well-designed and accessible interface designs.</li>
-//           <li><strong>Testing Framework:</strong> Implements Jest and Pytest for comprehensive unit and integration testing to maintain code quality and reliability. Automated testing ensures that new features and updates are thoroughly evaluated before deployment, minimizing the risk of bugs and issues.</li>
-//         </ul>
-//       </div>
-      
-//     </div>
-//   );
-// };
-
-// export default About;
-
-import React from 'react';
-import './about.css';
-
-const About = () => {
-  const imageUrl = "https://media.istockphoto.com/id/956240592/photo/abstract-watercolor-on-paper-texture-use-as-background.jpg?s=612x612&w=0&k=20&c=AppTJgUDIvwza-uRDc-lJ7uStLJHuJfQwBZGk9X_3Ws=";
+  const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
   return (
-    <div className="about-container" style={{ backgroundImage: `url(${imageUrl})` }}>
-      <h1>About Mazingira: Empowering Environmental Preservation</h1>
+    <>
+      <div
+        className='main-container  absolute top-0 left-0 z-1 w-full min-h-screen'
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1713494500139-a0d182b60cb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
       
-      <div className="problem-statement">
-        <h2>Problem Statement</h2>
-        <p>
-          Mazingira addresses the pressing issue of environmental degradation, which poses a significant threat to our planet. Environmental degradation encompasses the deterioration of the earth's natural resources, including air, water, soil, and habitats, leading to the loss of biodiversity and endangering ecosystems worldwide. The lack of sustainable practices and resources exacerbates this problem, threatening the well-being of current and future generations.
-        </p>
-        <p>
-          Furthermore, traditional funding models for environmental conservation efforts often fall short in meeting the escalating demands for urgent action. Many environmental organizations struggle to secure consistent funding, hindering their ability to implement long-term solutions and respond effectively to environmental challenges. Thus, there is a critical need for innovative approaches to empower both organizations and individuals to contribute meaningfully to environmental preservation.
-        </p>
+      <div className=' px-2 w-full min-h-screen mx-auto relative z-2'>
+        <Grid
+          container
+          spacing={1}
+          justifyContent='center'
+          alignItems='center'
+          className='h-full'
+        >
+          <Grid item xs={11} sm={9} md={5} lg={4} xl={3} className='bg-white p-5'>
+            <div className='signup-container bg-gradient-to-r from-orange-600 to-blue-400 rounded-lg mx-2 -mt-12 p-2 mb-1 text-center relative z-10'>
+              <h4 className='text-white font-medium mt-1'>Sign in</h4>
+              <Grid
+                container
+                spacing={3}
+                justifyContent='center'
+                className='mt-1 mb-2 '
+              >
+                <Grid item xs={2}>
+                  <a href='#' className='text-white'>
+                    <FacebookIcon />
+                  </a>
+                </Grid>
+                <Grid item xs={2}>
+                  <a href='#' className='text-white'>
+                    <GitHubIcon />
+                  </a>
+                </Grid>
+                <Grid item xs={2}>
+                  <a href='#' className='text-white'>
+                    <GoogleIcon />
+                  </a>
+                </Grid>
+              </Grid>
+            </div>
+            {/* <Card className=' pt-7 pb-3 px-3 relative z-0'> */}
+              <form className='p-5 w-full' >
+                <div className='mb-2'>
+                  <input
+                    type='email'
+                    placeholder='Email'
+                    className='w-full p-2 border border-gray-300 rounded'
+                  />
+                </div>
+                <div className='mb-2'>
+                  <input
+                    type='password'
+                    placeholder='Password'
+                    className='w-full p-2 border border-gray-300 rounded'
+                  />
+                </div>
+                <div className='flex items-center -ml-1 mb-4'>
+                  <Switch
+                    checked={rememberMe}
+                    onChange={handleSetRememberMe}
+                  />
+                  <span className='text-sm text-gray-600 cursor-pointer ml-1'
+                    onClick={handleSetRememberMe}
+                  >
+                    Remember me
+                  </span>
+                </div>
+                <div className='mb-1'>
+                  <button className='w-full bg-gradient-to-r from-blue-600 to-blue-400 text-white p-2 rounded hover:bg-blue-500'>
+                    Sign in
+                  </button>
+                </div>
+                <div className='text-center'>
+                  <p className='text-sm text-gray-600'>
+                    Don't have an account?{' '}
+                    <Link
+                      to='/authentication/sign-up/cover'
+                      className='text-blue-600'
+                    >
+                      Sign up
+                    </Link>
+                  </p>
+                </div>
+              </form>
+            {/* </Card> */}
+          </Grid>
+        </Grid>
       </div>
-      
-      <div className="solution">
-        <h2>Solution</h2>
-        <p>
-          Mazingira offers a comprehensive solution by empowering individuals and organizations to contribute to environmental preservation efforts effectively. Our platform facilitates regular donations to environmental organizations, enabling them to implement vital conservation projects, mitigate environmental damage, and protect endangered species. By fostering a community-driven approach to environmental stewardship, Mazingira aims to combat environmental degradation and promote sustainability on a global scale.
-        </p>
-        <p>
-          Through Mazingira, donors can make a tangible impact by supporting their chosen environmental causes with recurring donations. This sustained support enables organizations to plan and execute projects more effectively, fostering long-term environmental sustainability. Additionally, our platform provides transparency and accountability, allowing donors to track the impact of their contributions and stay informed about the progress of conservation efforts.
-        </p>
-      </div>
-      
-      <div className="team">
-        <h2>Team</h2>
-        <p>
-          The Mazingira project is driven by a dedicated team of professionals passionate about environmental conservation and technology innovation. Our interdisciplinary team combines expertise in full-stack development, environmental science, and sustainability to create a robust platform that empowers users to make a positive impact on the planet.
-        </p>
-        <p>
-          We are committed to leveraging our collective knowledge and skills to develop innovative solutions that address the complex challenges of environmental degradation. Through collaboration and creativity, we strive to build a platform that not only meets the needs of our users but also drives positive change in the global environmental landscape.
-        </p>
-      </div>
-      
-      <div className="users">
-        <h2>Users</h2>
-        <p>
-          Mazingira caters to three primary user categories:
-        </p>
-        <ul>
-          <li><strong>Environmental Preservation Organizations:</strong> Non-profit organizations dedicated to environmental conservation. These organizations rely on Mazingira to secure funding for their projects and engage with donors effectively.</li>
-          <li><strong>Donors:</strong> Individuals and entities interested in supporting environmental causes through donations. Donors can explore a variety of organizations and causes on Mazingira, make contributions, and track the impact of their donations over time.</li>
-          <li><strong>Administrators:</strong> Platform administrators responsible for managing organization applications and overseeing platform operations. Administrators play a crucial role in maintaining the integrity and functionality of Mazingira, ensuring a seamless experience for all users.</li>
-        </ul>
-      </div>
-      
-      <div className="user-stories">
-        <h2>User Stories</h2>
-        <p>
-          Mazingira prioritizes user-centric design and functionality to ensure a seamless experience for all users. Key user stories include:
-        </p>
-        {/* User stories can be listed here */}
-        <ul>
-          <li>As a donor, I want to easily discover and support environmental organizations aligned with my values.</li>
-          <li>As an environmental preservation organization, I want to efficiently communicate my mission and projects to potential donors.</li>
-          <li>As an administrator, I want to streamline the organization approval process and maintain transparency in platform operations.</li>
-          {/* Additional user stories can be added */}
-        </ul>
-      </div>
-      
-      <div className="technical-expectations">
-        <h2>Technical Expectations</h2>
-        <p>
-          Mazingira leverages cutting-edge technologies to deliver a robust and user-friendly platform. Technical expectations include:
-        </p>
-        <ul>
-          <li><strong>Backend:</strong> Developed using Python Flask for efficient server-side operations and API endpoints. Flask provides flexibility and scalability, allowing for seamless integration with various databases and third-party services.</li>
-          <li><strong>Database:</strong> Utilizes PostgreSQL to store and manage data securely. PostgreSQL offers advanced features for data integrity and performance, ensuring reliable storage and retrieval of user and organizational information.</li>
-          <li><strong>Frontend:</strong> Built with ReactJS and Redux Toolkit for responsive and interactive user interfaces. ReactJS enables dynamic rendering of content, while Redux Toolkit manages state efficiently, enhancing the overall user experience.</li>
-          <li><strong>Wireframes:</strong> Designed using Figma to ensure a mobile-friendly and intuitive user experience. Figma allows for collaborative prototyping and iteration, resulting in well-designed and accessible interface designs.</li>
-          <li><strong>Testing Framework:</strong> Implements Jest and Pytest for comprehensive unit and integration testing to maintain code quality and reliability. Automated testing ensures that new features and updates are thoroughly evaluated before deployment, minimizing the risk of bugs and issues.</li>
-        </ul>
-      </div>
-      
-    </div>
+    </>
   );
-};
+}
 
 export default About;
-
