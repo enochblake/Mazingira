@@ -1,8 +1,8 @@
 import React from 'react';
 // import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.js';
-import About from './components/About.js';
-import Contact from './components/Contact.js';
+import About from './components/AboutUs.jsx';
+import Contact from './components/ContactUs.jsx';
 import AuthForm from './components/AuthForm.js';
 import Home from './components/Home.js';
 import { Routes, Route } from 'react-router-dom';

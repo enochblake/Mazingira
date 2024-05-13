@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 
-function Contact() {
+function ContactUs() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -203,4 +203,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default ContactUs;
