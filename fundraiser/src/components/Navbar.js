@@ -1,47 +1,50 @@
-// // Navbar.js
-// import React from "react";
-// import { NavLink } from "react-router-dom";
-
-// function Navbar() {
-
-//     return (
-//         <div className="Nav-Container">
-//             <div>
-//                 <h3>MAZINGIRA</h3>
-//             </div>
-//             <div>
-//                 <ul className="hover-links">
-//                     <NavLink className='hover' to="/">Home</NavLink>
-//                     <NavLink className='hover' to="/About">About</NavLink>
-//                     <NavLink className='hover' to="/Contact">Contact</NavLink>
-//                     <NavLink className='hover' to="/AuthForm">AuthForm</NavLink> {/* Changed "Sign up" to "Signup" to match the route */}
-//                 </ul>
-//             </div>
-//         </div>
-//     );
-// }
-
-// export default Navbar;
-
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
-    return (
-        <div className="Nav-Container">
-            <div>
-                <h3>MAZINGIRA</h3>
-            </div>
-            <div>
-                <ul className="hover-links">
-                    <li><NavLink className='hover' to="/" exact>Home</NavLink></li>
-                    <li><NavLink className='hover' to="/about">About</NavLink></li>
-                    <li><NavLink className='hover' to="/contact">Contact</NavLink></li>
-                    <li><NavLink className='hover' to="/authForm">AuthForm</NavLink></li>
-                </ul>
-            </div>
-        </div>
-    );
+  return (
+    <div className='flex justify-between items-center bg-gray-800 p-4'>
+      <h3 className='text-white text-3xl font-bold'>MAZINGIRA</h3>
+      <ul className='flex space-x-4 mx-auto font-bold text-xl'>
+        <li>
+          <NavLink
+            className='text-white '
+            to='/'
+            activeClassName='border-b-2 border-orange-500'
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className='text-white '
+            to='/about'
+            activeClassName='border-b-2 border-orange-500'
+          >
+            About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className='text-white '
+            to='/contact'
+            activeClassName='border-b-2 border-orange-500'
+          >
+            Contact
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className='text-white '
+            to='/authForm'
+            activeClassName='border-b-2 border-orange-500'
+          >
+            AuthForm
+          </NavLink>
+        </li>
+      </ul>
+    </div>
+  );
 }
 
 export default Navbar;

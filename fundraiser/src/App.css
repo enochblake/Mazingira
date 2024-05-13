@@ -1,6 +1,6 @@
 /* app.css */
 
-.navbar {
+/* .navbar {
   display: flex;
   justify-content:right;
   align-items: center;
@@ -25,7 +25,7 @@
 .login button:hover,
 .signup button:hover {
   background-color: #0056b3;
-}
+} */
 
 /* Style for the modals */
 /* Add your modal styles here if needed */

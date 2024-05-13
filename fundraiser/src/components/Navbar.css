@@ -1,4 +1,4 @@
-.Nav-Container {
+/* .Nav-Container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +15,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Added to make the <ul> a flex container */
+    display: flex; 
 }
 
 .hover-links li {
@@ -34,4 +34,4 @@
 
 .hover:hover {
     color: #ffc107;
-}
+} */
