@@ -108,7 +108,7 @@ function ContactUs() {
       </div>
 
       <div className='w-1/2 bg-cover bg-center bg-no-repeat'>
-        <div className='send-message p-1 mx-auto bg-white rounded-lg w-[90vh] h-[80vh] flex justify-center items-center'>
+        <div className='send-message p-1 mx-auto bg-gray-100 rounded-lg w-[90vh] h-[80vh] flex justify-center items-center'>
           <Grid
             container
             spacing={1}
