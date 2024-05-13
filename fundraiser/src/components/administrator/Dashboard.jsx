@@ -82,7 +82,7 @@ const Dashboard = ({ThemeStyles}) => {
         <div className="flex mt-2 align-middle p-4 justify-between w-100 bg-sky-950">
             <div className=" p-2 align-middle">
             <h5 className="text-green-500 font-extrabold">009ur47</h5>
-            <h6 className="text-slate-200">Simon</h6>
+            <h6 className="text-slate-200">safaricom</h6>
             </div>
             <div className="m-3 text-slate-200">
             <h6 className="text-zinc-300 text-sm">37009103</h6>
@@ -94,7 +94,7 @@ const Dashboard = ({ThemeStyles}) => {
         <div className="flex mt-2 align-middle p-4 justify-between w-100 bg-sky-950">
             <div className=" p-2 align-middle">
             <h5 className="text-green-500 font-extrabold">009ur47</h5>
-            <h6 className="text-slate-200">Charity</h6>
+            <h6 className="text-slate-200">mazingira</h6>
             </div>
             <div className="m-3 text-slate-200">
             <h6 className="text-zinc-300 text-sm">39764784</h6>
@@ -106,7 +106,7 @@ const Dashboard = ({ThemeStyles}) => {
         <div className="flex mt-2 align-middle p-4 justify-between w-100 bg-sky-950">
             <div className=" p-2 align-middle">
             <h5 className="text-green-500 font-extrabold">009ur47</h5>
-            <h6 className="text-slate-200">Abaadir</h6>
+            <h6 className="text-slate-200">eclictics</h6>
             </div>
             <div className="m-3 text-slate-200">
             <h6 className="text-zinc-300 text-sm">3873785</h6>
@@ -118,7 +118,7 @@ const Dashboard = ({ThemeStyles}) => {
         <div className="flex mt-2 align-middle p-4 justify-between w-100 bg-sky-950">
             <div className=" p-2 align-middle">
             <h5 className="text-green-500 font-extrabold">009ur47</h5>
-            <h6 className="text-slate-200">Mwangi</h6>
+            <h6 className="text-slate-200">airtel</h6>
             </div>
             <div className="m-3 text-slate-200">
             <h6 className="text-zinc-300 text-sm">3873785</h6>
@@ -130,7 +130,7 @@ const Dashboard = ({ThemeStyles}) => {
         <div className="flex mt-2 align-middle p-4 justify-between w-100 bg-sky-950">
             <div className=" p-2 align-middle">
             <h5 className="text-green-500 font-extrabold">009ur47</h5>
-            <h6 className="text-slate-200">Wanjiku</h6>
+            <h6 className="text-slate-200">microsoft</h6>
             </div>
             <div className="m-3 text-slate-200">
             <h6 className="text-zinc-300 text-sm">3873785</h6>
@@ -142,7 +142,7 @@ const Dashboard = ({ThemeStyles}) => {
         <div className="flex mt-2 align-middle p-4 justify-between w-100 bg-sky-950">
             <div className=" p-2 align-middle">
             <h5 className="text-green-500 font-extrabold">009ur47</h5>
-            <h6 className="text-slate-200">Kimwaki</h6>
+            <h6 className="text-slate-200">google</h6>
             </div>
             <div className="m-3 text-slate-200">
             <h6 className="text-zinc-300 text-sm">3873785</h6>
@@ -154,7 +154,7 @@ const Dashboard = ({ThemeStyles}) => {
         <div className="flex mt-2 align-middle justify-between p-4 w-100 bg-sky-950">
             <div className=" p-2 align-middle">
             <h5 className="text-green-500 font-extrabold">009ur47</h5>
-            <h6 className="text-slate-200">Muteithia</h6>
+            <h6 className="text-slate-200">mazingira</h6>
             </div>
             <div className="m-3 text-slate-200">
             <h6 className="text-zinc-300 text-sm">3873785</h6>
