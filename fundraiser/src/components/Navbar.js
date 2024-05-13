@@ -1,46 +1,64 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
+  const [selectedContent, setSelectedContent] = useState('Home');
+
+  const handleContentChange = (content) => {
+    setSelectedContent(content);
+  };
+
   return (
     <div className='flex justify-between items-center bg-gray-800 p-4'>
       <h3 className='text-white text-3xl font-bold'>🌲 MAZINGIRA</h3>
       <ul className='flex space-x-4 mx-auto font-bold text-xl'>
         <li>
-          <NavLink
-            className='text-white '
+          <Link
             to='/'
-            activeClassName='border-b-4 border-orange-700'
+            className={`mx-4 text-white font-bold text-lg ${
+              selectedContent === 'Home' ? 'border-b-4 border-orange-500' : ''
+            }`}
+            onClick={() => handleContentChange('Home')}
           >
             Home
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink
-            className='text-white '
+          <Link
             to='/about'
-            activeClassName='border-b-2 border-orange-500'
+            className={`mx-4 text-white font-bold text-lg ${
+              selectedContent === 'About' ? 'border-b-4 border-orange-500' : ''
+            }`}
+            onClick={() => handleContentChange('About')}
           >
             About
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink
-            className='text-white '
+          <Link
             to='/contact'
-            activeClassName='border-b-2 border-orange-500'
+            className={`mx-4 text-white font-bold text-lg ${
+              selectedContent === 'Contact'
+                ? 'border-b-4 border-orange-500'
+                : ''
+            }`}
+            onClick={() => handleContentChange('Contact')}
           >
             Contact
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink
-            className='text-white '
+          <Link
             to='/authForm'
-            activeClassName='border-b-2 border-orange-500'
+            className={`mx-4 text-white font-bold text-lg ${
+              selectedContent === 'AuthForm'
+                ? 'border-b-4 border-orange-500'
+                : ''
+            }`}
+            onClick={() => handleContentChange('AuthForm')}
           >
             AuthForm
-          </NavLink>
+          </Link>
         </li>
       </ul>
     </div>
