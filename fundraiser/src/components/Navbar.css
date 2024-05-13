@@ -1,0 +1,37 @@
+.Nav-Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.Nav-Container h3 {
+    margin: 0;
+}
+
+.hover-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Added to make the <ul> a flex container */
+}
+
+.hover-links li {
+    margin-right: 20px;
+}
+
+.hover-links li:last-child {
+    margin-right: 0;
+}
+
+.hover {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hover:hover {
+    color: #ffc107;
+}

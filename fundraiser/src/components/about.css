@@ -1,0 +1,62 @@
+.about-container {
+    padding: 20px;
+    height: 100vh; /* Ensure the container fills the screen height */
+    background-size: cover; /* Cover the entire container with the background image */
+    background-position: center; /* Center the background image */
+    color: #333; /* Set text color */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    font-family: 'Arial', sans-serif; /* Set font family */
+  }
+  
+  .about-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .problem-statement,
+  .solution,
+  .team,
+  .users,
+  .user-stories,
+  .technical-expectations {
+    margin-bottom: 40px;
+  }
+  
+  .problem-statement h2,
+  .solution h2,
+  .team h2,
+  .users h2,
+  .user-stories h2,
+  .technical-expectations h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  
+  .problem-statement p,
+  .solution p,
+  .team p,
+  .users p,
+  .user-stories p,
+  .technical-expectations p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .problem-statement ul,
+  .solution ul,
+  .users ul,
+  .user-stories ul,
+  .technical-expectations ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .problem-statement li,
+  .solution li,
+  .users li,
+  .user-stories li,
+  .technical-expectations li {
+    margin-bottom: 5px;
+  }
+  
