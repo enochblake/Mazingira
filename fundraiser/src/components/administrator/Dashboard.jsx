@@ -58,7 +58,7 @@ const Dashboard = ({ThemeStyles}) => {
           <PersonAddOutlinedIcon className="w-8 h-8 text-purple-500 mr-4" />
           <div>
             <h1 className="text-2xl font-semibold text-slate-300">30,440</h1>
-            <h2 className="text-purple-500">New Clients +10%</h2>
+            <h2 className="text-purple-500">New Donors +10%</h2>
           </div>
         </div>
       </Box>
@@ -173,8 +173,8 @@ const Dashboard = ({ThemeStyles}) => {
         <h1 className="text-2xl font-semibold mb-2">Campaign</h1>
         <div className="p-4 rounded-lg shadow-md">
           <DonutLargeIcon className="w-75 h-72 text-4xl text-blue-500 mb-2" />
-          <h2 className='text-blue-500'>$48,354 revenue generated</h2>
-          <h3>Include extra misc expenditures and costs</h3>
+          <h2 className='text-blue-500'>$48,354 donations generated</h2>
+          <h3>Includes all Organizations and private institutions</h3>
         </div>
       </Box> 
 
