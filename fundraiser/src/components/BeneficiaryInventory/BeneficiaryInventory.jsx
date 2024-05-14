@@ -115,11 +115,7 @@ const BeneficiaryInventory = () => {
                   </h2>
                   <p className='text-2xl text-center'>${totalAmount}</p>
                 </div>
-                <Link to='/pay-page'>
-                  <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-3 px-5 rounded mt-4'>
-                    Donate
-                  </button>
-                </Link>
+             
               </div>
             </div>
           </div>
