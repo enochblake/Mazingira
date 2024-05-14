@@ -73,6 +73,20 @@ function Navbar() {
           >
             All Organizations
           </Link>
+
+        </li>
+        <li>
+          <Link
+            to='/admin-page'
+            className={`mx-4 text-white font-bold text-lg ${
+              selectedContent === 'Administrator'
+                ? 'border-b-4 border-orange-500'
+                : ''
+            }`}
+            onClick={() => handleContentChange('Administrator')}
+          >
+            Administrator
+          </Link>
         </li>
       </ul>
     </div>

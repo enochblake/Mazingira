@@ -20,6 +20,7 @@ import Navbar from './components/Pages/Navbar.jsx'
 import Organization from './components/Organizitons/Organization';
 import BeneficiaryInventory from './components/BeneficiaryInventory/BeneficiaryInventory.jsx';
 import AddBeneficiary from './components/BeneficiaryInventory/AddBeneficiary.jsx';
+import Administrator from './components/Administrator/Administrator.jsx';
 function App() {
   return (
     <Router>
@@ -42,6 +43,7 @@ function App() {
         <Route path='/b_stories-page' element={<BeneficiaryStories />} />
         <Route path='/B&I-page' element={<BeneficiaryInventory />} />
         <Route path='/add_B&I-page' element={<AddBeneficiary />} />
+        <Route path='/admin-page' element={<Administrator />} />
       </Routes>
     </Router>
   );
