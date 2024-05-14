@@ -62,7 +62,7 @@ const handleChange = (e) => {
     >
       <div className='w-1/2'>
         <div id='contact'>
-          <div className='main-container  absolute top-0 left-0 z-1 w-full min-h-screen' />
+          <div className='m  absolute top-0 left-0 z-1 w-full min-h-screen' />
           <div className='contact-container '>
             <div className='row'>
               <div className='contact-left p-5'>
@@ -114,14 +114,14 @@ const handleChange = (e) => {
       </div>
 
       <div className='w-1/2 bg-cover bg-center bg-no-repeat'>
-        <div className='send-message p-1 mx-auto bg-gray-100 rounded-lg w-[90vh] h-[80vh] flex justify-center items-center'>
+        <div className=' p-1 mx-auto bg-gray-100 rounded-lg w-[90vh] h-[80vh] flex justify-center items-center'>
           <Grid
             container
             spacing={1}
             justifyContent='center'
             alignItems='center'
           >
-            <div className='signup-container  bg-orange-400  rounded-lg mx-2 -mt-12 p-2 mb-1 text-center relative z-10 w-[70%] h-[80%]'>
+            <div className='  bg-orange-400  rounded-lg mx-2 -mt-12 p-2 mb-1 text-center relative z-10 w-[70%] h-[80%]'>
               <h4 className='text-white font-bold  mt-1 mb-2 font-3xl'>REACH US</h4>
               <Grid
                 container

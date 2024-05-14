@@ -26,7 +26,7 @@ const AddBeneficiary = () => {
   };
 
   return (
-    <div className='bg-gray-700 mt-5 pt-10 pb-10 mx-10 min-h-screen'>
+    <div className='bg-gray-700 mt-5 pt-10 pb-10 mx-10 '>
       <div className='container mx-auto py-8 bg-gray-100 rounded shadow-md p-5 mb-5 '>
         <h1 className='text-2xl font-bold mb-5 mx-auto text-center text-orange-700'>
           CREATE BENEFICIARY 
