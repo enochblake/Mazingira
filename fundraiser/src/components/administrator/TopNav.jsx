@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box,IconButton } from '@mui/material'
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+// import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 //import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
@@ -15,15 +15,15 @@ function TopNav({toggleColor,darkTheme}) {
   }
 
 return (
-    <Box  class="flex justify-between mt-2 p-5" style={ThemeStyles} >
+    <Box  class="flex justify-between mt-2 p-5 w-screen" style={ThemeStyles} >
     {/*searchbar*/}
-    <Box class="flex">
+    {/* <Box class="flex">
       <input className="text-slate-700 bg-sky-950 " placeholder="search"/>
       <IconButton style={ThemeStyles} class="text-slate-700">
         <SearchOutlinedIcon />
       </IconButton>
       
-    </Box>
+    </Box> */}
     {/*icons*/}
     <Box display="flex p-2">
       <IconButton style={ThemeStyles} class="text-xl"  onClick={toggleColor}>
@@ -55,3 +55,5 @@ return (
 }
 
 export default TopNav
+
+

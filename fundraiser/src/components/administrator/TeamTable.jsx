@@ -106,7 +106,7 @@ function TeamTable() {
 
   useEffect(() => {
     // Fetch data from the provided JSON file
-    fetch("")
+    fetch("http://localhost:5000/data")
       .then((res) => res.json())
       .then((data) => setTableItems(data.data)); // Assuming 'data' contains an array named 'data'
   }, []);

@@ -11,9 +11,9 @@ import ReceiptIcon from '@mui/icons-material/Receipt';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import QuizOutlinedIcon from '@mui/icons-material/QuizOutlined';
-// import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
-// import PieChartOutlineOutlinedIcon from '@mui/icons-material/PieChartOutlineOutlined';
-// import SsidChartOutlinedIcon from '@mui/icons-material/SsidChartOutlined';
+import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
+import PieChartOutlineOutlinedIcon from '@mui/icons-material/PieChartOutlineOutlined';
+import SsidChartOutlinedIcon from '@mui/icons-material/SsidChartOutlined';
 // import TerrainOutlinedIcon from '@mui/icons-material/TerrainOutlined';
 import ContactPage from "@mui/icons-material/ContactPage";
 
@@ -132,8 +132,8 @@ function SideBar({ThemeStyles}) {
         to="/FAQ"
       />
      </Box>
-     {/* <h1 className="text-slate-500">Charts</h1> */}
-     {/* <Box>
+     <h1 className="text-slate-500">Charts</h1>
+     <Box>
         <Item
         icon={<BarChartOutlinedIcon/>}
         title="Bar Chart"
@@ -153,7 +153,7 @@ function SideBar({ThemeStyles}) {
         to="/Line"
       />
      </Box>
-     </Box> */}
+     </Box>
 </Box>
 
 </Menu>

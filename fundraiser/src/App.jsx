@@ -12,6 +12,9 @@ import Item from './components/administrator/Item.jsx'
 import Form from './components/administrator/Form.jsx'
 import TeamTable from './components/administrator/TeamTable.jsx'
 import TopNav from './components/administrator/TopNav.jsx'
+import Bar from './components/administrator/Charts/BarChart.jsx'
+import Pie from './components/administrator/Charts/PieChart.jsx'
+import Line from './components/administrator/Charts/Line.jsx'
 
 
 function App () {
@@ -35,6 +38,9 @@ function App () {
        
         <Route path="/Team" element={<TeamTable/>}/>
         <Route path="/ThemeProvider" element={<ThemeProvider ThemeStyles={ThemeStyles} />}/>
+        <Route path="/Bar" element={<Bar ThemeStyles={ThemeStyles}/>}/>
+        <Route path="/Pie" element={<Pie/>}/>
+        <Route path="/Line" element={<Line/>}/>
        
         <Route path="/Profile" element={<Form ThemeStyles={ThemeStyles} />}/>
         <Route path="/" element={<Dashboard ThemeStyles={ThemeStyles}/>}/>
@@ -42,6 +48,7 @@ function App () {
         <Route path="/Item" element={<Item ThemeStyles={ThemeStyles}/>}/>
         <Route path="/Profile" element={<Form />}/>
         <Route path="/Contacts" element={<ContactInformation ThemeStyles={ThemeStyles} />}/>
+        
       </Routes> 
       </main>
      
