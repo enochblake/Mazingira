@@ -9,21 +9,13 @@ import {
 
 const AboutUs = () => {
   return (
-    <div
-      className='flex flex-col items-center  bg-cover'
-      style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1713494500139-a0d182b60cb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
-      <div className='bg-gray-700 mx-10 mt-3 p-10 h-1/2'>
-        <h1 className='text-center font-bold text-4xl text-orange-700 '>
+ <div className='bg-gray-100'>
+      <div className='bg-gray-700 mx-10 mt-3 p-2 mb-5 h-1/2 '>
+        {/* <h1 className='text-center font-bold text-4xl text-orange-700 '>
           ABOUT US
-        </h1>
-        <div className='flex flex-col lg:flex-row justify-center  mx-10 rounded p-5 mt-5'>
-          <div className='w-full lg:w-1/2 mt-10 '>
+        </h1> */}
+        <div className='flex flex-col lg:flex-row justify-center  mx-10 rounded  mt-5'>
+          <div className='w-1/2 lg:w-1/2 mt-10 '>
             <div className=' p-2 flex flex-row'>
               <div className='flex flex-wrap gap-4'>
                 {/* Card 1 and 2 */}
@@ -131,7 +123,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
   );
 };
 
