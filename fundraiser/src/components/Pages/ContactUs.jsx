@@ -76,11 +76,9 @@ function ContactUs() {
                   />
                   Find us at the office
                   <p className='text-lg text-gray-100 ml-10'>
-                    {' '}
                     ~ Bld Mihail Kogalniceanu, nr. 8
                   </p>
                   <p className='text-lg text-gray-100 ml-10'>
-                    {' '}
                     ~ 7652 Bucharest
                   </p>
                   <p className='text-lg text-gray-100 ml-10'> ~ Romania</p>
@@ -91,7 +89,7 @@ function ContactUs() {
                     icon={faPhone}
                     className='text-3xl
                     text-orange-500'
-                  />{' '}
+                  />
                   Give us a ring
                   <p className='text-lg text-gray-100 ml-10'>
                     ~ Michael Jordan
@@ -100,7 +98,7 @@ function ContactUs() {
                     ~ +40 762 321 762{' '}
                   </p>
                   <p className='text-lg text-gray-100 ml-10'>
-                    {' '}
+                    
                     ~ Mon - Fri, 8:00-22:00
                   </p>
                 </p>
@@ -119,7 +117,7 @@ function ContactUs() {
             alignItems='center'
           >
             <div className='signup-container  bg-orange-400  rounded-lg mx-2 -mt-12 p-2 mb-1 text-center relative z-10 w-[70%] h-[80%]'>
-              <h4 className='text-white font-medium mt-1'>Sign in</h4>
+              <h4 className='text-white font-medium mt-1 mb-2'>REACH US</h4>
               <Grid
                 container
                 spacing={3}
