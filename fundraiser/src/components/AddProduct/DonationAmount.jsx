@@ -7,6 +7,8 @@ const DonationAmount = () => {
   const [activeType, setActiveType] = useState('non-anonymous');
   const [totalAmount, setTotalAmount] = useState(0);
   const [totalOrganizationAmount, setTotalOrganizationAmount] = useState(0);
+  const [nonAnonymousCount, setNonAnonymousCount] = useState(0);
+  const [anonymousCount, setAnonymousCount] = useState(0);
 
   useEffect(() => {
     fetchData();
@@ -26,6 +28,13 @@ const DonationAmount = () => {
   const calculateTotals = (data) => {
     const totalAmount = data.reduce((acc, donor) => acc + donor.amount, 0);
     setTotalAmount(totalAmount);
+
+    const nonAnonymous = data.filter((donor) => !donor.anonymous_status);
+    const anonymous = data.filter((donor) => donor.anonymous_status);
+
+    setNonAnonymousCount(nonAnonymous.length);
+    setAnonymousCount(anonymous.length);
+
     setTotalOrganizationAmount(totalAmount);
   };
 
@@ -47,9 +56,9 @@ const DonationAmount = () => {
 
   return (
     <div className='bg-gray-100 '>
-        <h1 className='text-4xl font-bold text-center mb-4 text-orange-700'>
-          Donation Amount Page
-        </h1>
+      <h1 className='text-4xl font-bold text-center mb-4 text-orange-700'>
+        Donation Amount Page
+      </h1>
       <div className='bg-gray-700 min-h-screen  p-16 mx-10 mb-2'>
         <div className='container mx-auto border shadow-md mt-4 bg-gray-100 w-4/7 justify-center text-center p-4 pl-5'>
           <div className='flex mb-4 mt-7'>
@@ -113,18 +122,34 @@ const DonationAmount = () => {
             </div>
 
             <div className='w-1/2 ml-6'>
-              <div className='bg-white p-16 rounded shadow-lg mb-4'>
+              <div className='total-Amount-container bg-white p-16 rounded shadow-lg mb-4'>
                 <h2 className='text-lg font-bold mx-auto text-center'>
                   Total Amount
                 </h2>
                 <p className='text-2xl text-center'>${totalAmountForType}</p>
+                <p className='text-lg text-center ml-5'>
+                   <p>
+                    <hr className='w-full my-2 border-gray-400' />
+                  </p>
+                  No. of Donors:
+                <p></p>
+                  {activeType === 'non-anonymous'
+                    ? nonAnonymousCount
+                    : anonymousCount}
+                </p>
               </div>
-              <div className='bg-white p-16 rounded shadow-lg flex flex-col items-center'>
+              <div className='total-org-container bg-white p-16 rounded shadow-lg flex flex-col items-center'>
                 <h2 className='text-lg font-bold text-center'>
                   Total Organization Amount
                 </h2>
                 <p className='text-2xl text-center'>
                   ${totalOrganizationAmount}
+                </p>
+                <p className='text-lg text-center'>
+                  <p>
+                    <hr className='w-full my-2 border-gray-400' />
+                  </p>
+                  No. of Donors: {donors.length}
                 </p>
                 <Link to='/pay-page'>
                   <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-3 px-5 rounded mt-4'>
