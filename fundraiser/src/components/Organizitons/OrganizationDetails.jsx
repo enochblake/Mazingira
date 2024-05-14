@@ -1,12 +1,12 @@
 // Components/Organization/OrganizationDetails.jsx
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-// import { organizations } from './Organization';
+import { organizations } from './Organization';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import  {faUserGroup,faPaperclip} from '@fortawesome/free-solid-svg-icons';
 
 
-const OrganizationDetails = ({organizations}) => {
+const OrganizationDetails = () => {
   const { id } = useParams();
   const organization = organizations.find((org) => org.id === parseInt(id));
 
