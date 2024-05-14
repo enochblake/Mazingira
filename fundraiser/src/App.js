@@ -20,6 +20,7 @@ import Navbar from './components/Pages/Navbar.jsx'
 import Organization from './components/Organizitons/Organization';
 import BeneficiaryInventory from './components/BeneficiaryInventory/BeneficiaryInventory.jsx';
 import AddBeneficiary from './components/BeneficiaryInventory/AddBeneficiary.jsx';
+import Footer from './components/Pages/Footer.jsx';
 function App() {
   return (
     <Router>
@@ -43,6 +44,7 @@ function App() {
         <Route path='/B&I-page' element={<BeneficiaryInventory />} />
         <Route path='/add-beneficiary' element={<AddBeneficiary />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
