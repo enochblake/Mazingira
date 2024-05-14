@@ -18,12 +18,13 @@ import AboutUs from './components/Pages/AboutUs.jsx';
 import ContactUs from './components/Pages/ContactUs.jsx';
 import Navbar from './components/Pages/Navbar.jsx'
 import Organization from './components/Organizitons/Organization';
+import BeneficiaryInventory from './components/BeneficiaryInventory/BeneficiaryInventory.jsx';
+import AddBeneficiary from './components/BeneficiaryInventory/AddBeneficiary.jsx';
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-
         <Route path='/donor' element={<Donor />} />
         <Route path='/' element={<Home />} />
         <Route path='/about-us' element={<AboutUs />} />
@@ -39,8 +40,10 @@ function App() {
         <Route path='/amounts-page' element={<DonationAmount />} />
         <Route path='/create_stories-page' element={<AddBeneficiaryStory />} />
         <Route path='/b_stories-page' element={<BeneficiaryStories />} />
+        <Route path='/B&I-page' element={<BeneficiaryInventory />} />
+        <Route path='/add_B&I-page' element={<AddBeneficiary />} />
       </Routes>
-      </Router>
+    </Router>
   );
 }
 

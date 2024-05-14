@@ -749,36 +749,40 @@
       "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg",
       "name": "Beneficiary 1",
       "organization_id": 13,
-      "recieved_amount": 300.0
+      "received_amount": 300.0,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT"
     },
     {
       "id": 72,
       "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg",
       "name": "Beneficiary 1",
       "organization_id": 13,
-      "recieved_amount": 300.0
+      "received_amount": 300.0,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT"
     },
     {
       "id": 73,
       "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg",
       "name": "Beneficiary 2",
       "organization_id": 13,
-      "recieved_amount": 600.0
+      "received_amount": 600.0,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT"
     },
     {
       "id": 74,
       "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg",
       "name": "Beneficiary 2",
       "organization_id": 13,
-      "recieved_amount": 600.0
+      "received_amount": 600.0,
+      "donated_on": "Sat, 11 May 2024 11:04:36 GMT"
     }
   ],
-  
+
   "AddedBeneficiary":[
 
     {
       "name": "Beneficiary 2",
-      "recieved_amount": 600,
+      "received_amount": 600,
       "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg"
   }
   ]
