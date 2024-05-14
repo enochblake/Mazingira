@@ -41,7 +41,7 @@ function App() {
         <Route path='/create_stories-page' element={<AddBeneficiaryStory />} />
         <Route path='/b_stories-page' element={<BeneficiaryStories />} />
         <Route path='/B&I-page' element={<BeneficiaryInventory />} />
-        <Route path='/add_B&I-page' element={<AddBeneficiary />} />
+        <Route path='/add-beneficiary' element={<AddBeneficiary />} />
       </Routes>
     </Router>
   );
