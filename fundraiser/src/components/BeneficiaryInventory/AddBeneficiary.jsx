@@ -5,7 +5,7 @@ const AddBeneficiary = () => {
     name: '',
     imageUrl: '',
     receivedAmount: '',
-    imagePreview: '', // Added for image preview
+    imagePreview: '', 
   });
 
   const handleInputChange = ({ target: { name, value } }) => {
@@ -13,7 +13,7 @@ const AddBeneficiary = () => {
       setFormData((prevFormData) => ({
         ...prevFormData,
         [name]: value,
-        imagePreview: value, // Update imagePreview when imageUrl changes
+        imagePreview: value, 
       }));
     } else {
       setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
