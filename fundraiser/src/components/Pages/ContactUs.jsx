@@ -15,9 +15,14 @@ function ContactUs() {
     message: '',
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setFormData((prevFormData) => ({
+    ...prevFormData,
+    [name]: value,
+  }));
+};
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -117,7 +122,7 @@ function ContactUs() {
             alignItems='center'
           >
             <div className='signup-container  bg-orange-400  rounded-lg mx-2 -mt-12 p-2 mb-1 text-center relative z-10 w-[70%] h-[80%]'>
-              <h4 className='text-white font-medium mt-1 mb-2'>REACH US</h4>
+              <h4 className='text-white font-bold  mt-1 mb-2 font-3xl'>REACH US</h4>
               <Grid
                 container
                 spacing={3}

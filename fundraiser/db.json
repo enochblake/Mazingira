@@ -742,7 +742,44 @@
       "description": "This is organization 2 description.",
       "history": "The Green Earth Initiative was founded in 2005 by a group of passionate environmentalists who were concerned about the rapid degradation of the planet. Our founders, led by Sarah Johnson, a renowned environmental scientist, were determined to make a difference and create a sustainable future for generations to come. In the early years, our organization focused on raising awareness about environmental issues through educational programs, community outreach, and advocacy campaigns. We partnered with local schools, community groups, and businesses to promote sustainable practices and reduce waste."
     }
+  ],
+  "inventory": [
+    {
+      "id": 71,
+      "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg",
+      "name": "Beneficiary 1",
+      "organization_id": 13,
+      "recieved_amount": 300.0
+    },
+    {
+      "id": 72,
+      "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg",
+      "name": "Beneficiary 1",
+      "organization_id": 13,
+      "recieved_amount": 300.0
+    },
+    {
+      "id": 73,
+      "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg",
+      "name": "Beneficiary 2",
+      "organization_id": 13,
+      "recieved_amount": 600.0
+    },
+    {
+      "id": 74,
+      "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg",
+      "name": "Beneficiary 2",
+      "organization_id": 13,
+      "recieved_amount": 600.0
+    }
+  ],
+  
+  "AddedBeneficiary":[
+
+    {
+      "name": "Beneficiary 2",
+      "recieved_amount": 600,
+      "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg"
+  }
   ]
-
-
 }
