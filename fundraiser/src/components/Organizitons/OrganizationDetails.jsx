@@ -1,12 +1,12 @@
 // Components/Organization/OrganizationDetails.jsx
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { organizations } from './Organization';
+// import { organizations } from './Organization';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import  {faUserGroup,faPaperclip} from '@fortawesome/free-solid-svg-icons';
 
 
-const OrganizationDetails = () => {
+const OrganizationDetails = ({organizations}) => {
   const { id } = useParams();
   const organization = organizations.find((org) => org.id === parseInt(id));
 
@@ -52,16 +52,7 @@ const OrganizationDetails = () => {
                 Donate
               </button>
             </Link>
-            {/* <Link to='/testimonials-page'>
-              <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
-                TESTIMONIALS
-              </button>
-            </Link>
-            <Link to='/blogList-page'>
-              <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
-                Blog
-              </button>
-            </Link> */}
+      
             <Link to='/add_org-page'>
               <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
                 ADD_ORG
@@ -77,11 +68,6 @@ const OrganizationDetails = () => {
                 AMOUNTS
               </button>
             </Link>
-            {/* <Link to='/create_stories-page'>
-              <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
-                B-create-STORIES
-              </button>
-            </Link> */}
             <Link to='/b_stories-page'>
               <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
                 B-STORIES
