@@ -1,17 +1,34 @@
 // Components/Organization/OrganizationDetails.jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { organizations } from './Organization';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import  {faUserGroup,faPaperclip} from '@fortawesome/free-solid-svg-icons';
-
+import { faUserGroup, faPaperclip } from '@fortawesome/free-solid-svg-icons';
 
 const OrganizationDetails = () => {
   const { id } = useParams();
-  const organization = organizations.find((org) => org.id === parseInt(id));
+  const [organization, setOrganization] = useState(null);
+
+  useEffect(() => {
+    async function fetchOrganizationDetails() {
+      try {
+        const response = await fetch(
+          `http://localhost:5000/organizations/${id}`
+        );
+        if (!response.ok) {
+          throw new Error('Failed to fetch organization');
+        }
+        const data = await response.json();
+        setOrganization(data);
+      } catch (error) {
+        console.error('Error fetching organization details:', error);
+      }
+    }
+
+    fetchOrganizationDetails();
+  }, [id]);
 
   if (!organization) {
-    return <div className="text-center text-lg">Organization not found</div>;
+    return <div className='text-center text-lg'>Loading...</div>;
   }
 
   return (
@@ -52,7 +69,7 @@ const OrganizationDetails = () => {
                 Donate
               </button>
             </Link>
-      
+
             <Link to='/add_org-page'>
               <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
                 ADD_ORG
