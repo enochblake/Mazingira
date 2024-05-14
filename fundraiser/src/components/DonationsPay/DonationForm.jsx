@@ -43,10 +43,10 @@ function DonationForm() {
   };
 
   return (
-    <div className='container mx-auto mt-8 bg-gray-300 p-4'>
+    <div className='container mx-auto mt-8  p-4'>
       <main className='flex flex-col justify-center'>
-        <div className='bg-white shadow-md rounded-lg p-8  w-full mx-auto'>
-          <h1 className='text-3xl font-bold mb-4 text-orange-500 text-center'>Donation Now</h1>
+        <div className='bg-gray-50 shadow-md rounded-lg p-8  w-full mx-auto'>
+          <h1 className='text-3xl font-bold mb-4 text-orange-500 text-center'>Donate Now</h1>
           <form className='flex flex-col justify-center'>
             <div className='mb-4'>
               <label className='inline-flex items-center'>
@@ -63,7 +63,7 @@ function DonationForm() {
                 <input
                   type='checkbox'
                   className='form-checkbox h-5 w-5 text-gray-600'
-                  onChange={handleAnonymousDonationChange}
+                  // onChange={handleAnonymousDonationChange}
                 />
                 <span className='ml-2'>Anonymous Donation</span>
               </label>
