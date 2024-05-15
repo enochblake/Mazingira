@@ -5,11 +5,13 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 import Modal from './Modal'
 import SignUp from './SignUp'
 import config from '../../config'
-export default function Login({ onClose, onSignUpClick}) {
+export default function Login({ onClose, onSignUpClick }) {
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -43,6 +45,10 @@ export default function Login({ onClose, onSignUpClick}) {
 
       if (response.ok) {
         console.log('Login successful!');
+                handleClose();
+
+                navigate('/all_organizations');
+
       } else {
         console.error('Login failed:', response.statusText);
       }
