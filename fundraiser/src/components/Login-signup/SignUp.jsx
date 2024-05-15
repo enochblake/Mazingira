@@ -1,11 +1,10 @@
-//components/lpogin-signup/SignUp.jsx
 import React, { useState } from 'react';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import config from '../../config';
 
 export default function SignUp({ onClose, onLoginClick }) {
@@ -15,7 +14,7 @@ export default function SignUp({ onClose, onLoginClick }) {
     email: '',
     password: '',
     confirmPassword: '',
-    userType: '',
+    userType: 'donor', 
   });
 
   const handleChange = (e) => {
@@ -26,35 +25,44 @@ export default function SignUp({ onClose, onLoginClick }) {
     }));
   };
 
- const handleSubmit = async (e) => {
-   e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-   // Prepare the data for the POST request
-   const requestData = {
-     first_name: formData.firstName,
-     last_name: formData.lastName,
-     email: formData.email,
-     password: formData.password,
-   };
+    const endpoint =
+      formData.userType === 'donor' ? '/register' : '/org/register';
 
-   try {
-     const response = await fetch(`${config.baseURL}/register`, {
-       method: 'POST',
-       headers: {
-         'Content-Type': 'application/json',
-       },
-       body: JSON.stringify(requestData),
-     });
+    const requestData =
+      formData.userType === 'donor'
+        ? {
+            first_name: formData.firstName,
+            last_name: formData.lastName,
+            email: formData.email,
+            password: formData.password,
+          }
+        : {
+            name: formData.name,
+            email: formData.email,
+            password: formData.password,
+          };
 
-     if (response.ok) {
-       console.log('Registration successful!');
-     } else {
-       console.error('Registration failed:', response.statusText);
-     }
-   } catch (error) {
-     console.error('An error occurred:', error);
-   }
- };
+    try {
+      const response = await fetch(`${config.baseURL}${endpoint}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData),
+      });
+
+      if (response.ok) {
+        console.log('Registration successful!');
+      } else {
+        console.error('Registration failed:', response.statusText);
+      }
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
+  };
 
   const handleClose = () => {
     onClose();
@@ -90,27 +98,44 @@ export default function SignUp({ onClose, onLoginClick }) {
                 className='w-1/2 border-b border-gray-300 focus:outline-none mt-5 text-lg text-black'
               >
                 <option value='donor'>DONOR</option>
-                <option value='admin'>ADMIN</option>
+                <option value='organization'>ORGANIZATION</option>
               </select>
             </div>
-            <div className='mb-10 mt-5 grid grid-cols-2 gap-4'>
-              <input
-                type='text'
-                name='firstName'
-                value={formData.firstName}
-                onChange={handleChange}
-                placeholder='First Name'
-                className='w-full border-b border-gray-300 focus:outline-none text-lg text-black'
-              />
-              <input
-                type='text'
-                name='lastName'
-                value={formData.lastName}
-                onChange={handleChange}
-                placeholder='Last Name'
-                className='w-full border-b border-gray-300 focus:outline-none text-lg text-black'
-              />
-            </div>
+            {formData.userType === 'organization' ? (
+              <>
+                <div className='mb-2 w-[50vh]'>
+                  <input
+                    type='text'
+                    name='name'
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder='Organization Name'
+                    className='w-full border-b border-gray-300 focus:outline-none mt-5 text-lg text-black'
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className='mb-10 mt-5 grid grid-cols-2 gap-4'>
+                  <input
+                    type='text'
+                    name='firstName'
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    placeholder='First Name'
+                    className='w-full border-b border-gray-300 focus:outline-none text-lg text-black'
+                  />
+                  <input
+                    type='text'
+                    name='lastName'
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    placeholder='Last Name'
+                    className='w-full border-b border-gray-300 focus:outline-none text-lg text-black'
+                  />
+                </div>
+              </>
+            )}
             <div className='mb-2'>
               <input
                 type='email'
