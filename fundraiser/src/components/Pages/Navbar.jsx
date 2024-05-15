@@ -1,12 +1,32 @@
 //navbar.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import Modal from '../Login/Modal';
+import Login from '../Login/Login';
+import SignUp from '../Login/SignUp';
 function Navbar() {
   const [selectedContent, setSelectedContent] = useState('Home');
+  const [loginModalOpen, setLoginModalOpen] = useState(false);
+  const [signupModalOpen, setSignupModalOpen] = useState(false);
 
   const handleContentChange = (content) => {
     setSelectedContent(content);
+  };
+
+  const openLoginModal = () => {
+    setLoginModalOpen(true);
+  };
+
+  const openSignupModal = () => {
+    setSignupModalOpen(true);
+  };
+
+  const closeLoginModal = () => {
+    setLoginModalOpen(false);
+  };
+
+  const closeSignupModal = () => {
+    setSignupModalOpen(false);
   };
 
   return (
@@ -63,19 +83,27 @@ function Navbar() {
         </li>
       </ul>
       <div className='flex space-x-4'>
-        <Link
-          to='/login'
+        <button
+          onClick={openLoginModal}
           className='text-white font-bold text-lg hover:text-orange-500'
         >
           Login
-        </Link>
-        <Link
-          to='/signup'
+        </button>
+        <button
+          onClick={openSignupModal}
           className='text-white font-bold text-lg hover:text-orange-500'
         >
           Sign Up
-        </Link>
+        </button>
       </div>
+      {/* Login Modal */}
+      <Modal isOpen={loginModalOpen} onClose={closeLoginModal}>
+        <Login onClose={closeLoginModal} />
+      </Modal>
+      {/* Signup Modal */}
+      <Modal isOpen={signupModalOpen} onClose={closeSignupModal}>
+        <SignUp onClose={closeSignupModal} />
+      </Modal>
     </div>
   );
 }

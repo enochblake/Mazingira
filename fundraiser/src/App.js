@@ -2,12 +2,12 @@
 import './App.css';
 import Donor from './components/Organizitons/Organization';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
-import DonationPage from './components/DonationPage/DonationPage'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import DonationPage from './components/DonationPage/DonationPage';
 import OrganizationDetails from './components/Organizitons/OrganizationDetails';
 import PayPage from './components/DonationsPay/PayPage';
-import TestimonialsTwo from './components/StoriesFromUsers/TetimonialsTwo.jsx'
-import BlogList from './components/DonationPage/BlogList'
+import TestimonialsTwo from './components/StoriesFromUsers/TetimonialsTwo.jsx';
+import BlogList from './components/DonationPage/BlogList';
 import AddOrganization from './components/AddProduct/AddOrganizationPage.jsx';
 import RegistrationPage from './components/AddProduct/RegistrationPage.jsx';
 import DonationAmount from './components/AddProduct/DonationAmount.jsx';
@@ -16,13 +16,13 @@ import BeneficiaryStories from './components/AddProduct/BeneficiaryStories.jsx';
 import Home from './components/Pages/Home.jsx';
 import AboutUs from './components/Pages/AboutUs.jsx';
 import ContactUs from './components/Pages/ContactUs.jsx';
-import Navbar from './components/Pages/Navbar.jsx'
+import Navbar from './components/Pages/Navbar.jsx';
 import Organization from './components/Organizitons/Organization';
 import BeneficiaryInventory from './components/BeneficiaryInventory/BeneficiaryInventory.jsx';
 import AddBeneficiary from './components/BeneficiaryInventory/AddBeneficiary.jsx';
 import Footer from './components/Pages/Footer.jsx';
-import SignUp from './components/Login-signup/SignUp.jsx';
-import Login from './components/Login-signup/Login.jsx'
+import SignUp from './components/Login/SignUp.jsx';
+import Login from './components/Login/Login.jsx';
 function App() {
   return (
     <Router>
@@ -48,7 +48,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }
