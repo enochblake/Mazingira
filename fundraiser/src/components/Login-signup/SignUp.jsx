@@ -4,7 +4,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
-
+import {Link} from 'react-router-dom'
 export default function SignUp() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -115,9 +115,12 @@ export default function SignUp() {
                 type='submit'
                 className='bg-orange-400 text-white p-3 rounded hover:bg-orange-500 mt-10'
               >
-                LOGIN
+                SIGN UP
               </button>
             </div>
+            <Link to='/login'>
+              <p className='pt-5'>Already have an account?</p>
+            </Link>
           </div>
         </form>
       </div>

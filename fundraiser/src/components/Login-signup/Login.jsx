@@ -4,8 +4,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
-
-export default function SignUp() {
+import {Link} from 'react-router-dom'
+export default function Login() {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -28,7 +28,7 @@ export default function SignUp() {
   return (
     <div className='main-container p-1 mx-auto rounded-lg w-[90vh] h-[80vh] flex justify-center items-center relative overflow-hidden mt-10'>
       <div className='details-container absolute top-0 left-1/2 transform -translate-x-1/2 bg-orange-400 rounded-lg text-center z-10 w-1/4'>
-        <h4 className='text-white font-bold mt-1 mb-2 font-3xl'>SIGN UP</h4>
+        <h4 className='text-white font-bold mt-1 mb-2 font-3xl'>LOGIN</h4>
         <div className='mt-1 mb-2'>
           <a href='#' className='text-white mr-5'>
             <FacebookIcon />
@@ -79,16 +79,18 @@ export default function SignUp() {
                 className='w-full border-b border-gray-300 focus:outline-none mt-5 text-lg text-gray-500'
               />
             </div>
-          
+
             <div className='mb-1 flex justify-end'>
-<p>Don't have an account?</p>
               <button
                 type='submit'
                 className='bg-orange-400 text-white p-3 rounded hover:bg-orange-500 mt-10'
               >
-                SIGN UP
+                LOGIN
               </button>
             </div>
+            <Link to='/signup'>
+              <p className='pt-5'>Don't have an account?</p>
+            </Link>
           </div>
         </form>
       </div>
