@@ -6,14 +6,14 @@ import GoogleIcon from '@mui/icons-material/Google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom'
-export default function SignUp() {
+export default function SignUp({ onClose, onLoginClick }) {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     password: '',
     confirmPassword: '',
-    userType: '', 
+    userType: '',
   });
 
   const handleChange = (e) => {
@@ -27,6 +27,10 @@ export default function SignUp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic
+  };
+
+  const handleClose = () => {
+    onClose();
   };
 
   return (
@@ -119,9 +123,15 @@ export default function SignUp() {
                 SIGN UP
               </button>
             </div>
-            <Link to='/login'>
+            <Link to='/login' onClick={onLoginClick}>
               <p className='pt-5'>Already have an account?</p>
             </Link>
+            <button
+              onClick={handleClose}
+              className=' right-0 m-4 text-gray-600 hover:text-gray-800'
+            >
+              Close
+            </button>
           </div>
         </form>
       </div>

@@ -1,9 +1,9 @@
 //navbar.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Modal from '../Login/Modal';
-import Login from '../Login/Login';
-import SignUp from '../Login/SignUp';
+import Modal from '../Login-signup/Modal';
+import Login from '../Login-signup/Login';
+import SignUp from '../Login-signup/SignUp';
 function Navbar() {
   const [selectedContent, setSelectedContent] = useState('Home');
   const [loginModalOpen, setLoginModalOpen] = useState(false);

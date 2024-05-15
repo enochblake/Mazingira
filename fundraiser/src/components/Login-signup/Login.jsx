@@ -5,12 +5,14 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
-import {Link} from 'react-router-dom'
-export default function Login() {
+import { Link } from 'react-router-dom'
+import Modal from './Modal'
+import SignUp from './SignUp'
+export default function Login({ onClose, onSignUpClick}) {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    loginAs: 'donor', // Default login type
+    loginAs: 'donor',
   });
 
   const handleChange = (e) => {
@@ -24,6 +26,9 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic
+  };
+  const handleClose = () => {
+    onClose();
   };
 
   return (
@@ -89,9 +94,15 @@ export default function Login() {
                 LOGIN
               </button>
             </div>
-            <Link to='/signup'>
+            <Link to='/signup' onClick={onSignUpClick}>
               <p className='pt-5'>Don't have an account?</p>
             </Link>
+            <button
+              onClick={handleClose}
+              className=' right-0 m-4 text-gray-600 hover:text-gray-800'
+            >
+              Close
+            </button>
           </div>
         </form>
       </div>
