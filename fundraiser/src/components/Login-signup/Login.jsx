@@ -71,22 +71,22 @@ export default function Login({ onClose, onSignUpClick}) {
           </a>
         </div>
       </div>
-      <div className='mx-auto text-center p-6 relative z-0'>
+      <div className='mx-auto text-center p-6 relative z-0 w-5/6'>
         <form
           onSubmit={handleSubmit}
           className='form-container p-5 h-1/2 mt-5 bg-gray-200 relative z-0 rounded-lg pb-6'
         >
-          <div className='bg-white p-5 mt-10 rounded h-[60vh]'>
+          <div className='bg-white p-5 mt-10 rounded h-5/6'>
             <div className='mb-2'>
               <select
                 name='loginAs'
                 value={formData.loginAs}
                 onChange={handleChange}
-                className='w-full border-b border-gray-300 focus:outline-none mt-5 text-lg text-gray-500'
+                className='w-full  border-b border-gray-300 focus:outline-none mt-5 text-lg text-black font-bold'
               >
-                <option value='donor'>Donor</option>
-                <option value='organization'>Organization</option>
-                <option value='admin'>Admin</option>
+                <option value='donor'>DONOR</option>
+                <option value='organization'>ORGANIZATION</option>
+                <option value='admin'>ADMIN</option>
               </select>
             </div>
             <div className='mb-2'>
