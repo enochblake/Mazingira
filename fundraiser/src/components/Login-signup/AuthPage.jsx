@@ -1,4 +1,4 @@
-//components/login-signup/AuthPage
+// components/login-signup/AuthPage.jsx
 import React, { useState } from 'react';
 import Login from './Login';
 import SignUp from './SignUp';
@@ -13,9 +13,9 @@ export default function AuthPage() {
   return (
     <div>
       {showLogin ? (
-        <Login onSignUpClick={handleToggleForm} onClose={handleToggleForm} />
+        <Login onSignUpClick={handleToggleForm} />
       ) : (
-        <SignUp onLoginClick={handleToggleForm} onClose={handleToggleForm} />
+        <SignUp onLoginClick={handleToggleForm} />
       )}
     </div>
   );

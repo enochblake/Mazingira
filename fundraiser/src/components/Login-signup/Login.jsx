@@ -94,8 +94,9 @@ export default function Login({ onClose, onSignUpClick}) {
                 LOGIN
               </button>
             </div>
-            <Link to='/signup' onClick={onSignUpClick}>
-              <p className='pt-5'>Don't have an account?</p>
+            <Link to='#' onClick={onSignUpClick}>
+              {/* Don't have an account? Link */}
+              <p>Don't have an account?</p>
             </Link>
             <button
               onClick={handleClose}
