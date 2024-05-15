@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CategoryBar from './CategoryBar';
-
+import config from '../../config';
 function Organization() {
   const [organizations, setOrganizations] = useState([]);
   const [activeCategory, setActiveCategory] = useState('all');
   const categories = ['all', 'soil', 'water', 'air'];
 
+
   useEffect(() => {
     async function fetchOrganizations() {
       try {
-        const response = await fetch('http://localhost:5000/organizations');
+        const response = await fetch(`${config.baseURL}/donor/organization`);
         if (!response.ok) {
           throw new Error('Failed to fetch organizations');
         }
@@ -23,7 +24,7 @@ function Organization() {
 
     fetchOrganizations();
   }, []);
-
+  
   const filteredOrganizations =
     activeCategory === 'all'
       ? organizations
