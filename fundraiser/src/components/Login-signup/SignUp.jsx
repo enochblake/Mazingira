@@ -5,7 +5,9 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import config from '../../config';
+
 export default function SignUp({ onClose, onLoginClick }) {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -24,10 +26,35 @@ export default function SignUp({ onClose, onLoginClick }) {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic
-  };
+ const handleSubmit = async (e) => {
+   e.preventDefault();
+
+   // Prepare the data for the POST request
+   const requestData = {
+     first_name: formData.firstName,
+     last_name: formData.lastName,
+     email: formData.email,
+     password: formData.password,
+   };
+
+   try {
+     const response = await fetch(`${config.baseURL}/register`, {
+       method: 'POST',
+       headers: {
+         'Content-Type': 'application/json',
+       },
+       body: JSON.stringify(requestData),
+     });
+
+     if (response.ok) {
+       console.log('Registration successful!');
+     } else {
+       console.error('Registration failed:', response.statusText);
+     }
+   } catch (error) {
+     console.error('An error occurred:', error);
+   }
+ };
 
   const handleClose = () => {
     onClose();

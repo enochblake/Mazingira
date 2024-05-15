@@ -8,6 +8,7 @@ import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom'
 import Modal from './Modal'
 import SignUp from './SignUp'
+import config from '../../config'
 export default function Login({ onClose, onSignUpClick}) {
   const [formData, setFormData] = useState({
     email: '',
@@ -23,10 +24,33 @@ export default function Login({ onClose, onSignUpClick}) {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic
+
+    const requestData = {
+      email: formData.email,
+      password: formData.password,
+    };
+
+    try {
+      const response = await fetch(`${config.baseURL}/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData),
+      });
+
+      if (response.ok) {
+        console.log('Login successful!');
+      } else {
+        console.error('Login failed:', response.statusText);
+      }
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
   };
+
   const handleClose = () => {
     onClose();
   };
