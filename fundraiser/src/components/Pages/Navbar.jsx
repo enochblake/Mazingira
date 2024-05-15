@@ -1,4 +1,4 @@
-//components/Pages/Navbar.jsx
+//navbar.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -50,19 +50,6 @@ function Navbar() {
         </li>
         <li>
           <Link
-            to='/authForm'
-            className={`mx-4 text-white font-bold text-lg ${
-              selectedContent === 'AuthForm'
-                ? 'border-b-4 border-orange-500'
-                : ''
-            }`}
-            onClick={() => handleContentChange('AuthForm')}
-          >
-            AuthForm
-          </Link>
-        </li>
-        <li>
-          <Link
             to='/all_organizations'
             className={`mx-4 text-white font-bold text-lg ${
               selectedContent === 'AllOrganizations'
@@ -75,6 +62,20 @@ function Navbar() {
           </Link>
         </li>
       </ul>
+      <div className='flex space-x-4'>
+        <Link
+          to='/login'
+          className='text-white font-bold text-lg hover:text-orange-500'
+        >
+          Login
+        </Link>
+        <Link
+          to='/signup'
+          className='text-white font-bold text-lg hover:text-orange-500'
+        >
+          Sign Up
+        </Link>
+      </div>
     </div>
   );
 }

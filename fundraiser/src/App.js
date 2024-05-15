@@ -21,6 +21,8 @@ import Organization from './components/Organizitons/Organization';
 import BeneficiaryInventory from './components/BeneficiaryInventory/BeneficiaryInventory.jsx';
 import AddBeneficiary from './components/BeneficiaryInventory/AddBeneficiary.jsx';
 import Footer from './components/Pages/Footer.jsx';
+import SignUp from './components/Login-signup/SignUp.jsx';
+import Login from './components/Login-signup/Login.jsx'
 function App() {
   return (
     <Router>
@@ -43,6 +45,8 @@ function App() {
         <Route path='/b_stories-page' element={<BeneficiaryStories />} />
         <Route path='/B&I-page' element={<BeneficiaryInventory />} />
         <Route path='/add-beneficiary' element={<AddBeneficiary />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<SignUp />} />
       </Routes>
       <Footer/>
     </Router>
