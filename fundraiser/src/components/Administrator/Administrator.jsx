@@ -11,7 +11,7 @@ const Administrator = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('http://localhost:5000/data');
+        const response = await axios.get('https://mazingira-backend.onrender.com/admin');
         setOrganizations(response.data);
         setSearchResults(response.data);
       } catch (error) {
@@ -23,10 +23,10 @@ const Administrator = () => {
 
   const handleApprove = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/organizations/${id}/approve`);
+      await axios.patch(`https://mazingira-backend.onrender.com/admin/${id}`);
       setOrganizations(organizations.map(org => {
         if (org.id === id) {
-          return { ...org, status: 'approved' };
+          return { ...org, approval_status: true };
         }
         return org;
       }));
@@ -39,7 +39,7 @@ const Administrator = () => {
 
   const handleReject = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/organizations/${id}/reject`);
+      await axios.patch(`http://localhost:5000/organizations/${id}/reject`);
       setOrganizations(organizations.map(org => {
         if (org.id === id) {
           return { ...org, status: 'rejected' };
@@ -102,7 +102,7 @@ const Administrator = () => {
           onChange={handleFilterChange}
           className="bg-white border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring focus:border-blue-300"
         >
-          <option value="all">All</option>
+          <option value="all">Pending</option>
           <option value="approved">Approved</option>
           <option value="rejected">Rejected</option>
         </select>
@@ -119,10 +119,10 @@ const Administrator = () => {
       <div className="grid grid-cols-3 gap-4">
         {searchResults.map((org) => (
           <div key={org.id} className="border p-4 rounded-md shadow-md">
-            <img src={org.logo} alt={org.name} className="mb-2" />
+            {/* <img src={org.logo} alt={org.name} className="mb-2" /> */}
             <h2 className="text-lg font-bold mb-2">{org.name}</h2>
             <p className="text-gray-600 mb-2">{org.description}</p>
-            <p className="text-gray-600 mb-4">{org.history}</p>
+            <p className="text-gray-600 mb-4">{org.email}</p>
             <div className="flex justify-between">
               {org.status !== 'approved' && (
                 <button
