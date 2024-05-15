@@ -1,5 +1,6 @@
-import React from 'react';
+//components/pages/Header.jsx
 
+import React from 'react';
 function Header() {
   return (
     <header className='relative'>
