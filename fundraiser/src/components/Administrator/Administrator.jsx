@@ -9,6 +9,7 @@ const Administrator = () => {
   const [filter, setFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [deletedOrgs, setDeletedOrgs] = useState(new Set());
 
   const navigate = useNavigate(); // Initialize the navigate hook
 
@@ -61,11 +62,13 @@ const Administrator = () => {
     try {
       await axios.delete(`https://mazingira-backend.onrender.com/admin/${id}`);
       setOrganizations(organizations.filter(org => org.id !== id));
+       setDeletedOrgs(prev => new Set(prev).add(id));
       window.alert('Organization deleted successfully!');
     } catch (error) {
       console.error('Error deleting organization:', error);
       window.alert('Failed to delete organization. Please try again.');
     }
+
   };
 
   const handleFilterChange = (e) => {
@@ -128,7 +131,7 @@ const Administrator = () => {
       </div>
       <div className="grid grid-cols-3 gap-4">
         {searchResults.map((org) => (
-          <div key={org.id} className="border p-4 rounded-md shadow-md">
+          <div key={org.id} className={`border p-4 rounded-md shadow-md ${deletedOrgs.has(org.id) ? 'line-through' : ''}`}>
             <h2 className="text-lg font-bold mb-2">{org.name}</h2>
             <p className="text-gray-600 mb-2">{org.description}</p>
             <p className="text-gray-600 mb-4">{org.email}</p>
@@ -139,6 +142,8 @@ const Administrator = () => {
               >
                 View More
               </button>
+      
+     
               {org.status !== 'Redirecting you to all more details' && (
                 <button
                   onClick={() => handleApprove(org.id)}
@@ -176,5 +181,6 @@ const Administrator = () => {
 };
 
 export default Administrator;
+
 
 

@@ -10,7 +10,7 @@ function Organization() {
   useEffect(() => {
     async function fetchOrganizations() {
       try {
-        const response = await fetch('http://localhost:5000/organizations');
+        const response = await fetch('https://mazingira-backend.onrender.com/admin');
         if (!response.ok) {
           throw new Error('Failed to fetch organizations');
         }
