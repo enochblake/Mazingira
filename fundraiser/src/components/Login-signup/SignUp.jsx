@@ -4,10 +4,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 import config from '../../config';
 
 export default function SignUp({ onClose, onLoginClick }) {
+    const navigate = useNavigate(); 
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -56,8 +58,15 @@ export default function SignUp({ onClose, onLoginClick }) {
 
       if (response.ok) {
         console.log('Registration successful!');
+         handleClose();
+
+        if (formData.loginAs === 'organization') {
+          navigate('/register_org-page');
+        } else {
+          navigate('/all_organizations');
+        }
       } else {
-        console.error('Registration failed:', response.statusText);
+        console.error('Signup failed:', response.statusText);
       }
     } catch (error) {
       console.error('An error occurred:', error);
@@ -176,7 +185,6 @@ export default function SignUp({ onClose, onLoginClick }) {
               </button>
             </div>
             <Link to='#' onClick={onLoginClick}>
-              {/* Already have an account? Link */}
               <p>Already have an account?</p>
             </Link>
             <button
