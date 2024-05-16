@@ -5,13 +5,13 @@ import axios from 'axios';
 const CreateBeneficiaryStory = () => {
   const [formData, setFormData] = useState({
     title: '',
-    received_amount: '',
+    content: '',
     image_url: '',
     imagePreview: null,
   });
 
   const handleInputChange = ({ target: { name, value } }) => {
-    if (name === 'description' && value.length > 500) return;
+    if (name === 'content' && value.length > 500) return;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
 
     if (name === 'image_url') {
@@ -30,11 +30,11 @@ const CreateBeneficiaryStory = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const { name, received_amount, image_url } = formData;
+    const { title, content, image_url } = formData;
 
     const postData = {
-      name,
-      received_amount: parseFloat(received_amount),
+      title,
+      content,
       image_url,
     };
 
@@ -69,17 +69,16 @@ const CreateBeneficiaryStory = () => {
           <div className='w-1/2 px-4 text-lg'>
             <form onSubmit={handleSubmit}>
               <InputField
-                label='Beneficiary Name'
-                name='name'
-                value={formData.name}
+                label='Title'
+                name='title'
+                value={formData.title}
                 onChange={handleInputChange}
               />
               <InputField
-                label='Received Amount'
-                name='received_amount'
-                value={formData.received_amount}
+                label='Content'
+                name='content'
+                value={formData.content}
                 onChange={handleInputChange}
-                type='number'
               />
               <InputField
                 label='Image URL'
