@@ -1,38 +1,63 @@
 import React, { useState } from 'react';
+import config from '../../config';
+import axios from 'axios';
 
 const CreateBeneficiaryStory = () => {
   const [formData, setFormData] = useState({
-    organizationName: '',
-    description: '',
-    contactEmail: '',
-    phoneNumber: '',
-    websiteURL: '',
-    selectedCategory: '',
-    image: null,
+    name: '',
+    received_amount: '',
+    image_url: '',
     imagePreview: null,
   });
 
   const handleInputChange = ({ target: { name, value } }) => {
     if (name === 'description' && value.length > 500) return;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+
+    if (name === 'image_url') {
+      handleImageUpload(value);
+    }
   };
 
-  const handleImageUpload = ({ target: { files } }) => {
-    const file = files[0];
+  const handleImageUpload = (imageUrl) => {
     setFormData((prevFormData) => ({
       ...prevFormData,
-      image: file,
-      imagePreview: URL.createObjectURL(file),
+      image_url: imageUrl,
+      imagePreview: imageUrl,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic
+
+    const { name, received_amount, image_url } = formData;
+
+    const postData = {
+      name,
+      received_amount: parseFloat(received_amount),
+      image_url,
+    };
+
+    try {
+      const response = await axios.post(
+        `${config.baseURL}/beneficiary`,
+        postData
+      );
+      console.log('Beneficiary created:', response.data);
+    } catch (error) {
+      console.error(
+        'Error creating beneficiary:',
+        error.response ? error.response.data : error.message
+      );
+      alert(
+        'Error creating beneficiary: ' +
+          (error.response ? error.response.data : error.message)
+      );
+    }
   };
 
   return (
-    <div className='bg-gray-700 mt-5 pt-10 pb-10 mx-10 min-h-screen'>
+    <div className='bg-gray-700 mt-5 p-10 mx-10'>
       <div className='container mx-auto py-8 bg-gray-100 rounded shadow-md p-5 mb-5 '>
         <h1 className='text-2xl font-bold mb-5 mx-auto text-center text-orange-700'>
           CREATE BENEFICIARY STORIES
@@ -40,44 +65,27 @@ const CreateBeneficiaryStory = () => {
         <div className='flex flex-wrap -mx-4'>
           <div className='w-1/2 px-4'>
             <ImagePreview imagePreview={formData.imagePreview} />
-            <ImageInput handleImageUpload={handleImageUpload} />
-            <CategorySelection
-              selectedCategory={formData.selectedCategory}
-              handleCategoryChange={handleInputChange}
-            />
           </div>
           <div className='w-1/2 px-4 text-lg'>
             <form onSubmit={handleSubmit}>
               <InputField
-                label='Organization Name'
-                name='organizationName'
-                value={formData.organizationName}
+                label='Beneficiary Name'
+                name='name'
+                value={formData.name}
                 onChange={handleInputChange}
               />
               <InputField
-                label='Contact Email'
-                name='contactEmail'
-                value={formData.contactEmail}
+                label='Received Amount'
+                name='received_amount'
+                value={formData.received_amount}
                 onChange={handleInputChange}
+                type='number'
               />
               <InputField
-                label='Phone Number'
-                name='phoneNumber'
-                value={formData.phoneNumber}
+                label='Image URL'
+                name='image_url'
+                value={formData.image_url}
                 onChange={handleInputChange}
-              />
-              <InputField
-                label='Website URL'
-                name='websiteURL'
-                value={formData.websiteURL}
-                onChange={handleInputChange}
-              />
-              <TextareaField
-                label='Description'
-                name='description'
-                value={formData.description}
-                onChange={handleInputChange}
-                maxLength={500}
               />
               <div className='flex items-center justify-between'>
                 <Button
@@ -113,75 +121,12 @@ const ImagePreview = ({ imagePreview }) => {
     <img
       className='border-4 border-gray-500 rounded-md mb-2'
       src={imagePreview || 'https://via.placeholder.com/200'}
-      alt='Organization Preview'
+      alt='Beneficiary Preview'
     />
   );
 };
 
-const ImageInput = ({ handleImageUpload }) => {
-  return (
-    <input
-      className='shadow appearance-none border rounded w-2/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-      id='image'
-      type='file'
-      accept='image/*'
-      onChange={handleImageUpload}
-      required
-    />
-  );
-};
-
-const CategorySelection = ({ selectedCategory, handleCategoryChange }) => {
-  return (
-    <div>
-      <label className='block text-gray-700 font-bold mb-2 mt-5 text-lg'>
-        Category
-      </label>
-      <div>
-        <RadioOption
-          value='air'
-          checked={selectedCategory === 'air'}
-          onChange={handleCategoryChange}
-        >
-          Air
-        </RadioOption>
-        <RadioOption
-          value='water'
-          checked={selectedCategory === 'water'}
-          onChange={handleCategoryChange}
-        >
-          Water
-        </RadioOption>
-        <RadioOption
-          value='land'
-          checked={selectedCategory === 'land'}
-          onChange={handleCategoryChange}
-        >
-          Land
-        </RadioOption>
-      </div>
-    </div>
-  );
-};
-
-const RadioOption = ({ value, checked, onChange, children }) => {
-  return (
-    <label className='inline-flex items-center mr-6 cursor-pointer'>
-      <input
-        type='radio'
-        className='form-radio h-5 w-5 text-orange-500 border-orange-500'
-        value={value}
-        checked={checked}
-        onChange={() =>
-          onChange({ target: { name: 'selectedCategory', value } })
-        }
-      />
-      <span className='ml-2 text-gray-700'>{children}</span>
-    </label>
-  );
-};
-
-const InputField = ({ label, name, value, onChange }) => {
+const InputField = ({ label, name, value, onChange, type = 'text' }) => {
   return (
     <div className='mb-2'>
       <label className='block text-gray-700 font-bold mb-2'>{label}</label>
@@ -192,27 +137,8 @@ const InputField = ({ label, name, value, onChange }) => {
         value={value}
         onChange={onChange}
         required
+        type={type}
       />
-    </div>
-  );
-};
-
-const TextareaField = ({ label, name, value, onChange, maxLength }) => {
-  return (
-    <div className='mb-4'>
-      <label className='block text-gray-700 font-bold mb-2'>{label}</label>
-      <textarea
-        className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-40 resize-none'
-        id={name}
-        name={name}
-        value={value}
-        onChange={onChange}
-        maxLength={maxLength}
-        required
-      />
-      <div className='text-right text-sm mt-2'>
-        {value.length}/{maxLength}
-      </div>
     </div>
   );
 };
