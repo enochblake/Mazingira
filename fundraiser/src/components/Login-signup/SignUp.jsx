@@ -63,7 +63,7 @@ export default function SignUp({ onClose, onLoginClick }) {
         if (formData.loginAs === 'organization') {
           navigate('/register_org-page');
         } else {
-          navigate('/all_organizations');
+          navigate('/all_organizations-page');
         }
       } else {
         console.error('Signup failed:', response.statusText);
