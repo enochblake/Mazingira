@@ -7,8 +7,8 @@ function RegistrationPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Call API to register organization and wait for admin approval
   };
+
   return (
     <div class='min-h-screen flex flex-col items-center justify-center bg-gray-100'>
       <h2 className='font-bold text-4xl text-center mb-4 '>Work with us</h2>

@@ -55,7 +55,7 @@ export default function Login({ onClose, onSignUpClick }) {
          handleClose();
 
          if (formData.loginAs === 'organization') {
-           navigate('/register_org-pape');
+           navigate('/environmental_org');
          } else {
            navigate('/all_organizations');
          }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import CreateBeneficiaryStory from './AddBeneficiaryStories';
+import CreateBeneficiaryStory from './CreateBeneficiaryStories';
 
 const BeneficiaryStories = () => {
   const [stories, setStories] = useState([]);

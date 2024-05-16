@@ -11,7 +11,7 @@ import BlogList from './components/DonationPage/BlogList';
 import AddOrganization from './components/AddProduct/AddOrganizationPage.jsx';
 import RegistrationPage from './components/AddProduct/RegistrationPage.jsx';
 import DonationAmount from './components/AddProduct/DonationAmount.jsx';
-import AddBeneficiaryStory from './components/AddProduct/AddBeneficiaryStories.jsx';
+import AddBeneficiaryStory from './components/AddProduct/CreateBeneficiaryStories.jsx';
 import BeneficiaryStories from './components/AddProduct/BeneficiaryStories.jsx';
 import Home from './components/Pages/Home.jsx';
 import AboutUs from './components/Pages/AboutUs.jsx';
@@ -23,6 +23,8 @@ import AddBeneficiary from './components/BeneficiaryInventory/AddBeneficiary.jsx
 import Footer from './components/Pages/Footer.jsx';
 import SignUp from './components/Login-signup/SignUp.jsx';
 import Login from './components/Login-signup/Login.jsx';
+import EnvironmentalOrgPage from './components/AddProduct/EnvironOrgPage.jsx';
+import BeneficiaryInventoryPage from './components/BeneficiaryInventory/B&IPage.jsx';
 function App() {
   return (
     <Router>
@@ -47,6 +49,8 @@ function App() {
         <Route path='/add-beneficiary' element={<AddBeneficiary />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
+        <Route path='/environmental_org' element={<EnvironmentalOrgPage/>} />
+        <Route path='/B&IPage' element={<BeneficiaryInventoryPage/>} />
       </Routes>
       <Footer />
     </Router>
