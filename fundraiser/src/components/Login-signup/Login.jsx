@@ -10,7 +10,7 @@ import Modal from './Modal'
 import SignUp from './SignUp'
 import config from '../../config'
 export default function Login({ onClose, onSignUpClick }) {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
   const [formData, setFormData] = useState({
     email: '',
@@ -125,7 +125,6 @@ export default function Login({ onClose, onSignUpClick }) {
               </button>
             </div>
             <Link to='#' onClick={onSignUpClick}>
-              {/* Don't have an account? Link */}
               <p>Don't have an account?</p>
             </Link>
             <button
