@@ -68,19 +68,6 @@ function Navbar() {
             Contact
           </Link>
         </li>
-        <li>
-          {/* <Link
-            to='/all_organizations'
-            className={`mx-4 text-white font-bold text-lg ${
-              selectedContent === 'AllOrganizations'
-                ? 'border-b-4 border-orange-500'
-                : ''
-            }`}
-            onClick={() => handleContentChange('AllOrganizations')}
-          >
-            All Organizations
-          </Link> */}
-        </li>
       </ul>
       <div className='flex space-x-4'>
         <button
@@ -96,11 +83,9 @@ function Navbar() {
           Sign Up
         </button>
       </div>
-      {/* Login Modal */}
       <Modal isOpen={loginModalOpen} onClose={closeLoginModal}>
         <Login onClose={closeLoginModal} />
       </Modal>
-      {/* Signup Modal */}
       <Modal isOpen={signupModalOpen} onClose={closeSignupModal}>
         <SignUp onClose={closeSignupModal} />
       </Modal>
