@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import config from '../../config';
 
 const DonationAmount = () => {
   const [donors, setDonors] = useState([]);
@@ -16,7 +17,9 @@ const DonationAmount = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/donationAmount');
+      const response = await axios.get(
+        `${config.baseURL}/organization/donations`
+      );
       const data = response.data;
       setDonors(data);
       calculateTotals(data);
@@ -59,7 +62,7 @@ const DonationAmount = () => {
       <h1 className='text-4xl font-bold text-center mb-4 text-orange-700'>
         Donation Amount Page
       </h1>
-      <div className='bg-gray-700 min-h-screen  p-16 mx-10 mb-2'>
+      <div className='bg-gray-700 min-h-screen p-16 mx-10 mb-2'>
         <div className='container mx-auto border shadow-md mt-4 bg-gray-100 w-4/7 justify-center text-center p-4 pl-5'>
           <div className='flex mb-4 mt-7'>
             <span
@@ -90,11 +93,11 @@ const DonationAmount = () => {
                   ? 'Non-Anonymous Donors'
                   : 'Anonymous Donors'}
               </h2>
-              <div className='max-h-96  overflow-y-auto'>
+              <div className='max-h-96 overflow-y-auto'>
                 <ul className='w-3/4'>
                   {filteredDonors.map((donor, index) => (
                     <React.Fragment key={donor.id}>
-                      <li className='flex  py-4'>
+                      <li className='flex py-4'>
                         <div>
                           <p className='text-lg flex justify-start font-semibold'>
                             {donor.anonymous_status ||
@@ -128,11 +131,11 @@ const DonationAmount = () => {
                 </h2>
                 <p className='text-2xl text-center'>${totalAmountForType}</p>
                 <p className='text-lg text-center ml-5'>
-                   <p>
+                  <p>
                     <hr className='w-full my-2 border-gray-400' />
                   </p>
                   No. of Donors:
-                <p></p>
+                  <p></p>
                   {activeType === 'non-anonymous'
                     ? nonAnonymousCount
                     : anonymousCount}

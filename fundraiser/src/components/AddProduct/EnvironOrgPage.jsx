@@ -14,9 +14,9 @@ function EnvironmentalOrgPage() {
   return (
     <div className='bg-gray-100 min-h-screen'>
       <div className='container mx-auto p-5'>
-        <h1 className='text-center text-orange-700 font-bold text-5xl mx-auto mt-4'>
+        {/* <h1 className='text-center text-orange-700 font-bold text-5xl mx-auto mt-4'>
           ORGANIZATION STUFF
-        </h1>
+        </h1> */}
         <div className='flex justify-center my-4'>
           <Link
             to='#'
@@ -50,7 +50,7 @@ function EnvironmentalOrgPage() {
             Inventory
           </Link>
         </div>
-        {selectedContent === 'donation' && <DonationAmount/>}
+        {selectedContent === 'donations' && <DonationAmount/>}
         {selectedContent === 'create_stories' && <CreateBeneficiaryStory />}
         {selectedContent === 'inventory' && < BeneficiaryInventoryPage/>}
       </div>
