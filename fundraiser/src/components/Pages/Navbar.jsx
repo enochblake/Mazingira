@@ -69,7 +69,7 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link
+          {/* <Link
             to='/all_organizations'
             className={`mx-4 text-white font-bold text-lg ${
               selectedContent === 'AllOrganizations'
@@ -79,7 +79,7 @@ function Navbar() {
             onClick={() => handleContentChange('AllOrganizations')}
           >
             All Organizations
-          </Link>
+          </Link> */}
         </li>
       </ul>
       <div className='flex space-x-4'>

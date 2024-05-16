@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserGroup, faPaperclip } from '@fortawesome/free-solid-svg-icons';
+import config from '../../config';
 
 const OrganizationDetails = () => {
   const { id } = useParams();
@@ -11,9 +12,7 @@ const OrganizationDetails = () => {
   useEffect(() => {
     async function fetchOrganizationDetails() {
       try {
-        const response = await fetch(
-          `http://localhost:5000/organizations/${id}`
-        );
+        const response = await fetch(`${config.baseURL}/donor/organization/${id}`);
         if (!response.ok) {
           throw new Error('Failed to fetch organization');
         }

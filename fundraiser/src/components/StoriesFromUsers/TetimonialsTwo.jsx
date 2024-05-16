@@ -16,27 +16,64 @@ import {
 import Hero from './Hero';
 
 SwiperCore.use([Autoplay, Navigation]);
-
+const testimonials = [
+  {
+    id: 1,
+    name: 'John Doe',
+    logo: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BvdGlmeSUyMGxvZ298ZW58MHx8MHx8fDA%3D',
+    message:
+      'Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services',
+    image:
+      'https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    id: 2,
+    name: 'Jane Doe',
+    logo: 'https://images.unsplash.com/photo-1705988142466-e468bc654eeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2xhY2slMjBsb2dvfGVufDB8fDB8fHww',
+    message:
+      'Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services',
+    image:
+      'https://plus.unsplash.com/premium_photo-1683141202259-ee13ddd953fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    id: 3,
+    name: 'Jane Doe',
+    logo: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BvdGlmeSUyMGxvZ298ZW58MHx8MHx8fDA%3D',
+    message:
+      'Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services',
+    image:
+      'https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    id: 4,
+    name: 'Jane Doe',
+    logo: 'https://images.unsplash.com/photo-1705988142466-e468bc654eeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2xhY2slMjBsb2dvfGVufDB8fDB8fHww',
+    message:
+      'Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services',
+    image:
+      'https://images.unsplash.com/photo-1543807535-eceef0bc6599?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D',
+  },
+];
 function TestimonialsTwo() {
   const navigationStyles =
     'absolute top-0 z-10 flex items-center justify-center w-1/6 h-full text-center opacity-50 cursor-pointer transition-opacity duration-150';
 
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
-  const [testimonials, setTestimonials] = useState([]);
+  // const [testimonials, setTestimonials] = useState([]);
 
-  useEffect(() => {
-    const fetchTestimonials = async () => {
-      try {
-        const response = await axios.get('http://localhost:5000/testimonials');
-        setTestimonials(response.data);
-      } catch (error) {
-        console.error('Error fetching testimonials:', error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchTestimonials = async () => {
+  //     try {
+  //       const response = await axios.get('http://localhost:5000/testimonials');
+  //       setTestimonials(response.data);
+  //     } catch (error) {
+  //       console.error('Error fetching testimonials:', error);
+  //     }
+  //   };
 
-    fetchTestimonials();
-  }, []);
+  //   fetchTestimonials();
+  // }, []);
 
   useEffect(() => {
     const { current: prevEl } = navigationPrevRef;

@@ -2,15 +2,15 @@
 import React, { useState } from 'react';
 import '../../index.css';
 
-const BlogPreview = ({ title, image, timeToRead, description, index }) => {
+const BlogPreview = ({ title, image_url, timeToRead,content, index }) => {
   const isEven = index % 2 === 0;
   const [expanded, setExpanded] = useState(false);
-  const [prevDescription, setPrevDescription] = useState(description);
+  const [prevDescription, setPrevDescription] = useState(content);
 
   const toggleExpanded = () => {
     setExpanded(!expanded);
     if (!expanded) {
-      setPrevDescription(description);
+      setPrevDescription(content);
     }
   };
 
@@ -25,7 +25,7 @@ const BlogPreview = ({ title, image, timeToRead, description, index }) => {
       {index === 0 ? (
         <div className='flex flex-row-reverse'>
           <div className='mb-4'>
-            <img src={image} alt='Blog' className='w-[370px] h-[250px]' />
+            <img src={image_url} alt='Blog' className='w-[370px] h-[250px]' />
           </div>
           <div className='flex-1 mt-7 m-7'>
             <h2 className='text-2xl font-bold mb-2'>{title}</h2>
@@ -34,7 +34,7 @@ const BlogPreview = ({ title, image, timeToRead, description, index }) => {
               <span className='text-orange-500'>{` ${timeToRead} min`}</span>
             </p>
             <p className='text-gray-700 mb-4'>
-              {expanded ? description : `${prevDescription.slice(0, 150)}...`}
+              {expanded ? content : `${prevDescription.slice(0, 150)}...`}
             </p>
             {!expanded && (
               <button
@@ -57,12 +57,12 @@ const BlogPreview = ({ title, image, timeToRead, description, index }) => {
       ) : (
         <div
           className='bg-cover bg-center h-90 relative blur-custom'
-          style={{ backgroundImage: `url(${image})`, height: '450px' }}
+          style={{ backgroundImage: `url(${image_url})`, height: '450px' }}
         >
           <div
             className='absolute inset-0 z-0'
             style={{
-              backgroundImage: `url(${image})`,
+              backgroundImage: `url(${image_url})`,
               opacity: 0.9,
               filter: 'blur(5px)',
             }}
@@ -76,7 +76,7 @@ const BlogPreview = ({ title, image, timeToRead, description, index }) => {
               <span className='text-orange-700 font-bold text-lg'>{` ${timeToRead} min`}</span>
             </p>
             <p className='text-white mb-4'>
-              {expanded ? description : `${prevDescription.slice(0, 150)}...`}
+              {expanded ? content : `${prevDescription.slice(0, 150)}...`}
             </p>
             {!expanded && (
               <button
