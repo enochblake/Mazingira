@@ -5,7 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { Link, useNavigate } from 'react-router-dom'; 
 import Modal from './Modal'
 import SignUp from './SignUp'
 import config from '../../config'
@@ -26,36 +26,46 @@ export default function Login({ onClose, onSignUpClick }) {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+   const handleSubmit = async (e) => {
+     e.preventDefault();
 
-    const requestData = {
-      email: formData.email,
-      password: formData.password,
-    };
+     const requestData = {
+       email: formData.email,
+       password: formData.password,
+     };
 
-    try {
-      const response = await fetch(`${config.baseURL}/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(requestData),
-      });
+     let loginEndpoint;
+     if (formData.loginAs === 'donor' || formData.loginAs === 'admin') {
+       loginEndpoint = `${config.baseURL}/login`;
+     } else if (formData.loginAs === 'organization') {
+       loginEndpoint = `${config.baseURL}/org/login`;
+     }
 
-      if (response.ok) {
-        console.log('Login successful!');
-                handleClose();
+     try {
+       const response = await fetch(loginEndpoint, {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify(requestData),
+       });
 
-                navigate('/all_organizations');
+       if (response.ok) {
+         console.log('Login successful!');
+         handleClose();
 
-      } else {
-        console.error('Login failed:', response.statusText);
-      }
-    } catch (error) {
-      console.error('An error occurred:', error);
-    }
-  };
+         if (formData.loginAs === 'organization') {
+           navigate('/organization_dashboard');
+         } else {
+           navigate('/all_organizations');
+         }
+       } else {
+         console.error('Login failed:', response.statusText);
+       }
+     } catch (error) {
+       console.error('An error occurred:', error);
+     }
+   };
 
   const handleClose = () => {
     onClose();
