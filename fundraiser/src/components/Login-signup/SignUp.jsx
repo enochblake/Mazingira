@@ -57,11 +57,15 @@ export default function SignUp({ onClose, onLoginClick }) {
       });
 
       if (response.ok) {
+        const responseData = await response.json();
         console.log('Registration successful!');
          handleClose();
 
-        if (formData.loginAs === 'organization') {
-          navigate('/register_org-page');
+        if (
+          formData.userType === 'organization' &&
+          responseData.approval_status === false
+        ) {
+          navigate('/approvalPending-page');
         } else {
           navigate('/all_organizations-page');
         }
@@ -72,6 +76,7 @@ export default function SignUp({ onClose, onLoginClick }) {
       console.error('An error occurred:', error);
     }
   };
+
 
   const handleClose = () => {
     onClose();

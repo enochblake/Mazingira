@@ -9,7 +9,6 @@ import PayPage from './components/DonationsPay/PayPage';
 import TestimonialsTwo from './components/StoriesFromUsers/TetimonialsTwo.jsx';
 import BlogList from './components/DonationPage/BlogList';
 import AddOrganization from './components/AddProduct/AddOrganizationPage.jsx';
-import RegistrationPage from './components/AddProduct/RegistrationPage.jsx';
 import DonationAmount from './components/AddProduct/DonationAmount.jsx';
 import AddBeneficiaryStory from './components/AddProduct/CreateBeneficiaryStories.jsx';
 import BeneficiaryStories from './components/AddProduct/BeneficiaryStories.jsx';
@@ -25,6 +24,7 @@ import SignUp from './components/Login-signup/SignUp.jsx';
 import Login from './components/Login-signup/Login.jsx';
 import EnvironmentalOrgPage from './components/AddProduct/EnvironOrgPage.jsx';
 import BeneficiaryInventoryPage from './components/BeneficiaryInventory/B&IPage.jsx';
+import ApprovalPending from './components/AddProduct/ApprovalPending.jsx';
 function App() {
   return (
     <Router>
@@ -41,7 +41,7 @@ function App() {
         <Route path='/testimonials-page' element={<TestimonialsTwo />} />
         <Route path='/blogList-page' element={<BlogList />} />
         <Route path='/add_org-page' element={<AddOrganization />} />
-        <Route path='/register_org-page' element={<RegistrationPage />} />
+        <Route path='/approvalPending-page' element={<ApprovalPending />} />
         <Route path='/amounts-page' element={<DonationAmount />} />
         <Route path='/create_stories-page' element={<AddBeneficiaryStory />} />
         <Route path='/b_stories-page' element={<BeneficiaryStories />} />
