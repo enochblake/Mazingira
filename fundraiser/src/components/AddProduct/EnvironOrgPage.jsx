@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import BeneficiaryInventoryPage from '../BeneficiaryInventory/B&IPage';
 import CreateBeneficiaryStory from './CreateBeneficiaryStories';
 import DonationAmount from './DonationAmount';
 import AddBeneficiary from '../BeneficiaryInventory/AddBeneficiary';
