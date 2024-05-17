@@ -1,7 +1,15 @@
 //components/pages/Header.jsx
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 function Header() {
+  const navigate = useNavigate();
+
+   const handleReadMoreClick = () => {
+     navigate('/about-us');
+   };
+
   return (
     <header className='relative'>
       <div
@@ -23,7 +31,9 @@ function Header() {
               <button className='bg-transparent border border-white px-4 py-2 text-white mr-2'>
                 Get Started
               </button>
-              <button className='text-white'>Read more</button>
+              <button className='text-white' onClick={handleReadMoreClick}>
+                Read more
+              </button>
             </div>
           </div>
         </div>
