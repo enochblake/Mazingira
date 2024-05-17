@@ -43,7 +43,7 @@ const BeneficiaryInventory = () => {
         Beneficiary & Inventory
       </h1>
       <div className='flex justify-center my-4'>
-        <Link
+        {/* <Link
           to='#'
           className={`mx-4 text-black  font-bold text-lg ${
             selectedContent === 'inventory'
@@ -53,8 +53,8 @@ const BeneficiaryInventory = () => {
           onClick={() => handleContentChange('inventory')}
         >
           Inventory
-        </Link>
-        <Link
+        </Link> */}
+        {/* <Link
           to='#'
           className={`mx-4 text-black font-bold text-lg ${
             selectedContent === 'beneficiaries'
@@ -64,10 +64,10 @@ const BeneficiaryInventory = () => {
           onClick={() => handleContentChange('beneficiaries')}
         >
           Beneficiaries
-        </Link>
+        </Link> */}
       </div>
 
-      {selectedContent === 'inventory' && (
+      {/* {selectedContent === 'inventory' && ( */}
         <div className='bg-gray-700 min-h-screen  p-16 mx-10 mb-2'>
           <div className='container mx-auto border shadow-md mt-4 bg-gray-100 w-4/7 justify-center text-center p-4 pl-5'>
             <div className='flex mb-4 mt-7'>
@@ -120,9 +120,9 @@ const BeneficiaryInventory = () => {
             </div>
           </div>
         </div>
-      )}
+      {/* )} */}
 
-      {selectedContent === 'beneficiaries' && <AddBeneficiary />}
+      {/* {selectedContent === 'beneficiaries' && <AddBeneficiary />} */}
     </div>
   );
 };
