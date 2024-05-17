@@ -118,7 +118,7 @@ const CreateBeneficiaryStory = () => {
 const ImagePreview = ({ imagePreview }) => {
   return (
     <img
-      className='border-4 border-gray-500 rounded-md mb-2'
+      className='border-4 border-gray-500 rounded-md mb-2 h-1/2'
       src={imagePreview || 'https://via.placeholder.com/200'}
       alt='Beneficiary Preview'
     />

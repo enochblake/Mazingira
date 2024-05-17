@@ -9,6 +9,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Modal from './Modal'
 import SignUp from './SignUp'
 import config from '../../config'
+import axios from 'axios'
 export default function Login({ onClose, onSignUpClick }) {
   const navigate = useNavigate(); 
 
@@ -42,15 +43,18 @@ export default function Login({ onClose, onSignUpClick }) {
      }
 
      try {
-       const response = await fetch(loginEndpoint, {
-         method: 'POST',
-         headers: {
-           'Content-Type': 'application/json',
-         },
-         body: JSON.stringify(requestData),
-       });
+      //  const response = await fetch(loginEndpoint, {
+      //    method: 'POST',
+      //    headers: {
+      //      'Content-Type': 'application/json',
+      //    },
+      //    body: JSON.stringify(requestData),
+      //  });
 
-       if (response.ok) {
+      const response = await axios.post(loginEndpoint, requestData, {withCredentials: true});
+      console.log(response)
+
+       if (response.data) {
          console.log('Login successful!');
          handleClose();
 
