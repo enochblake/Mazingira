@@ -1,10 +1,9 @@
-//navbar.jsx
 import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Modal from '../Login-signup/Modal';
 import Login from '../Login-signup/Login';
-import SignUp from '../Login-signup/SignUp'
-import config from '../../config'
+import SignUp from '../Login-signup/SignUp';
+import config from '../../config';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
 
@@ -14,7 +13,7 @@ function Navbar() {
   const [signupModalOpen, setSignupModalOpen] = useState(false);
 
   const { authenticated, setAuthenticated } = useContext(AuthContext);
-
+  const navigate = useNavigate();
 
   const handleContentChange = (content) => {
     setSelectedContent(content);
@@ -38,10 +37,11 @@ function Navbar() {
 
   const handleLogout = async () => {
     try {
-        await axios.delete(`${config.baseURL}/logout`, { withCredentials: true });
-        setAuthenticated(false);
+      await axios.delete(`${config.baseURL}/logout`, { withCredentials: true });
+      setAuthenticated(false);
+      navigate('/'); // Redirect to homepage after logout
     } catch (error) {
-        console.error("Logout failed:", error);
+      console.error('Logout failed:', error);
     }
   };
 
@@ -86,31 +86,30 @@ function Navbar() {
         </li>
       </ul>
       {authenticated ? (
-                <div className='flex space-x-4'>
-                  <button
-                    onClick={handleLogout}
-                    className='text-white font-bold text-lg hover:text-orange-500'
-                  >
-                  Logout
-                  </button>
-                  </div>
-            ) : (
-              <div className='flex space-x-4'>
-                  <button
-                    onClick={openLoginModal}
-                    className='text-white font-bold text-lg hover:text-orange-500'
-                  >
-                    Login
-                  </button>
-                  <button
-                    onClick={openSignupModal}
-                    className='text-white font-bold text-lg hover:text-orange-500'
-                  >
-                  Sign Up
-                  </button>
-              </div>
-            )
-        }
+        <div className='flex space-x-4'>
+          <button
+            onClick={handleLogout}
+            className='text-white font-bold text-lg hover:text-orange-500'
+          >
+            Logout
+          </button>
+        </div>
+      ) : (
+        <div className='flex space-x-4'>
+          <button
+            onClick={openLoginModal}
+            className='text-white font-bold text-lg hover:text-orange-500'
+          >
+            Login
+          </button>
+          <button
+            onClick={openSignupModal}
+            className='text-white font-bold text-lg hover:text-orange-500'
+          >
+            Sign Up
+          </button>
+        </div>
+      )}
 
       <Modal isOpen={loginModalOpen} onClose={closeLoginModal}>
         <Login onClose={closeLoginModal} />
