@@ -1,20 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import CreateBeneficiaryStory from './CreateBeneficiaryStories';
+import config from '../../config'; // Import the config file for baseURL
 
 const BeneficiaryStories = () => {
   const [stories, setStories] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [activeTab, setActiveTab] = useState('read');
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/beneficiaryStories')
+      .get(`${config.baseURL}/donor/stories`)
       .then((response) => {
-        setStories(response.data);
+        if (response.data.message) {
+          setError(response.data.message);
+        } else {
+          setStories(response.data);
+        }
       })
       .catch((error) => {
         console.error(error);
+        setError('Failed to fetch stories. Please try again later.');
       });
   }, []);
 
@@ -24,38 +29,13 @@ const BeneficiaryStories = () => {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
-
   return (
     <div className='bg-gray-100'>
-      <h2 className='text-4xl font-bold text-orange-700 text-center mb-4'>
-        BENEFICIARIES STORIES
-      </h2>
-      <div className='flex justify-center mb-4  '>
-        <button
-          className={` ${
-            activeTab === 'create' ? 'border-b-4 border-orange-500' : ''
-          } text-2xl font-bold mr-7`}
-          onClick={() => handleTabClick('create')}
-        >
-          Create
-        </button>
-        <button
-          className={`${
-            activeTab === 'read' ? 'border-b-4 border-orange-500' : ''
-          } text-2xl font-bold`}
-          onClick={() => handleTabClick('read')}
-        >
-          Read
-        </button>
-      </div>
-      {activeTab === 'create' ? (
-        <CreateBeneficiaryStory />
+      {error ? (
+        <div className='text-center text-red-500'>{error}</div>
       ) : (
-        <div className='bg-gray-700  mb-5 pt-10 mx-10'>
-          <div className='grid grid-cols-1 rounded border shadow-md p-7 md:grid-cols-3 gap-6 bg-white w-3/4 mx-auto  justify-center'>
+        <div className='bg-gray-700 mb-5 pt-10 mx-10'>
+          <div className='grid grid-cols-1 rounded border shadow-md p-7 md:grid-cols-3 gap-6 bg-white w-3/4 mx-auto justify-center'>
             {currentStories.map((story) => (
               <div key={story.id} className='flex flex-col'>
                 <img
@@ -67,13 +47,13 @@ const BeneficiaryStories = () => {
                   <h3 className='text-lg font-bold mb-2'>{story.title}</h3>
                   <p className='text-gray-600 mb-4'>{story.content}</p>
                   <span className='text-sm text-gray-500'>
-                    {story.created_at}
+                    {new Date(story.created_at).toLocaleDateString()}
                   </span>
                 </div>
               </div>
             ))}
           </div>
-          {activeTab === 'read' && (
+          {stories.length > 0 && (
             <Pagination
               storiesPerPage={3}
               totalStories={stories.length}
@@ -94,7 +74,7 @@ const Pagination = ({ storiesPerPage, totalStories, paginate }) => {
   }
 
   return (
-    <ul className='flex justify-center mt-3 '>
+    <ul className='flex justify-center mt-3'>
       {pageNumbers.map((number) => (
         <li key={number}>
           <button
