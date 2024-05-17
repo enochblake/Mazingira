@@ -28,7 +28,7 @@ import BeneficiaryInventoryPage from './components/BeneficiaryInventory/B&IPage.
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar/>
       <Routes>
         <Route path='/donor' element={<Donor />} />
         <Route path='/' element={<Home />} />

@@ -1,5 +1,5 @@
 //components/login-signup/Login.jsx
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
@@ -10,8 +10,12 @@ import Modal from './Modal'
 import SignUp from './SignUp'
 import config from '../../config'
 import axios from 'axios'
+import { AuthContext } from '../../context/AuthContext';
+
 export default function Login({ onClose, onSignUpClick }) {
   const navigate = useNavigate(); 
+
+  const { setAuthenticated } = useContext(AuthContext);
 
   const [formData, setFormData] = useState({
     email: '',
@@ -55,6 +59,7 @@ export default function Login({ onClose, onSignUpClick }) {
       console.log(response)
 
        if (response.data) {
+        setAuthenticated(true)
          console.log('Login successful!');
          handleClose();
 
