@@ -1,15 +1,16 @@
-//components/login-signup/Login.jsx
+
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom'; 
-import Modal from './Modal'
-import SignUp from './SignUp'
-import config from '../../config'
-import axios from 'axios'
+import Modal from './Modal';
+import SignUp from './SignUp';
+import config from '../../config';
+import axios from 'axios';
+
 export default function Login({ onClose, onSignUpClick }) {
   const navigate = useNavigate(); 
 
@@ -27,49 +28,41 @@ export default function Login({ onClose, onSignUpClick }) {
     }));
   };
 
-   const handleSubmit = async (e) => {
-     e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-     const requestData = {
-       email: formData.email,
-       password: formData.password,
-     };
+    const requestData = {
+      email: formData.email,
+      password: formData.password,
+    };
 
-     let loginEndpoint;
-     if (formData.loginAs === 'donor' || formData.loginAs === 'admin') {
-       loginEndpoint = `${config.baseURL}/login`;
-     } else if (formData.loginAs === 'organization') {
-       loginEndpoint = `${config.baseURL}/org/login`;
-     }
+    let loginEndpoint;
+    if (formData.loginAs === 'donor' || formData.loginAs === 'admin') {
+      loginEndpoint = `${config.baseURL}/login`;
+    } else if (formData.loginAs === 'organization') {
+      loginEndpoint = `${config.baseURL}/org/login`;
+    }
 
-     try {
-      //  const response = await fetch(loginEndpoint, {
-      //    method: 'POST',
-      //    headers: {
-      //      'Content-Type': 'application/json',
-      //    },
-      //    body: JSON.stringify(requestData),
-      //  });
+    try {
+      const response = await axios.post(loginEndpoint, requestData, { withCredentials: true });
+      console.log(response);
 
-      const response = await axios.post(loginEndpoint, requestData, {withCredentials: true});
-      console.log(response)
+      if (response.data) {
+        toast.success('Login successful!');
+        handleClose();
 
-       if (response.data) {
-         console.log('Login successful!');
-         handleClose();
-
-         if (formData.loginAs === 'organization') {
-           navigate('/environmental_org');
-         } else {
-           navigate('/all_organizations');
-         }
-       } else {
-         console.error('Login failed:', response.statusText);
-       }
-     } catch (error) {
-       console.error('An error occurred:', error);
-     }
-   };
+        if (formData.loginAs === 'organization') {
+          navigate('/environmental_org');
+        } else {
+          navigate('/all_organizations');
+        }
+      } else {
+        toast.error('Login failed: ' + response.statusText);
+      }
+    } catch (error) {
+      toast.error('An error occurred: ' + error.message);
+    }
+  };
 
   const handleClose = () => {
     onClose();
@@ -102,7 +95,7 @@ export default function Login({ onClose, onSignUpClick }) {
                 name='loginAs'
                 value={formData.loginAs}
                 onChange={handleChange}
-                className='w-full  border-b border-gray-300 focus:outline-none mt-5 text-lg text-black font-bold'
+                className='w-full border-b border-gray-300 focus:outline-none mt-5 text-lg text-black font-bold'
               >
                 <option value='donor'>DONOR</option>
                 <option value='organization'>ORGANIZATION</option>
@@ -143,13 +136,14 @@ export default function Login({ onClose, onSignUpClick }) {
             </Link>
             <button
               onClick={handleClose}
-              className=' right-0 m-4 text-gray-600 hover:text-gray-800'
+              className='right-0 m-4 text-gray-600 hover:text-gray-800'
             >
               Close
             </button>
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 }
