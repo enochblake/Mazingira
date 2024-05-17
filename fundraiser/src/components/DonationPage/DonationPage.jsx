@@ -4,6 +4,7 @@ import OrganizationDetails from '../Organizitons/OrganizationDetails';
 import TestimonialsTwo from '../StoriesFromUsers/TetimonialsTwo';
 import BlogList from './BlogList';
 import OrganizationAim from '../Organizitons/OrgAim';
+import BeneficiaryStories from '../AddProduct/BeneficiaryStories';
 
 function DonationPage() {
   const [selectedContent, setSelectedContent] = useState('details');
@@ -44,11 +45,11 @@ function DonationPage() {
           <Link
             to='#'
             className={`mx-4 text-black font-bold text-lg ${
-              selectedContent === 'blogs' ? 'border-b-4 border-orange-500' : ''
+              selectedContent === 'beneficiary-stories' ? 'border-b-4 border-orange-500' : ''
             }`}
-            onClick={() => handleContentChange('blogs')}
+            onClick={() => handleContentChange('beneficiary-stories')}
           >
-            Blogs
+          Stories
           </Link>
         </div>
         {selectedContent === 'details' && (
@@ -64,7 +65,7 @@ function DonationPage() {
           </div>
         )}
         {selectedContent === 'testimonials' && <TestimonialsTwo />}
-        {selectedContent === 'blogs' && <BlogList />}
+        {selectedContent === 'beneficiary-stories' && <BeneficiaryStories />}
       </div>
     </div>
   );
