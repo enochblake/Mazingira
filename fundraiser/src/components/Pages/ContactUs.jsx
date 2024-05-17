@@ -4,6 +4,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
+import config from '../../config';
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -22,9 +23,46 @@ function ContactUs() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic
+
+    // Map the form data to the keys expected by the server
+    const payload = {
+      first_name: formData.firstName,
+      last_name: formData.lastName,
+      email: formData.email,
+      message: formData.message,
+    };
+
+    try {
+      const response = await fetch(`${config.baseURL}/submit_contact_form`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok) {
+        // Handle successful response
+        alert('Message sent successfully!');
+        // Optionally reset form data
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          message: '',
+        });
+      } else {
+        // Handle errors
+        const errorData = await response.json();
+        console.error('Error:', errorData);
+        alert('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again.');
+    }
   };
 
   return (
@@ -85,82 +123,79 @@ function ContactUs() {
           </div>
         </div>
       </div>
-      {/* <div className='w-1/2 bg-cover bg-center bg-no-repeat'> */}
-        <div className='main-container p-1 mx-auto  rounded-lg w-[90vh] h-[80vh] flex justify-center items-center relative overflow-hidden'>
-          <div className='details-container absolute top-0 left-1/2 transform -translate-x-1/2 bg-orange-400 rounded-lg  mb-2 text-center z-10 w-1/2'>
-            <h4 className='text-white font-bold mt-1 mb-2 font-3xl'>
-              REACH US
-            </h4>
-            <div className='mt-1 mb-2'>
-              <a href='#' className='text-white mr-5'>
-                <FacebookIcon />
-              </a>
-              <a href='#' className='text-white mr-5'>
-                <GitHubIcon />
-              </a>
-              <a href='#' className='text-white'>
-                <GoogleIcon />
-              </a>
-            </div>
-          </div>
-          <div className='mx-auto text-center p-6 relative z-0'>
-            <form
-              onSubmit={handleSubmit}
-              className='p-5  h-1/2 mt-5 bg-gray-200 relative z-0 rounded-lg pb-6 '
-            >
-              <div className='bg-white p-5 mt-10 rounded '>
-                <div className='mb-10 mt-5 grid grid-cols-2 gap-4'>
-                  <input
-                    type='text'
-                    name='firstName'
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    placeholder='First Name'
-                    className='w-full border-b border-gray-300 focus:outline-none text-lg text-gray-500'
-                  />
-                  <input
-                    type='text'
-                    name='lastName'
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    placeholder='Last Name'
-                    className='w-full border-b border-gray-300 focus:outline-none text-lg'
-                  />
-                </div>
-                <div className='mb-2'>
-                  <input
-                    type='email'
-                    name='email'
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder='Email'
-                    className='w-full border-b border-gray-300 focus:outline-none mt-5 text-lg'
-                  />
-                </div>
-                <div className='mb-2'>
-                  <textarea
-                    name='message'
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder='Your Message'
-                    rows='4'
-                    className='w-full border-b border-gray-300 focus:outline-none mt-7 text-lg'
-                  />
-                </div>
-
-                <div className='mb-1 flex justify-end'>
-                  <button
-                    type='submit'
-                    className=' bg-orange-400  text-white p-3 rounded hover:bg-orange-500 mt-10'
-                  >
-                    SEND MESSAGE
-                  </button>
-                </div>
-              </div>
-            </form>
+      <div className='main-container p-1 mx-auto rounded-lg w-[90vh] h-[80vh] flex justify-center items-center relative overflow-hidden'>
+        <div className='details-container absolute top-0 left-1/2 transform -translate-x-1/2 bg-orange-400 rounded-lg mb-2 text-center z-10 w-1/2'>
+          <h4 className='text-white font-bold mt-1 mb-2 font-3xl'>
+            REACH US
+          </h4>
+          <div className='mt-1 mb-2'>
+            <a href='#' className='text-white mr-5'>
+              <FacebookIcon />
+            </a>
+            <a href='#' className='text-white mr-5'>
+              <GitHubIcon />
+            </a>
+            <a href='#' className='text-white'>
+              <GoogleIcon />
+            </a>
           </div>
         </div>
-      {/* </div> */}
+        <div className='mx-auto text-center p-6 relative z-0'>
+          <form
+            onSubmit={handleSubmit}
+            className='p-5 h-1/2 mt-5 bg-gray-200 relative z-0 rounded-lg pb-6 '
+          >
+            <div className='bg-white p-5 mt-10 rounded '>
+              <div className='mb-10 mt-5 grid grid-cols-2 gap-4'>
+                <input
+                  type='text'
+                  name='firstName'
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  placeholder='First Name'
+                  className='w-full border-b border-gray-300 focus:outline-none text-lg text-gray-500'
+                />
+                <input
+                  type='text'
+                  name='lastName'
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  placeholder='Last Name'
+                  className='w-full border-b border-gray-300 focus:outline-none text-lg'
+                />
+              </div>
+              <div className='mb-2'>
+                <input
+                  type='email'
+                  name='email'
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder='Email'
+                  className='w-full border-b border-gray-300 focus:outline-none mt-5 text-lg'
+                />
+              </div>
+              <div className='mb-2'>
+                <textarea
+                  name='message'
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder='Your Message'
+                  rows='4'
+                  className='w-full border-b border-gray-300 focus:outline-none mt-7 text-lg'
+                />
+              </div>
+              <div className='mb-1 flex justify-end'>
+                <button
+                  type='submit'
+                  className='bg-orange-400 text-white p-3 rounded hover:bg-orange-500 mt-10'
+                >
+                  SEND MESSAGE
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }
