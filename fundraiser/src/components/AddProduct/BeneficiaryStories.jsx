@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import config from '../../config'; // Import the config file for baseURL
+import config from '../../config'; 
 
 const BeneficiaryStories = () => {
   const [stories, setStories] = useState([]);
