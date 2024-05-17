@@ -15,7 +15,7 @@ const BeneficiaryInventory = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`${config.baseURL}/beneficiary`);
+      const response = await axios.get(`${config.baseURL}/beneficiary`, {withCredentials: true});
       const beneficiaryData = response.data;
       setInventory(beneficiaryData);
       calculateTotalAmount(beneficiaryData);
@@ -26,7 +26,7 @@ const BeneficiaryInventory = () => {
 
   const calculateTotalAmount = (inventoryData) => {
     const total = inventoryData.reduce(
-      (acc, item) => acc + item.received_amount,
+      (acc, item) => acc + item.recieved_amount,
       0
     );
     setTotalAmount(total);
@@ -89,11 +89,11 @@ const BeneficiaryInventory = () => {
                               {item.name}
                             </p>
                             <p className='text-gray-400 text-lg'>
-                              Donated on: {item.donated_on}
+                              Donated on: {item.created_at}
                             </p>
                           </div>
                           <div className='text-orange-500 text-xl font-bold ml-auto'>
-                            ${item.received_amount}
+                            ${item.recieved_amount}
                           </div>
                         </li>
                         {index !== inventory.length - 1 && (

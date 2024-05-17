@@ -29,7 +29,8 @@ const AddBeneficiary = () => {
         name: formData.name,
         received_amount: parseFloat(formData.receivedAmount),
         image_url: formData.imageUrl,
-      });
+      },
+      {withCredentials: true});
       console.log('Beneficiary created:', response.data);
     } catch (error) {
       console.error(
