@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import config from '../../config'
+import axios from 'axios'
 
 const AddBeneficiary = () => {
   const [formData, setFormData] = useState({
@@ -20,9 +22,21 @@ const AddBeneficiary = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic
+    try {
+      const response = await axios.post(`${config.baseURL}/beneficiary`, {
+        name: formData.name,
+        received_amount: parseFloat(formData.receivedAmount),
+        image_url: formData.imageUrl,
+      });
+      console.log('Beneficiary created:', response.data);
+    } catch (error) {
+      console.error(
+        'Error creating beneficiary:',
+        error.response ? error.response.data : error.message
+      );
+    }
   };
 
   return (

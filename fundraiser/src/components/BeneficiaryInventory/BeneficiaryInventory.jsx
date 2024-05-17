@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import AddBeneficiary from './AddBeneficiary';
+import config from '../../config'
 
 const BeneficiaryInventory = () => {
   const [inventory, setInventory] = useState([]);
   const [totalAmount, setTotalAmount] = useState(0);
-  const [selectedContent, setSelectedContent] = useState('inventory');
+  // const [selectedContent, setSelectedContent] = useState('inventory');
 
   useEffect(() => {
     fetchData();
@@ -14,12 +15,10 @@ const BeneficiaryInventory = () => {
 
   const fetchData = async () => {
     try {
-      const inventoryResponse = await axios.get(
-        'http://localhost:5000/inventory'
-      );
-      const inventoryData = inventoryResponse.data;
-      setInventory(inventoryData);
-      calculateTotalAmount(inventoryData);
+      const response = await axios.get(`${config.baseURL}/beneficiary`);
+      const beneficiaryData = response.data;
+      setInventory(beneficiaryData);
+      calculateTotalAmount(beneficiaryData);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -33,9 +32,9 @@ const BeneficiaryInventory = () => {
     setTotalAmount(total);
   };
 
-  const handleContentChange = (content) => {
-    setSelectedContent(content);
-  };
+  // const handleContentChange = (content) => {
+  //   setSelectedContent(content);
+  // };
 
   return (
     <div className='bg-gray-100 '>
