@@ -42,9 +42,16 @@ const CreateBeneficiaryStory = () => {
       const response = await axios.post(
         `${config.baseURL}/createpost`,
         postData,
-        {withCredentials: true}
+        { withCredentials: true }
       );
       console.log('Story created:', response.data);
+
+      setFormData({
+        title: '',
+        content: '',
+        image_url: '',
+        imagePreview: null,
+      });
     } catch (error) {
       console.error(
         'Error creating story:',
@@ -56,6 +63,7 @@ const CreateBeneficiaryStory = () => {
       );
     }
   };
+
 
   return (
     <div className='bg-gray-700 mt-5 p-10 mx-10'>
@@ -120,7 +128,7 @@ const CreateBeneficiaryStory = () => {
 const ImagePreview = ({ imagePreview }) => {
   return (
     <img
-      className='border-4 border-gray-500 rounded-md mb-2 h-4/7'
+      className='border-4 border-gray-500 rounded-md mb-2 h-3/4'
       src={imagePreview || 'https://via.placeholder.com/200'}
       alt='Beneficiary Preview'
     />
