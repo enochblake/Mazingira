@@ -4,6 +4,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import config from '../../config';
 
 function ContactUs() {
@@ -26,7 +28,6 @@ function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Map the form data to the keys expected by the server
     const payload = {
       first_name: formData.firstName,
       last_name: formData.lastName,
@@ -44,9 +45,7 @@ function ContactUs() {
       });
 
       if (response.ok) {
-        // Handle successful response
-        alert('Message sent successfully!');
-        // Optionally reset form data
+        toast.success('Message sent successfully!');
         setFormData({
           firstName: '',
           lastName: '',
@@ -54,14 +53,13 @@ function ContactUs() {
           message: '',
         });
       } else {
-        // Handle errors
         const errorData = await response.json();
         console.error('Error:', errorData);
-        alert('Failed to send message. Please try again.');
+        toast.error('Failed to send message. Please try again.');
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('An error occurred. Please try again.');
+      toast.error('An error occurred. Please try again.');
     }
   };
 
@@ -196,6 +194,7 @@ function ContactUs() {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }
