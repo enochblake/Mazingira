@@ -22,15 +22,16 @@ const AddBeneficiary = () => {
     }
   };
 
+  const requestData = {
+    name: formData.name,
+    received_amount: parseFloat(formData.receivedAmount),
+    image_url: formData.imageUrl,
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${config.baseURL}/beneficiary`, {
-        name: formData.name,
-        received_amount: parseFloat(formData.receivedAmount),
-        image_url: formData.imageUrl,
-      },
-      {withCredentials: true});
+      const response = await axios.post(`${config.baseURL}/beneficiary`, requestData, {withCredentials: true});
       console.log('Beneficiary created:', response.data);
     } catch (error) {
       console.error(
