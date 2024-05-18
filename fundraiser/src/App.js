@@ -25,6 +25,8 @@ import Login from './components/Login-signup/Login.jsx';
 import EnvironmentalOrgPage from './components/AddProduct/EnvironOrgPage.jsx';
 import BeneficiaryInventoryPage from './components/BeneficiaryInventory/B&IPage.jsx';
 import ApprovalPending from './components/AddProduct/ApprovalPending.jsx';
+import Administrator from './components/Administrator/Administrator.jsx';
+import AuthForm from './components/AuthForm/AuthForm.jsx';
 function App() {
   return (
     <Router>
@@ -51,6 +53,9 @@ function App() {
         <Route path='/signup' element={<SignUp />} />
         <Route path='/environmental_org' element={<EnvironmentalOrgPage/>} />
         <Route path='/B&IPage' element={<BeneficiaryInventoryPage />} />
+          <Route path='/admin-page' element={<Administrator />} />
+        <Route path='/authForm' element={<AuthForm />} />
+        
         
       </Routes>
       <Footer />
