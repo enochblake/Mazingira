@@ -17,7 +17,7 @@ const Administrator = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get(`${config.baseURL}/admin`);
+        const response = await axios.get(`${config.baseURL}/admin`, { withCredentials: true });
         setOrganizations(response.data);
         setSearchResults(response.data);
       } catch (error) {
@@ -29,15 +29,8 @@ const Administrator = () => {
 
   const handleApprove = async (id) => {
     try {
-      await axios.patch(`${config.baseURL}/admin/${id}`, {
-        status: 'approved',
-      });
-      setOrganizations(organizations.map(org => {
-        if (org.id === id) {
-          return { ...org, status: 'approved' };
-        }
-        return org;
-      }));
+      await axios.patch(`${config.baseURL}/admin/${id}`, { approval_status: true }, { withCredentials: true });
+      setOrganizations(organizations.map(org => org.id === id ? { ...org, approval_status: true } : org));
       window.alert('Organization approved successfully!');
     } catch (error) {
       console.error('Error approving organization:', error);
@@ -47,15 +40,8 @@ const Administrator = () => {
 
   const handleReject = async (id) => {
     try {
-      await axios.patch(`${config.baseURL}//admin/${id}`, {
-        status: 'rejected',
-      });
-      setOrganizations(organizations.map(org => {
-        if (org.id === id) {
-          return { ...org, status: 'rejected' };
-        }
-        return org;
-      }));
+      await axios.patch(`${config.baseURL}/admin/${id}`, { approval_status: false }, { withCredentials: true });
+      setOrganizations(organizations.map(org => org.id === id ? { ...org, approval_status: false } : org));
       window.alert('Organization rejected successfully!');
     } catch (error) {
       console.error('Error rejecting organization:', error);
@@ -65,7 +51,7 @@ const Administrator = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${config.baseURL}//admin/${id}`);
+      await axios.delete(`${config.baseURL}/admin/${id}`, { withCredentials: true });
       setOrganizations(organizations.filter(org => org.id !== id));
        setDeletedOrgs(prev => new Set(prev).add(id));
       window.alert('Organization deleted successfully!');
@@ -91,7 +77,7 @@ const Administrator = () => {
       if (filter === 'all') {
         return true;
       }
-      return org.status === filter;
+      return org.approval_status === filter;
     });
 
     if (searchTerm !== '') {
@@ -101,11 +87,6 @@ const Administrator = () => {
     }
 
     setSearchResults(filteredOrgs);
-  };
-
-  const handleViewMore = (id) => {
-    handleApprove(id);
-    navigate('/all_organizations');
   };
 
   return (
@@ -141,15 +122,7 @@ const Administrator = () => {
             <p className="text-gray-600 mb-2">{org.description}</p>
             <p className="text-gray-600 mb-4">{org.email}</p>
             <div className="flex justify-between">
-              <button
-                onClick={() => handleViewMore(org.id)}
-                className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mr-2"
-              >
-                View More
-              </button>
-      
-     
-              {org.status !== 'Redirecting you to all more details' && (
+              {org.approval_status !== true && (
                 <button
                   onClick={() => handleApprove(org.id)}
                   className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2"
@@ -157,7 +130,7 @@ const Administrator = () => {
                   Approve
                 </button>
               )}
-              {org.status !== 'rejected' && (
+              {org.approval_status !== false && (
                 <button
                   onClick={() => handleReject(org.id)}
                   className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-2"
