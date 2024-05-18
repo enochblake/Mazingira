@@ -1,517 +1,516 @@
 {
   "donationAmount": [
     {
-      "amount": 9027.0,
+      "amount": 9027,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
       "donor_first_name": "Christopher",
       "donor_last_name": "Hurst",
-      "id": 1,
+      "id": "1",
       "organization_id": 9
     },
     {
-      "amount": 6614.0,
+      "amount": 6614,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
       "donor_first_name": "Jordan",
       "donor_last_name": "Morgan",
-      "id": 2,
+      "id": "2",
       "organization_id": 3
     },
     {
-      "amount": 2284.0,
+      "amount": 2284,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
       "donor_first_name": "Kelly",
       "donor_last_name": "Hart",
-      "id": 3,
+      "id": "3",
       "organization_id": 2
     },
     {
-      "amount": 9297.0,
+      "amount": 9297,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
       "donor_first_name": "Austin",
       "donor_last_name": "Kelley",
-      "id": 4,
+      "id": "4",
       "organization_id": 4
     },
     {
-      "amount": 2753.0,
+      "amount": 2753,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
       "donor_first_name": "William",
       "donor_last_name": "May",
-      "id": 5,
+      "id": "5",
       "organization_id": 1
     },
     {
-      "amount": 8098.0,
+      "amount": 8098,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
       "donor_first_name": "Abigail",
       "donor_last_name": "Frost",
-      "id": 6,
+      "id": "6",
       "organization_id": 8
     },
     {
-      "amount": 9904.0,
+      "amount": 9904,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
       "donor_first_name": "Daniel",
       "donor_last_name": "Walker",
-      "id": 7,
+      "id": "7",
       "organization_id": 3
     },
     {
-      "amount": 1265.0,
+      "amount": 1265,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
       "donor_first_name": "Jordan",
       "donor_last_name": "Morgan",
-      "id": 8,
+      "id": "8",
       "organization_id": 3
     },
     {
-      "amount": 8680.0,
+      "amount": 8680,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
       "donor_first_name": "Jennifer",
       "donor_last_name": "Bolton",
-      "id": 9,
+      "id": "9",
       "organization_id": 2
     },
     {
-      "amount": 3992.0,
+      "amount": 3992,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
       "donor_first_name": "Anthony",
       "donor_last_name": "Roberts",
-      "id": 10,
+      "id": "10",
       "organization_id": 5
     },
     {
-      "amount": 8045.0,
+      "amount": 8045,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
       "donor_first_name": "Daniel",
       "donor_last_name": "Turner",
-      "id": 11,
+      "id": "11",
       "organization_id": 2
     },
     {
-      "amount": 4512.0,
+      "amount": 4512,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT",
       "donor_first_name": "Amy",
       "donor_last_name": "Chandler",
-      "id": 12,
+      "id": "12",
       "organization_id": null
     },
     {
-      "amount": 4792.0,
+      "amount": 4792,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Nicole",
       "donor_last_name": "Stout",
-      "id": 13,
+      "id": "13",
       "organization_id": 8
     },
     {
-      "amount": 8045.0,
+      "amount": 8045,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Stephanie",
       "donor_last_name": "Whitney",
-      "id": 14,
+      "id": "14",
       "organization_id": 10
     },
     {
-      "amount": 8106.0,
+      "amount": 8106,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Elizabeth",
       "donor_last_name": "Patel",
-      "id": 15,
+      "id": "15",
       "organization_id": 4
     },
     {
-      "amount": 6298.0,
+      "amount": 6298,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Amy",
       "donor_last_name": "Mullen",
-      "id": 16,
+      "id": "16",
       "organization_id": 9
     },
     {
-      "amount": 4616.0,
+      "amount": 4616,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Amy",
       "donor_last_name": "Mullen",
-      "id": 17,
+      "id": "17",
       "organization_id": 10
     },
     {
-      "amount": 6888.0,
+      "amount": 6888,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Victor",
       "donor_last_name": "Duran",
-      "id": 18,
+      "id": "18",
       "organization_id": null
     },
     {
-      "amount": 7966.0,
+      "amount": 7966,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Amy",
       "donor_last_name": "Williams",
-      "id": 19,
+      "id": "19",
       "organization_id": null
     },
     {
-      "amount": 5577.0,
+      "amount": 5577,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Amy",
       "donor_last_name": "Mullen",
-      "id": 20,
+      "id": "20",
       "organization_id": null
     },
     {
-      "amount": 4035.0,
+      "amount": 4035,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Stephanie",
       "donor_last_name": "Whitney",
-      "id": 21,
+      "id": "21",
       "organization_id": 3
     },
     {
-      "amount": 4321.0,
+      "amount": 4321,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Victor",
       "donor_last_name": "Duran",
-      "id": 22,
+      "id": "22",
       "organization_id": 6
     },
     {
-      "amount": 7690.0,
+      "amount": 7690,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Sandra",
       "donor_last_name": "Hobbs",
-      "id": 23,
+      "id": "23",
       "organization_id": 4
     },
     {
-      "amount": 7153.0,
+      "amount": 7153,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Amanda",
       "donor_last_name": "Ritter",
-      "id": 24,
+      "id": "24",
       "organization_id": 3
     },
     {
-      "amount": 7802.0,
+      "amount": 7802,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Megan",
       "donor_last_name": "Booth",
-      "id": 25,
+      "id": "25",
       "organization_id": 8
     },
     {
-      "amount": 7380.0,
+      "amount": 7380,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Richard",
       "donor_last_name": "Reed",
-      "id": 26,
+      "id": "26",
       "organization_id": null
     },
     {
-      "amount": 8869.0,
+      "amount": 8869,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Elizabeth",
       "donor_last_name": "Johnson",
-      "id": 27,
+      "id": "27",
       "organization_id": 5
     },
     {
-      "amount": 1637.0,
+      "amount": 1637,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Amy",
       "donor_last_name": "Mullen",
-      "id": 28,
+      "id": "28",
       "organization_id": 5
     },
     {
-      "amount": 1514.0,
+      "amount": 1514,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Justin",
       "donor_last_name": "Smith",
-      "id": 29,
+      "id": "29",
       "organization_id": 8
     },
     {
-      "amount": 6498.0,
+      "amount": 6498,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Austin",
       "donor_last_name": "Kelley",
-      "id": 30,
+      "id": "30",
       "organization_id": 5
     },
     {
-      "amount": 5409.0,
+      "amount": 5409,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Daniel",
       "donor_last_name": "Turner",
-      "id": 31,
+      "id": "31",
       "organization_id": 3
     },
     {
-      "amount": 6937.0,
+      "amount": 6937,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Jennifer",
       "donor_last_name": "Bolton",
-      "id": 32,
+      "id": "32",
       "organization_id": 1
     },
     {
-      "amount": 1455.0,
+      "amount": 1455,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Stephanie",
       "donor_last_name": "Whitney",
-      "id": 33,
+      "id": "33",
       "organization_id": 9
     },
     {
-      "amount": 2730.0,
+      "amount": 2730,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Elizabeth",
       "donor_last_name": "Patel",
-      "id": 34,
+      "id": "34",
       "organization_id": 1
     },
     {
-      "amount": 7891.0,
+      "amount": 7891,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Michael",
       "donor_last_name": "Clark",
-      "id": 35,
+      "id": "35",
       "organization_id": 6
     },
     {
-      "amount": 3862.0,
+      "amount": 3862,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Sara",
       "donor_last_name": "Lambert",
-      "id": 36,
+      "id": "36",
       "organization_id": 8
     },
     {
-      "amount": 9337.0,
+      "amount": 9337,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Devin",
       "donor_last_name": "Barry",
-      "id": 37,
+      "id": "37",
       "organization_id": 5
     },
     {
-      "amount": 534.0,
+      "amount": 534,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Megan",
       "donor_last_name": "Booth",
-      "id": 38,
+      "id": "38",
       "organization_id": 9
     },
     {
-      "amount": 9411.0,
+      "amount": 9411,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Michael",
       "donor_last_name": "Clark",
-      "id": 39,
+      "id": "39",
       "organization_id": 4
     },
     {
-      "amount": 4293.0,
+      "amount": 4293,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Austin",
       "donor_last_name": "Kelley",
-      "id": 40,
+      "id": "40",
       "organization_id": 6
     },
     {
-      "amount": 4534.0,
+      "amount": 4534,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "William",
       "donor_last_name": "May",
-      "id": 41,
+      "id": "41",
       "organization_id": 2
     },
     {
-      "amount": 7791.0,
+      "amount": 7791,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Sara",
       "donor_last_name": "Lambert",
-      "id": 42,
+      "id": "42",
       "organization_id": 4
     },
     {
-      "amount": 6646.0,
+      "amount": 6646,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Amy",
       "donor_last_name": "Mullen",
-      "id": 43,
+      "id": "43",
       "organization_id": 3
     },
     {
-      "amount": 9748.0,
+      "amount": 9748,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Elizabeth",
       "donor_last_name": "Patel",
-      "id": 44,
+      "id": "44",
       "organization_id": null
     },
     {
-      "amount": 9136.0,
+      "amount": 9136,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Nicole",
       "donor_last_name": "Stout",
-      "id": 45,
+      "id": "45",
       "organization_id": 9
     },
     {
-      "amount": 8904.0,
+      "amount": 8904,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Daniel",
       "donor_last_name": "Walker",
-      "id": 46,
+      "id": "46",
       "organization_id": 9
     },
     {
-      "amount": 5672.0,
+      "amount": 5672,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Megan",
       "donor_last_name": "Booth",
-      "id": 47,
+      "id": "47",
       "organization_id": 9
     },
     {
-      "amount": 8404.0,
+      "amount": 8404,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Kelly",
       "donor_last_name": "Hart",
-      "id": 48,
+      "id": "48",
       "organization_id": 8
     },
     {
-      "amount": 8238.0,
+      "amount": 8238,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Amy",
       "donor_last_name": "Chandler",
-      "id": 49,
+      "id": "49",
       "organization_id": null
     },
     {
-      "amount": 1617.0,
+      "amount": 1617,
       "anonymous_status": false,
       "donated_on": "Sat, 11 May 2024 11:04:37 GMT",
       "donor_first_name": "Austin",
       "donor_last_name": "Kelley",
-      "id": 50,
+      "id": "50",
       "organization_id": 9
     },
     {
-      "amount": 200.0,
+      "amount": 200,
       "anonymous_status": true,
       "donated_on": "Sat, 11 May 2024 11:26:57 GMT",
-
-      "id": 51,
+      "id": "51",
       "organization_id": 3
     },
     {
-      "amount": 200.0,
+      "amount": 200,
       "anonymous_status": true,
       "donated_on": "Sat, 11 May 2024 11:40:33 GMT",
-      "id": 52,
+      "id": "52",
       "organization_id": 3
     },
     {
-      "amount": 500.0,
+      "amount": 500,
       "anonymous_status": true,
       "donated_on": "Sat, 11 May 2024 11:40:45 GMT",
-      "id": 53,
+      "id": "53",
       "organization_id": 3
     },
     {
-      "amount": 500.0,
+      "amount": 500,
       "anonymous_status": true,
       "donated_on": "Sat, 11 May 2024 11:40:45 GMT",
-      "id": 54,
+      "id": "54",
       "organization_id": 3
     },
     {
-      "amount": 400.0,
+      "amount": 400,
       "anonymous_status": true,
       "donated_on": "Sat, 11 May 2024 11:40:50 GMT",
-      "id": 55,
+      "id": "55",
       "organization_id": 3
     },
     {
-      "amount": 400.0,
+      "amount": 400,
       "anonymous_status": true,
       "donated_on": "Sat, 11 May 2024 11:51:40 GMT",
-      "id": 56,
+      "id": "56",
       "organization_id": 5
     },
     {
-      "amount": 400.0,
+      "amount": 400,
       "anonymous_status": true,
       "donated_on": "Sat, 11 May 2024 11:51:45 GMT",
-      "id": 57,
+      "id": "57",
       "organization_id": 9
     },
     {
-      "amount": 400.0,
+      "amount": 400,
       "anonymous_status": true,
       "donated_on": "Sat, 11 May 2024 11:51:50 GMT",
-      "id": 58,
+      "id": "58",
       "organization_id": 10
     },
     {
-      "amount": 400.0,
+      "amount": 400,
       "anonymous_status": true,
       "donated_on": "Sat, 11 May 2024 11:51:53 GMT",
-      "id": 59,
+      "id": "59",
       "organization_id": 11
     }
   ],
@@ -519,7 +518,7 @@
     {
       "content": "Street hair first significant skin play go. Tell stand light general treat walk I try. Population it eye necessary establish star. Professional child young certain move. Ball shake choice address another thing figure pull. Growth arm manager.",
       "created_at": "Sat, 11 May 2024 11:04:37 GMT",
-      "id": 1,
+      "id": "1",
       "image_url": "https://pbs.twimg.com/media/FpmD9sMXEAA4Mb7.jpg",
       "organization_id": 10,
       "title": "Kristine Peters"
@@ -527,7 +526,7 @@
     {
       "content": "Not low agent guess toward control tell. Time include use price kid guy. Feeling instead free indicate recently player bit.",
       "created_at": "Sat, 11 May 2024 11:04:37 GMT",
-      "id": 3,
+      "id": "3",
       "image_url": "https://pbs.twimg.com/media/FpmD9sMXEAA4Mb7.jpg",
       "organization_id": 10,
       "title": "Austin Moore"
@@ -535,7 +534,7 @@
     {
       "content": "Author often Democrat financial song experience. Task mention happen. Method hold factor why. Task deal book director history order drop. Chair maybe kitchen agent score technology. Wind hold probably pretty. Before not perhaps line campaign woman.",
       "created_at": "Sat, 11 May 2024 11:04:37 GMT",
-      "id": 6,
+      "id": "6",
       "image_url": "https://pbs.twimg.com/media/FpmD9sMXEAA4Mb7.jpg",
       "organization_id": 9,
       "title": "Marc Evans"
@@ -543,7 +542,7 @@
     {
       "content": "Social newspaper anyone all much never. Ask include the our environment such. Person care time standard. Story career less about best become everyone.",
       "created_at": "Sat, 11 May 2024 11:04:37 GMT",
-      "id": 8,
+      "id": "8",
       "image_url": "https://pbs.twimg.com/media/FpmD9sMXEAA4Mb7.jpg",
       "organization_id": 9,
       "title": "Dennis Lewis"
@@ -551,7 +550,7 @@
     {
       "content": "Explain against get as speak sea main why. Sea huge little represent wind all. Election themselves understand kid feeling. Market happy become strategy involve add present left.",
       "created_at": "Sat, 11 May 2024 11:04:37 GMT",
-      "id": 10,
+      "id": "10",
       "image_url": "https://pbs.twimg.com/media/FpmD9sMXEAA4Mb7.jpg",
       "organization_id": 9,
       "title": "Danielle Smith PhD"
@@ -559,7 +558,7 @@
     {
       "content": "Course item both central sit cold. Address reduce year. Single score bar technology put within development. Politics whether too discuss two hair site generation.",
       "created_at": "Sat, 11 May 2024 11:04:37 GMT",
-      "id": 12,
+      "id": "12",
       "image_url": "https://pbs.twimg.com/media/FpmD9sMXEAA4Mb7.jpg",
       "organization_id": 10,
       "title": "Amy Eaton"
@@ -567,7 +566,7 @@
     {
       "content": "Live article green star take. Big response table feel others two. Next different other. Letter million though owner six activity range. Three item letter. Attention social among huge exist audience free turn. Account than medical reduce.",
       "created_at": "Sat, 11 May 2024 11:04:37 GMT",
-      "id": 16,
+      "id": "16",
       "image_url": "https://pbs.twimg.com/media/FpmD9sMXEAA4Mb7.jpg",
       "organization_id": 10,
       "title": "Heather Martinez"
@@ -575,7 +574,7 @@
     {
       "content": "Wall east house maintain after. Single heart identify marriage. Brother whole task quality.",
       "created_at": "Sat, 11 May 2024 11:04:37 GMT",
-      "id": 18,
+      "id": "18",
       "image_url": "https://pbs.twimg.com/media/FpmD9sMXEAA4Mb7.jpg",
       "organization_id": 9,
       "title": "Peter Patel"
@@ -583,7 +582,7 @@
     {
       "content": "International lawyer mission cause. Sense require citizen rule add talk during. Ground either before. Investment could official many according sport. Bed heart above. Society election fear thank even seat science. Radio agreement image budget avoid.",
       "created_at": "Sat, 11 May 2024 11:04:37 GMT",
-      "id": 21,
+      "id": "21",
       "image_url": "https://pbs.twimg.com/media/FpmD9sMXEAA4Mb7.jpg",
       "organization_id": 9,
       "title": "Erin Stewart"
@@ -591,7 +590,7 @@
     {
       "content": "From door tonight read buy value worry tough. Thing wall agent level later. Now if mission food strong organization. Star green old join water arm. Result age fill until writer.",
       "created_at": "Sat, 11 May 2024 11:04:37 GMT",
-      "id": 22,
+      "id": "22",
       "image_url": "https://pbs.twimg.com/media/FpmD9sMXEAA4Mb7.jpg",
       "organization_id": 10,
       "title": "William Oliver"
@@ -599,7 +598,7 @@
     {
       "content": "Parent different upon these. Box population discover leg run center available. Radio garden particularly eat next impact analysis represent. Manage rather improve. Scientist PM enjoy chance floor trade. Kind line blood guy doctor. Quite front else reveal rock identify suggest. Mrs subject response onto education home scene unit.",
       "created_at": "Sat, 11 May 2024 11:04:37 GMT",
-      "id": 24,
+      "id": "24",
       "image_url": "https://pbs.twimg.com/media/FpmD9sMXEAA4Mb7.jpg",
       "organization_id": 5,
       "title": "Steven Andrade"
@@ -607,7 +606,7 @@
     {
       "content": "More that organization leg development. Member pressure large. Town theory positive street certainly interview. Mother easy recent.",
       "created_at": "Sat, 11 May 2024 11:04:37 GMT",
-      "id": 29,
+      "id": "29",
       "image_url": "https://pbs.twimg.com/media/FpmD9sMXEAA4Mb7.jpg",
       "organization_id": 3,
       "title": "Antonio Griffin"
@@ -615,7 +614,7 @@
     {
       "content": "Seem read fear hope reflect. Pick area night keep pick land high. Several court off spend. Start rich beyond as us film two.",
       "created_at": "Sat, 11 May 2024 11:04:37 GMT",
-      "id": 31,
+      "id": "31",
       "image_url": "https://pbs.twimg.com/media/FpmD9sMXEAA4Mb7.jpg",
       "organization_id": 10,
       "title": "Joseph Brown"
@@ -623,7 +622,7 @@
     {
       "content": "Physical time significant down industry behind day. Although huge right drop sense usually notice. Answer least evening school authority phone door gas.",
       "created_at": "Sat, 11 May 2024 11:04:38 GMT",
-      "id": 40,
+      "id": "40",
       "image_url": "https://pbs.twimg.com/media/FpmD9sMXEAA4Mb7.jpg",
       "organization_id": 9,
       "title": "Ryan Welch"
@@ -631,7 +630,7 @@
     {
       "content": "John Kimani",
       "created_at": "Sun, 12 May 2024 09:00:07 GMT",
-      "id": 41,
+      "id": "41",
       "image_url": "John Kimani",
       "organization_id": 11,
       "title": "John Kimani"
@@ -642,51 +641,55 @@
       "title": "Combating Environmental Degradation: Encouraging Repeat Donations",
       "image": "https://source.unsplash.com/random/600x400",
       "timeToRead": "5",
-      "description": "Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts."
+      "description": "Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts.",
+      "id": "ed6f"
     },
     {
       "title": "Combating Environmental Degradation: Encouraging Repeat Donations",
       "image": "https://source.unsplash.com/random/600x400",
       "timeToRead": "5",
-      "description": "Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts."
+      "description": "Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts.",
+      "id": "4fcf"
     },
     {
       "title": "Another Blog Post",
       "image": "https://source.unsplash.com/random/600x400",
       "timeToRead": "3",
-      "description": "This is another blog post. It's about something else."
+      "description": "This is another blog post. It's about something else.",
+      "id": "9f80"
     },
     {
       "title": "Combating Environmental Degradation: Encouraging Repeat Donations",
       "image": "https://source.unsplash.com/random/600x400",
       "timeToRead": "5",
-      "description": "Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts."
+      "description": "Environmental degradation is the disintegration of the earth or deterioration of the environment through the consumption of assets, for example, air, water, and soil; the destruction of environments and the eradication of wildlife. It is characterized as any change or aggravation to nature’s turf seen to be pernicious or undesirable. This process leads to the endangerment of the human race, however, there are limited resources to help combat this at this time. One of the ways the organization is looking to raise funds is by encouraging repeat donations. The goal would be to create a platform that allows users to donate to organizations such as this one regularly, to enable the organization to meet their goals. They are looking to create a product that automates the donation process by allowing donors to set up regular donations e.g. monthly donations of stipulated amounts.",
+      "id": "d547"
     }
   ],
   "testimonials": [
     {
-      "id": 1,
+      "id": "1",
       "name": "John Doe",
       "logo": "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BvdGlmeSUyMGxvZ298ZW58MHx8MHx8fDA%3D",
       "message": "Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services",
       "image": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Jane Doe",
       "logo": "https://images.unsplash.com/photo-1705988142466-e468bc654eeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2xhY2slMjBsb2dvfGVufDB8fDB8fHww",
       "message": "Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services",
       "image": "https://plus.unsplash.com/premium_photo-1683141202259-ee13ddd953fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Jane Doe",
       "logo": "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BvdGlmeSUyMGxvZ298ZW58MHx8MHx8fDA%3D",
       "message": "Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services",
       "image": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Jane Doe",
       "logo": "https://images.unsplash.com/photo-1705988142466-e468bc654eeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2xhY2slMjBsb2dvfGVufDB8fDB8fHww",
       "message": "Working with ABC Company has been an absolute pleasure. Their professionalism I highly recommend ABC Company to anyone in need of their services",
@@ -695,15 +698,7 @@
   ],
   "organizations": [
     {
-      "id": 10,
-      "category": "soil",
-      "name": "Organization 1",
-      "logo": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww",
-      "description": "This is organization 1 description.",
-      "history": "The Green Earth Initiative was founded in 2005 by a group of passionate environmentalists who were concerned about the rapid degradation of the planet. Our founders, led by Sarah Johnson, a renowned environmental scientist, were determined to make a difference and create a sustainable future for generations to come. In the early years, our organization focused on raising awareness about environmental issues through educational programs, community outreach, and advocacy campaigns. We partnered with local schools, community groups, and businesses to promote sustainable practices and reduce waste."
-    },
-    {
-      "id": 12,
+      "id": "12",
       "category": "water",
       "name": "Organization 2",
       "logo": "https://plus.unsplash.com/premium_photo-1663089162887-403fb53108cd?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww",
@@ -711,7 +706,7 @@
       "history": "The Green Earth Initiative was founded in 2005 by a group of passionate environmentalists who were concerned about the rapid degradation of the planet. Our founders, led by Sarah Johnson, a renowned environmental scientist, were determined to make a difference and create a sustainable future for generations to come. In the early years, our organization focused on raising awareness about environmental issues through educational programs, community outreach, and advocacy campaigns. We partnered with local schools, community groups, and businesses to promote sustainable practices and reduce waste."
     },
     {
-      "id": 1,
+      "id": "1",
       "category": "soil",
       "name": "Organization 1",
       "logo": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww",
@@ -719,7 +714,7 @@
       "history": "The Green Earth Initiative was founded in 2005 by a group of passionate environmentalists who were concerned about the rapid degradation of the planet. Our founders, led by Sarah Johnson, a renowned environmental scientist, were determined to make a difference and create a sustainable future for generations to come. In the early years, our organization focused on raising awareness about environmental issues through educational programs, community outreach, and advocacy campaigns. We partnered with local schools, community groups, and businesses to promote sustainable practices and reduce waste."
     },
     {
-      "id": 2,
+      "id": "2",
       "category": "water",
       "name": "Organization 2",
       "logo": "https://plus.unsplash.com/premium_photo-1663089162887-403fb53108cd?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww",
@@ -727,63 +722,114 @@
       "history": "The Green Earth Initiative was founded in 2005 by a group of passionate environmentalists who were concerned about the rapid degradation of the planet. Our founders, led by Sarah Johnson, a renowned environmental scientist, were determined to make a difference and create a sustainable future for generations to come. In the early years, our organization focused on raising awareness about environmental issues through educational programs, community outreach, and advocacy campaigns. We partnered with local schools, community groups, and businesses to promote sustainable practices and reduce waste."
     },
     {
-      "id": 3,
+      "id": "3",
       "category": "air",
       "name": "Organization 1",
       "logo": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww",
       "description": "This is organization 1 description.",
-      "history": "The Green Earth Initiative was founded in 2005 by a group of passionate environmentalists who were concerned about the rapid degradation of the planet. Our founders, led by Sarah Johnson, a renowned environmental scientist, were determined to make a difference and create a sustainable future for generations to come. In the early years, our organization focused on raising awareness about environmental issues through educational programs, community outreach, and advocacy campaigns. We partnered with local schools, community groups, and businesses to promote sustainable practices and reduce waste."
-    },
-    {
-      "id": 4,
-      "category": "air",
-      "name": "Organization 2",
-      "logo": "https://plus.unsplash.com/premium_photo-1663089162887-403fb53108cd?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww",
-      "description": "This is organization 2 description.",
       "history": "The Green Earth Initiative was founded in 2005 by a group of passionate environmentalists who were concerned about the rapid degradation of the planet. Our founders, led by Sarah Johnson, a renowned environmental scientist, were determined to make a difference and create a sustainable future for generations to come. In the early years, our organization focused on raising awareness about environmental issues through educational programs, community outreach, and advocacy campaigns. We partnered with local schools, community groups, and businesses to promote sustainable practices and reduce waste."
     }
   ],
   "inventory": [
     {
-      "id": 71,
+      "id": "71",
       "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg",
       "name": "Beneficiary 1",
       "organization_id": 13,
-      "received_amount": 300.0,
+      "received_amount": 300,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT"
     },
     {
-      "id": 72,
+      "id": "72",
       "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg",
       "name": "Beneficiary 1",
       "organization_id": 13,
-      "received_amount": 300.0,
+      "received_amount": 300,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT"
     },
     {
-      "id": 73,
+      "id": "73",
       "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg",
       "name": "Beneficiary 2",
       "organization_id": 13,
-      "received_amount": 600.0,
+      "received_amount": 600,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT"
     },
     {
-      "id": 74,
+      "id": "74",
       "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg",
       "name": "Beneficiary 2",
       "organization_id": 13,
-      "received_amount": 600.0,
+      "received_amount": 600,
       "donated_on": "Sat, 11 May 2024 11:04:36 GMT"
     }
   ],
-
-  "AddedBeneficiary":[
-
+  "AddedBeneficiary": [
     {
       "name": "Beneficiary 2",
       "received_amount": 600,
-      "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg"
-  }
-  ]
-}
+      "image_url": "https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg",
+      "id": "f457"
+    }
+  ],
+  
+    "data": [
+      {
+        "approval_status": true,
+        "description": null,
+        "email": "gkramer@nguyen.com",
+        "id": 25,
+        "image_url": null,
+        "name": "Carrillo-Garcia",
+        "updated_at": null
+      },
+      {
+        "approval_status": true,
+        "description": null,
+        "email": "jdoe@example.com",
+        "id": 26,
+        "image_url": null,
+        "name": "Doe-Jane",
+        "updated_at": null
+      },
+      {
+        "approval_status": true,
+        "description": null,
+        "email": "asmith@example.com",
+        "id": 27,
+        "image_url": null,
+        "name": "Smith-Anna",
+        "updated_at": null
+      },
+      {
+        "approval_status": true,
+        "description": null,
+        "email": "bjones@example.com",
+        "id": 28,
+        "image_url": null,
+        "name": "Jones-Bob",
+        "updated_at": null
+      },
+      {
+        "approval_status": true,
+        "description": null,
+        "email": "mjohnson@example.com",
+        "id": 29,
+        "image_url": null,
+        "name": "Johnson-Mike",
+        "updated_at": null
+      },
+      {
+        "approval_status": true,
+        "description": null,
+        "email": "clee@example.com",
+        "id": 30,
+        "image_url": null,
+        "name": "Lee-Chris",
+        "updated_at": null
+      }
+    ]
+  } 
+    
+   
+
