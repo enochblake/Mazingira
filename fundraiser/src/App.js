@@ -50,7 +50,8 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/environmental_org' element={<EnvironmentalOrgPage/>} />
-        <Route path='/B&IPage' element={<BeneficiaryInventoryPage/>} />
+        <Route path='/B&IPage' element={<BeneficiaryInventoryPage />} />
+        
       </Routes>
       <Footer />
     </Router>

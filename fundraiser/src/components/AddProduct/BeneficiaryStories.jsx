@@ -8,19 +8,19 @@ const BeneficiaryStories = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`${config.baseURL}/donor/stories`)
-      .then((response) => {
-        if (response.data.message) {
-          setError(response.data.message);
-        } else {
-          setStories(response.data);
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-        setError('Failed to fetch stories. Please try again later.');
-      });
+    axios.get(`${config.baseURL}/donor/stories`,
+      { withCredentials: true })
+        .then((response) => {
+          if (response.data.message) {
+            setError(response.data.message);
+          } else {
+            setStories(response.data);
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          setError('Failed to fetch stories. Please try again later.');
+        });
   }, []);
 
   const indexOfLastStory = currentPage * 3;

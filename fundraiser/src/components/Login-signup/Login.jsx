@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -10,6 +10,7 @@ import Modal from './Modal';
 import SignUp from './SignUp';
 import config from '../../config';
 import axios from 'axios';
+import { AuthContext } from '../../context/AuthContext';
 
 export default function Login({ onClose, onSignUpClick }) {
   const navigate = useNavigate(); 
