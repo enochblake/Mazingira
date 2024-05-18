@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { useNavigate, Route, Routes } from 'react-router-dom'; 
+import { Route, Routes } from 'react-router-dom'; 
 import axios from 'axios';
 import Organization from '../Organizitons/Organization'; 
 import config from '../../config'
@@ -12,7 +12,6 @@ const Administrator = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [deletedOrgs, setDeletedOrgs] = useState(new Set());
 
-  const navigate = useNavigate(); 
 
   useEffect(() => {
     async function fetchData() {
@@ -77,17 +76,25 @@ const Administrator = () => {
       if (filter === 'all') {
         return true;
       }
-      return org.approval_status === filter;
+      else if (filter === 'pending') {
+        return org.updated_at === null;
+      }
+      else if (filter === 'approved') {
+        return org.approval_status === true;
+      }
+      else if (filter === 'rejected') {
+        return org.approval_status === false;
+      }
     });
-
+  
     if (searchTerm !== '') {
       filteredOrgs = filteredOrgs.filter(org =>
         org.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-
+  
     setSearchResults(filteredOrgs);
-  };
+  };  
 
   return (
     <div className="container mx-auto mt-5">
@@ -121,6 +128,7 @@ const Administrator = () => {
             <h2 className="text-lg font-bold mb-2">{org.name}</h2>
             <p className="text-gray-600 mb-2">{org.description}</p>
             <p className="text-gray-600 mb-4">{org.email}</p>
+           
             <div className="flex justify-between">
               {org.approval_status !== true && (
                 <button
@@ -145,6 +153,7 @@ const Administrator = () => {
                 Delete
               </button>
             </div>
+            
           </div>
         ))}
       </div>
