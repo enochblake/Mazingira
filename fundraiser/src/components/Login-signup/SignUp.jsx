@@ -1,14 +1,17 @@
+
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { Link ,useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import config from '../../config';
 
 export default function SignUp({ onClose, onLoginClick }) {
-    const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -16,7 +19,7 @@ export default function SignUp({ onClose, onLoginClick }) {
     email: '',
     password: '',
     confirmPassword: '',
-    userType: 'donor', 
+    userType: 'donor',
   });
 
   const handleChange = (e) => {
@@ -57,23 +60,19 @@ export default function SignUp({ onClose, onLoginClick }) {
       });
 
       if (response.ok) {
-        const responseData = await response.json();
-        console.log('Registration successful!');
-         handleClose();
+        toast.success('Registration successful!');
+        handleClose();
 
-        if (
-          formData.userType === 'organization' &&
-          responseData.approval_status === false
-        ) {
-          navigate('/approvalPending-page');
+        if (formData.userType === 'organization') {
+          navigate('/register_org-page');
         } else {
           navigate('/all_organizations-page');
         }
       } else {
-        console.error('Signup failed:', response.statusText);
+        toast.error('Signup failed: ' + response.statusText);
       }
     } catch (error) {
-      console.error('An error occurred:', error);
+      toast.error('An error occurred: ' + error.message);
     }
   };
 
@@ -201,6 +200,7 @@ export default function SignUp({ onClose, onLoginClick }) {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 }
