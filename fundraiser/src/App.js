@@ -30,7 +30,7 @@ import AuthForm from './components/AuthForm/AuthForm.jsx';
 function App() {
   return (
     <Router>
-      <Navbar/>
+      <Navbar />
       <Routes>
         <Route path='/donor' element={<Donor />} />
         <Route path='/' element={<Home />} />
@@ -51,12 +51,10 @@ function App() {
         <Route path='/add-beneficiary' element={<AddBeneficiary />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
-        <Route path='/environmental_org' element={<EnvironmentalOrgPage/>} />
+        <Route path='/environmental_org' element={<EnvironmentalOrgPage />} />
         <Route path='/B&IPage' element={<BeneficiaryInventoryPage />} />
-          <Route path='/admin-page' element={<Administrator />} />
+        <Route path='/admin-page' element={<Administrator />} />
         <Route path='/authForm' element={<AuthForm />} />
-        
-        
       </Routes>
       <Footer />
     </Router>
