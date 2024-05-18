@@ -5,6 +5,8 @@ import Login from '../Login-signup/Login';
 import SignUp from '../Login-signup/SignUp';
 import config from '../../config';
 import axios from 'axios';
+import Cookies from 'js-cookie';
+
 import { AuthContext } from '../../context/AuthContext';
 
 function Navbar() {
@@ -39,6 +41,8 @@ function Navbar() {
     try {
       await axios.delete(`${config.baseURL}/logout`, { withCredentials: true });
       setAuthenticated(false);
+  // Explicitly remove the session cookie on the client side
+      Cookies.remove('session', { path: '/' });
       navigate('/'); // Redirect to homepage after logout
     } catch (error) {
       console.error('Logout failed:', error);
