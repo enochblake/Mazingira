@@ -31,9 +31,7 @@ const BeneficiaryStories = () => {
 
   return (
     <div className='bg-gray-100'>
-      {error ? (
         <div className='text-center text-red-500'>{error}</div>
-      ) : (
         <div className='bg-gray-700 mb-5 pt-10 mx-10'>
           <div className='grid grid-cols-1 rounded border shadow-md p-7 md:grid-cols-3 gap-6 bg-white w-3/4 mx-auto justify-center'>
             {currentStories.map((story) => (
@@ -61,7 +59,6 @@ const BeneficiaryStories = () => {
             />
           )}
         </div>
-      )}
     </div>
   );
 };

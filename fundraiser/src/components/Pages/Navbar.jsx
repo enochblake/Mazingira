@@ -41,9 +41,8 @@ function Navbar() {
     try {
       await axios.delete(`${config.baseURL}/logout`, { withCredentials: true });
       setAuthenticated(false);
-  // Explicitly remove the session cookie on the client side
       Cookies.remove('session', { path: '/' });
-      navigate('/'); // Redirect to homepage after logout
+      navigate('/');
     } catch (error) {
       console.error('Logout failed:', error);
     }
