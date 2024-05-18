@@ -31,41 +31,47 @@ export default function Login({ onClose, onSignUpClick }) {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+   e.preventDefault();
 
-    const requestData = {
-      email: formData.email,
-      password: formData.password,
-    };
+   const requestData = {
+     email: formData.email,
+     password: formData.password,
+   };
 
-    let loginEndpoint;
-    if (formData.loginAs === 'donor' || formData.loginAs === 'admin') {
-      loginEndpoint = `${config.baseURL}/login`;
-    } else if (formData.loginAs === 'organization') {
-      loginEndpoint = `${config.baseURL}/org/login`;
-    }
+   let loginEndpoint;
+   if (formData.loginAs === 'donor' || formData.loginAs === 'admin') {
+     loginEndpoint = `${config.baseURL}/login`;
+   } else if (formData.loginAs === 'organization') {
+     loginEndpoint = `${config.baseURL}/org/login`;
+   }
 
-    try {
-      const response = await axios.post(loginEndpoint, requestData, { withCredentials: true });
-      console.log(response);
+   try {
+     const response = await axios.post(loginEndpoint, requestData, {
+       withCredentials: true,
+     });
+     console.log(response);
 
-      if (response.data) {
-        toast.success('Login successful!');
-        handleClose();
+     if (response.data) {
+       toast.success('Login successful!');
+       handleClose();
+       setAuthenticated(true); 
 
-        if (formData.loginAs === 'organization') {
-          navigate('/environmental_org');
-        } else {
-          navigate('/all_organizations');
-        }
-      } else {
-        toast.error('Login failed: ' + response.statusText);
-      }
-    } catch (error) {
-      toast.error('An error occurred: ' + error.message);
-    }
-  };
+       if (formData.loginAs === 'admin') {
+         navigate('/admin-page');
+       } else if (formData.loginAs === 'organization') {
+         navigate('/environmental_org');
+       } else {
+         navigate('/all_organizations');
+       }
+     } else {
+       toast.error('Login failed: ' + response.statusText);
+     }
+   } catch (error) {
+     toast.error('An error occurred: ' + error.message);
+   }
+ };
+
 
   const handleClose = () => {
     onClose();
