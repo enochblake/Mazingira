@@ -1,8 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
-import { useNavigate, Route, Routes } from 'react-router-dom'; // Import necessary hooks and components from react-router-dom
+import { useNavigate, Route, Routes } from 'react-router-dom'; 
 import axios from 'axios';
-import Organization from '../Organizitons/Organization'; // Ensure you import the Organization component
+import Organization from '../Organizitons/Organization'; 
+import config from '../../config'
 
 const Administrator = () => {
   const [organizations, setOrganizations] = useState([]);
@@ -11,12 +12,12 @@ const Administrator = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [deletedOrgs, setDeletedOrgs] = useState(new Set());
 
-  const navigate = useNavigate(); // Initialize the navigate hook
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('https://mazingira-backend.onrender.com/admin');
+        const response = await axios.get(`${config.baseURL}/admin`);
         setOrganizations(response.data);
         setSearchResults(response.data);
       } catch (error) {
@@ -28,7 +29,9 @@ const Administrator = () => {
 
   const handleApprove = async (id) => {
     try {
-      await axios.patch(`https://mazingira-backend.onrender.com/admin/${id}`, { status: 'approved' });
+      await axios.patch(`${config.baseURL}/admin/${id}`, {
+        status: 'approved',
+      });
       setOrganizations(organizations.map(org => {
         if (org.id === id) {
           return { ...org, status: 'approved' };
@@ -44,7 +47,9 @@ const Administrator = () => {
 
   const handleReject = async (id) => {
     try {
-      await axios.patch(`https://mazingira-backend.onrender.com/admin/${id}`, { status: 'rejected' });
+      await axios.patch(`${config.baseURL}//admin/${id}`, {
+        status: 'rejected',
+      });
       setOrganizations(organizations.map(org => {
         if (org.id === id) {
           return { ...org, status: 'rejected' };
@@ -60,7 +65,7 @@ const Administrator = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://mazingira-backend.onrender.com/admin/${id}`);
+      await axios.delete(`${config.baseURL}//admin/${id}`);
       setOrganizations(organizations.filter(org => org.id !== id));
        setDeletedOrgs(prev => new Set(prev).add(id));
       window.alert('Organization deleted successfully!');
