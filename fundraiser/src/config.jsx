@@ -1,6 +1,6 @@
 // src/config.js
 const config = {
-  baseURL: 'http://127.0.0.1:5555',
+  baseURL: 'https://mazingira-backend.onrender.com',
 };
 
 export default config;
