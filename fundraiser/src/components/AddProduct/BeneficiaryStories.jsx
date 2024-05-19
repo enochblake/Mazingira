@@ -44,8 +44,8 @@ const BeneficiaryStories = () => {
               <div className='pr-7'>
                 <h3 className='text-lg font-bold mb-2'>{story.title}</h3>
                 <p className='text-gray-600 mb-4'>{story.content}</p>
-                <span className='text-sm text-gray-500'>
-                  {new Date(story.created_at).toLocaleDateString()}
+                <span className='text-sm mr-3 text-orange-600'> Created On: 
+                   {new Date(story.created_at).toLocaleDateString()}
                 </span>
               </div>
             </div>
