@@ -1,3 +1,4 @@
+//component/AddProducts/EnvironmentalOrgPage
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CreateBeneficiaryStory from './CreateBeneficiaryStories';
@@ -5,12 +6,15 @@ import DonationAmount from './DonationAmount';
 import AddBeneficiary from '../BeneficiaryInventory/AddBeneficiary';
 import BeneficiaryInventory from '../BeneficiaryInventory/BeneficiaryInventory';
 import AddOrganization from './AddOrganizationPage';
+
 function EnvironmentalOrgPage() {
-  const [selectedContent, setSelectedContent] = useState('donations');
+  const [selectedContent, setSelectedContent] = useState('details');
+  const [isDetailsSubmitted, setIsDetailsSubmitted] = useState(false);
 
   const handleContentChange = (content) => {
     setSelectedContent(content);
   };
+  
 
   return (
     <div className='bg-gray-100 min-h-screen'>
@@ -18,67 +22,59 @@ function EnvironmentalOrgPage() {
         <div className='flex justify-center my-4'>
           <Link
             to='#'
-            className={`mx-4 text-black  font-bold text-lg ${
-              selectedContent === 'details'
-                ? 'border-b-4 border-orange-500'
-                : ''
+            className={`mx-4 text-black font-bold text-lg ${
+              selectedContent === 'details' ? 'border-b-4 border-orange-500' : ''
             }`}
             onClick={() => handleContentChange('details')}
           >
             Add Details
           </Link>
-          <Link
-            to='#'
-            className={`mx-4 text-black  font-bold text-lg ${
-              selectedContent === 'donations'
-                ? 'border-b-4 border-orange-500'
-                : ''
-            }`}
-            onClick={() => handleContentChange('donations')}
-          >
-            Donations
-          </Link>
-          <Link
-            to='#'
-            className={`mx-4 text-black font-bold text-lg ${
-              selectedContent === 'create_stories'
-                ? 'border-b-4 border-orange-500'
-                : ''
-            }`}
-            onClick={() => handleContentChange('create_stories')}
-          >
-            Create Stories
-          </Link>
-          <Link
-            to='#'
-            className={`mx-4 text-black font-bold text-lg ${
-              selectedContent === 'add_beneficiary'
-                ? 'border-b-4 border-orange-500'
-                : ''
-            }`}
-            onClick={() => handleContentChange('add_beneficiary')}
-          >
-            Create Beneficiary
-          </Link>
-          <Link
-            to='#'
-            className={`mx-4 text-black font-bold text-lg ${
-              selectedContent === 'beneficiary_inventory'
-                ? 'border-b-4 border-orange-500'
-                : ''
-            }`}
-            onClick={() => handleContentChange('beneficiary_inventory')}
-          >
-            Inventory
-          </Link>
+          {isDetailsSubmitted && (
+            <>
+              <Link
+                to='#'
+                className={`mx-4 text-black font-bold text-lg ${
+                  selectedContent === 'donations' ? 'border-b-4 border-orange-500' : ''
+                }`}
+                onClick={() => handleContentChange('donations')}
+              >
+                Donations
+              </Link>
+              <Link
+                to='#'
+                className={`mx-4 text-black font-bold text-lg ${
+                  selectedContent === 'create_stories' ? 'border-b-4 border-orange-500' : ''
+                }`}
+                onClick={() => handleContentChange('create_stories')}
+              >
+                Create Stories
+              </Link>
+              <Link
+                to='#'
+                className={`mx-4 text-black font-bold text-lg ${
+                  selectedContent === 'add_beneficiary' ? 'border-b-4 border-orange-500' : ''
+                }`}
+                onClick={() => handleContentChange('add_beneficiary')}
+              >
+                Create Beneficiary
+              </Link>
+              <Link
+                to='#'
+                className={`mx-4 text-black font-bold text-lg ${
+                  selectedContent === 'beneficiary_inventory' ? 'border-b-4 border-orange-500' : ''
+                }`}
+                onClick={() => handleContentChange('beneficiary_inventory')}
+              >
+                Inventory
+              </Link>
+            </>
+          )}
         </div>
-        {selectedContent === 'details' && <AddOrganization />}
-        {selectedContent === 'donations' && <DonationAmount />}
-        {selectedContent === 'create_stories' && <CreateBeneficiaryStory />}
-        {selectedContent === 'add_beneficiary' && <AddBeneficiary />}
-        {selectedContent === 'beneficiary_inventory' && (
-          <BeneficiaryInventory />
-        )}
+        {selectedContent === 'details' && <AddOrganization onDetailsSubmit={() => setIsDetailsSubmitted(true)} />}
+        {isDetailsSubmitted && selectedContent === 'donations' && <DonationAmount />}
+        {isDetailsSubmitted && selectedContent === 'create_stories' && <CreateBeneficiaryStory />}
+        {isDetailsSubmitted && selectedContent === 'add_beneficiary' && <AddBeneficiary />}
+        {isDetailsSubmitted && selectedContent === 'beneficiary_inventory' && <BeneficiaryInventory />}
       </div>
     </div>
   );

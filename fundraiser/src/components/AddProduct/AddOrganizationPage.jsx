@@ -1,10 +1,12 @@
+//component/AddProducts/AdddOrganization.jsx
+// AddOrganization.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import config from '../../config';
 
-const AddOrganization = () => {
+const AddOrganization = ({ onDetailsSubmit }) => {
   const initialFormData = {
     organizationName: '',
     description: '',
@@ -47,6 +49,9 @@ const AddOrganization = () => {
       console.log('Organization updated successfully:', response.data);
       toast.success('Organization updated successfully');
       setFormData(initialFormData);
+      if (onDetailsSubmit) {
+        onDetailsSubmit();
+      }
     } catch (error) {
       console.error('Error updating organization:', error.response.data);
       toast.error('Error updating organization');
