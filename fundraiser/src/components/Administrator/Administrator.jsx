@@ -4,6 +4,9 @@ import { Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 import Organization from '../Organizitons/Organization'; 
 import config from '../../config'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Administrator = () => {
   const [organizations, setOrganizations] = useState([]);
@@ -26,40 +29,58 @@ const Administrator = () => {
     fetchData();
   }, []);
 
-  const handleApprove = async (id) => {
-    try {
-      await axios.patch(`${config.baseURL}/admin/${id}`, { approval_status: true }, { withCredentials: true });
-      setOrganizations(organizations.map(org => org.id === id ? { ...org, approval_status: true } : org));
-      window.alert('Organization approved successfully!');
-    } catch (error) {
-      console.error('Error approving organization:', error);
-      window.alert('Failed to approve organization. Please try again.');
-    }
-  };
+const handleApprove = async (id) => {
+  try {
+    await axios.patch(
+      `${config.baseURL}/admin/${id}`,
+      { approval_status: true },
+      { withCredentials: true }
+    );
+    setOrganizations(
+      organizations.map((org) =>
+        org.id === id ? { ...org, approval_status: true } : org
+      )
+    );
+    toast.success('Organization approved successfully!');
+  } catch (error) {
+    console.error('Error approving organization:', error);
+    toast.error('Failed to approve organization. Please try again.');
+  }
+};
 
-  const handleReject = async (id) => {
-    try {
-      await axios.patch(`${config.baseURL}/admin/${id}`, { approval_status: false }, { withCredentials: true });
-      setOrganizations(organizations.map(org => org.id === id ? { ...org, approval_status: false } : org));
-      window.alert('Organization rejected successfully!');
-    } catch (error) {
-      console.error('Error rejecting organization:', error);
-      window.alert('Failed to reject organization. Please try again.');
-    }
-  };
+const handleReject = async (id) => {
+  try {
+    await axios.patch(
+      `${config.baseURL}/admin/${id}`,
+      { approval_status: false },
+      { withCredentials: true }
+    );
+    setOrganizations(
+      organizations.map((org) =>
+        org.id === id ? { ...org, approval_status: false } : org
+      )
+    );
+    toast.success('Organization rejected successfully!');
+  } catch (error) {
+    console.error('Error rejecting organization:', error);
+    toast.error('Failed to reject organization. Please try again.');
+  }
+};
 
-  const handleDelete = async (id) => {
-    try {
-      await axios.delete(`${config.baseURL}/admin/${id}`, { withCredentials: true });
-      setOrganizations(organizations.filter(org => org.id !== id));
-       setDeletedOrgs(prev => new Set(prev).add(id));
-      window.alert('Organization deleted successfully!');
-    } catch (error) {
-      console.error('Error deleting organization:', error);
-      window.alert('Failed to delete organization. Please try again.');
-    }
+const handleDelete = async (id) => {
+  try {
+    await axios.delete(`${config.baseURL}/admin/${id}`, {
+      withCredentials: true,
+    });
+    setOrganizations(organizations.filter((org) => org.id !== id));
+    setDeletedOrgs((prev) => new Set(prev).add(id));
+    toast.success('Organization deleted successfully!');
+  } catch (error) {
+    console.error('Error deleting organization:', error);
+    toast.error('Failed to delete organization. Please try again.');
+  }
+};
 
-  };
 
   const handleFilterChange = (e) => {
     setFilter(e.target.value);

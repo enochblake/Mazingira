@@ -26,6 +26,9 @@ import EnvironmentalOrgPage from './components/AddProduct/EnvironOrgPage.jsx';
 import ApprovalPending from './components/AddProduct/ApprovalPending.jsx';
 import Administrator from './components/Administrator/Administrator.jsx';
 import AuthForm from './components/AuthForm/AuthForm.jsx';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   return (
     <Router>
@@ -55,6 +58,7 @@ function App() {
         <Route path='/authForm' element={<AuthForm />} />
       </Routes>
       <Footer />
+      <ToastContainer />
     </Router>
   );
 }
