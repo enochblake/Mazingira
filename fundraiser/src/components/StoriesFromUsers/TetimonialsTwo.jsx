@@ -1,6 +1,6 @@
 //components/storiesFromUs/TestimonialsTwo
 import { useRef, useEffect, useState } from 'react';
-import axios from 'axios'; // Import Axios for making HTTP requests
+import axios from 'axios'; 
 import SwiperCore from 'swiper';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';

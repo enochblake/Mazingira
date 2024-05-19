@@ -6,7 +6,6 @@ import SignUp from '../Login-signup/SignUp';
 import config from '../../config';
 import axios from 'axios';
 import Cookies from 'js-cookie';
-
 import { AuthContext } from '../../context/AuthContext';
 
 function Navbar() {

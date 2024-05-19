@@ -7,7 +7,6 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
     const [authenticated, setAuthenticated] = useState(false);
 
-    // Function to check session status
     const checkSession = async () => {
         try {
             const response = await axios.get(`${config.baseURL}/checksession`, { withCredentials: true });
@@ -22,7 +21,6 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    // Check session status when component mounts
     useEffect(() => {
         checkSession();
     }, []);

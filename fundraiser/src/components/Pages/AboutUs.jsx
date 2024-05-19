@@ -19,9 +19,6 @@ const AboutUs = () => {
       className='flex justify-center items-center min-h-screen relative'
     >
       <div className=' mx-10  p-2 mb-5 h-1/2 '>
-        {/* <h1 className='text-center font-bold text-4xl text-orange-700 '>
-          ABOUT US
-        </h1> */}
         <div className='flex flex-col lg:flex-row justify-center  mx-10 rounded  mt-5'>
           <div className='w-1/2 lg:w-1/2 mt-10 '>
             <div className=' p-2 flex flex-row'>

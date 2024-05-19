@@ -68,37 +68,6 @@ const OrganizationDetails = () => {
                 Donate
               </button>
             </Link>
-{/* 
-            <Link to='/add_org-page'>
-              <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
-                ADD_ORG
-              </button>
-            </Link>
-            <Link to='/register_org-page'>
-              <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
-                REGISTER_ORG
-              </button>
-            </Link>
-            <Link to='/amounts-page'>
-              <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
-                AMOUNTS
-              </button>
-            </Link>
-            <Link to='/b_stories-page'>
-              <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
-                B-STORIES
-              </button>
-            </Link>
-            <Link to='/B&I-page'>
-              <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
-                B & I
-              </button>
-            </Link>
-            <Link to='/add_B&I-page'>
-              <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded ml-4'>
-               Add B & I
-              </button>
-            </Link> */}
           </div>
         </div>
       </main>

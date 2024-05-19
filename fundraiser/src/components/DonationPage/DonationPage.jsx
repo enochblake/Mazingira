@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import OrganizationDetails from '../Organizitons/OrganizationDetails';
 import TestimonialsTwo from '../StoriesFromUsers/TetimonialsTwo';
-import BlogList from './BlogList';
 import OrganizationAim from '../Organizitons/OrgAim';
 import BeneficiaryStories from '../AddProduct/BeneficiaryStories';
 

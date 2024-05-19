@@ -6,8 +6,6 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import { Link, useNavigate } from 'react-router-dom'; 
-import Modal from './Modal';
-import SignUp from './SignUp';
 import config from '../../config';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';

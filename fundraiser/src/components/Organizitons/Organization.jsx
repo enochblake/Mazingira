@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CategoryBar from './CategoryBar';
 import config from '../../config';
+
+
 function Organization() {
   const [organizations, setOrganizations] = useState([]);
   const [activeCategory, setActiveCategory] = useState('all');
