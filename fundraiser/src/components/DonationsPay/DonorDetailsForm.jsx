@@ -1,4 +1,3 @@
-// Components/DonationPay/DonorDetailsForm.jsx
 import React, { useState } from 'react';
 
 function DonorDetailsForm({ onSubmit }) {
@@ -7,15 +6,39 @@ function DonorDetailsForm({ onSubmit }) {
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
   const [message, setMessage] = useState('');
+  const [amount, setAmount] = useState('');
+  const [amountError, setAmountError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ firstName, lastName, email, address, message });
+    if (validateAmount(amount)) {
+      onSubmit({ firstName, lastName, email, address, message, amount });
+    }
+  };
+
+  const validateAmount = (value) => {
+    if (isNaN(value) || value <= 0) {
+      setAmountError('Please enter a valid donation amount greater than zero.');
+      return false;
+    } else {
+      setAmountError('');
+      return true;
+    }
+  };
+
+  const handleAmountChange = (e) => {
+    const value = e.target.value;
+    if (/^\d*\.?\d*$/.test(value)) {
+      setAmount(value);
+      setAmountError('');
+    } else {
+      setAmountError('Please enter a valid number.');
+    }
   };
 
   return (
     <form onSubmit={handleSubmit} className='mt-4'>
-      <div className='grid grid-cols-2  gap-4'>
+      <div className='grid grid-cols-2 gap-4'>
         <div className='mb-4'>
           <label
             htmlFor='firstName'
@@ -96,7 +119,35 @@ function DonorDetailsForm({ onSubmit }) {
           rows='3'
         ></textarea>
       </div>
- 
+      <div className='mb-4'>
+        <label
+          htmlFor='amount'
+          className='block text-gray-700 font-bold text-lg mb-2'
+        >
+          Donation Amount ($)
+        </label>
+        <input
+          type='number'
+          id='amount'
+          value={amount}
+          onChange={handleAmountChange}
+          className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+          min='0'
+          step='0.01'
+          required
+        />
+        {amountError && (
+          <p className='text-red-500 text-sm mt-2'>{amountError}</p>
+        )}
+      </div>
+      <div className='flex justify-end'>
+        {/* <button
+          type='submit'
+          className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+        >
+          Submit
+        </button> */}
+      </div>
     </form>
   );
 }
