@@ -35,7 +35,7 @@ const OrganizationDetails = () => {
       <main className='flex flex-col justify-center'>
         <div className='w-full mx-auto mb-4 relative'>
           <img
-            className='rounded-full w-auto h-40 mx-auto -translate-y-1/2 ml-[500px]'
+            className='rounded-full w-1/4 h-40 mx-auto -translate-y-1/2 ml-[500px]'
             src={organization.logo}
             alt={organization.name}
           />
@@ -48,7 +48,7 @@ const OrganizationDetails = () => {
             />
             {organization.name}
           </h2>
-          <p className='text-gray-600'>{organization.description}</p>
+          <p className='text-gray-900 text-xl'>{organization.description}</p>
           <p className='text-lg mb-4 w-[600px]'>
             <h2 className='text-2xl font-bold mt-4'>
               <FontAwesomeIcon
@@ -57,10 +57,10 @@ const OrganizationDetails = () => {
               />
               History
             </h2>
-            <span className='text-4xl font-bold '>
+            <span className='text-4xl font-bold text-black'>
               {organization.history.charAt(0)}
             </span>
-            <span>{organization.history.slice(1)}</span>
+            <span className='text-xl'>{organization.history.slice(1)}</span>
           </p>
           <div className='flex justify-center mb-4'>
             <Link to='/pay-page'>

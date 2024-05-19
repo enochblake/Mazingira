@@ -116,14 +116,14 @@ const AddOrganization = ({ onDetailsSubmit }) => {
               name='description'
               value={formData.description}
               onChange={handleInputChange}
-              maxLength={10}
+              maxLength={80}
             />
             <TextareaField
               label='History'
               name='history'
               value={formData.history}
               onChange={handleInputChange}
-              maxLength={500}
+              maxLength={800}
             />
             <div className='flex items-center justify-between'>
               <Button
@@ -156,13 +156,19 @@ const AddOrganization = ({ onDetailsSubmit }) => {
 
 const ImagePreview = ({ image_url }) => {
   return (
-    <img
-      className='border-4 border-gray-500 rounded-md mb-2'
-      src={image_url || 'https://via.placeholder.com/200'}
-      alt='Organization Preview'
-    />
+    <div
+      className='border-4 border-gray-500 rounded-md mb-2 overflow-hidden'
+      style={{ width: '600px', height: '400px' }}
+    >
+      <img
+        className='object-cover w-full h-full'
+        src={image_url || 'https://via.placeholder.com/200'}
+        alt='Organization Preview'
+      />
+    </div>
   );
 };
+
 
 const CategorySelection = ({ selectedCategory, handleCategoryChange }) => {
   return (
