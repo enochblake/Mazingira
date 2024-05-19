@@ -198,14 +198,16 @@ const handleDelete = async (id) => {
         ))}
       </div>
       <div className='mt-4 flex justify-center'>
-        <ul className='pagination flex'>
+        <ul className='pagination flex '>
           {Array.from(
             { length: Math.ceil(searchResults.length / organizationsPerPage) },
             (_, i) => (
               <li key={i} className='page-item'>
                 <button
                   onClick={() => paginate(i + 1)}
-                  className='page-link bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mr-2'
+                  className={`page-link ${
+                    currentPage === i + 1 ? 'bg-gray-700' : 'bg-gray-500'
+                  } hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mr-10 mt-5`}
                   style={{ marginRight: '8px' }}
                 >
                   {i + 1}
