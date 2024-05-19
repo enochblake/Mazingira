@@ -5,8 +5,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
 import config from '../../config';
 
@@ -59,12 +57,19 @@ export default function SignUp({ onClose, onLoginClick }) {
         body: JSON.stringify(requestData),
       });
 
+
+      
       if (response.ok) {
+        const data = await response.json();
         toast.success('Registration successful!');
         handleClose();
 
         if (formData.userType === 'organization') {
-          navigate('/register_org-page');
+          if (data.approval_status === false) {
+            navigate('/approvalPending-page');
+          } else {
+            navigate('/register_org-page');
+          }
         } else {
           navigate('/all_organizations-page');
         }
@@ -75,6 +80,7 @@ export default function SignUp({ onClose, onLoginClick }) {
       toast.error('An error occurred: ' + error.message);
     }
   };
+
 
 
   const handleClose = () => {

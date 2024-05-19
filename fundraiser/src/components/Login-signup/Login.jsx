@@ -50,17 +50,20 @@ export default function Login({ onClose, onSignUpClick }) {
      const response = await axios.post(loginEndpoint, requestData, {
        withCredentials: true,
      });
-     console.log(response);
 
      if (response.data) {
        toast.success('Login successful!');
        handleClose();
-       setAuthenticated(true); 
+       setAuthenticated(true);
 
        if (formData.loginAs === 'admin') {
          navigate('/admin-page');
        } else if (formData.loginAs === 'organization') {
-         navigate('/environmental_org');
+         if (response.data.approval_status === false) {
+           navigate('/approvalPending-page');
+         } else {
+           navigate('/environmental_org');
+         }
        } else {
          navigate('/all_organizations');
        }
