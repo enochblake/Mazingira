@@ -1,4 +1,3 @@
-//component/AddProducts/AdddOrganization.jsx
 // AddOrganization.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
@@ -22,7 +21,15 @@ const AddOrganization = ({ onDetailsSubmit }) => {
   const [formData, setFormData] = useState(initialFormData);
 
   const handleInputChange = ({ target: { name, value } }) => {
-    if (name === 'content' && value.length > 500) return;
+    if (name === 'description') {
+      const wordCount = value.trim().split(/\s+/).length;
+      if (wordCount > 10) return;
+    }
+
+    if (name === 'phoneNumber') {
+      if (value.length > 10 || isNaN(value)) return;
+    }
+
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
 
     if (name === 'image_url') {
@@ -109,7 +116,7 @@ const AddOrganization = ({ onDetailsSubmit }) => {
               name='description'
               value={formData.description}
               onChange={handleInputChange}
-              maxLength={500}
+              maxLength={10}
             />
             <TextareaField
               label='History'
