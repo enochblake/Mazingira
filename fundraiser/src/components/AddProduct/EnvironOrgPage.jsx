@@ -4,6 +4,7 @@ import CreateBeneficiaryStory from './CreateBeneficiaryStories';
 import DonationAmount from './DonationAmount';
 import AddBeneficiary from '../BeneficiaryInventory/AddBeneficiary';
 import BeneficiaryInventory from '../BeneficiaryInventory/BeneficiaryInventory';
+import AddOrganization from './AddOrganizationPage';
 function EnvironmentalOrgPage() {
   const [selectedContent, setSelectedContent] = useState('donations');
 
@@ -15,6 +16,17 @@ function EnvironmentalOrgPage() {
     <div className='bg-gray-100 min-h-screen'>
       <div className='container mx-auto p-5'>
         <div className='flex justify-center my-4'>
+          <Link
+            to='#'
+            className={`mx-4 text-black  font-bold text-lg ${
+              selectedContent === 'details'
+                ? 'border-b-4 border-orange-500'
+                : ''
+            }`}
+            onClick={() => handleContentChange('details')}
+          >
+            Add Details
+          </Link>
           <Link
             to='#'
             className={`mx-4 text-black  font-bold text-lg ${
@@ -60,6 +72,7 @@ function EnvironmentalOrgPage() {
             Inventory
           </Link>
         </div>
+        {selectedContent === 'details' && <AddOrganization />}
         {selectedContent === 'donations' && <DonationAmount />}
         {selectedContent === 'create_stories' && <CreateBeneficiaryStory />}
         {selectedContent === 'add_beneficiary' && <AddBeneficiary />}

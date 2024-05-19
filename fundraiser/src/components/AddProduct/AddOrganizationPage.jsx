@@ -1,34 +1,56 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import config from '../../config';
 
 const AddOrganization = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     organizationName: '',
     description: '',
+    history: '',
     contactEmail: '',
     phoneNumber: '',
     websiteURL: '',
     selectedCategory: '',
-    image: null,
+    image_url: '',
     imagePreview: null,
-  });
-
-  const handleInputChange = ({ target: { name, value } }) => {
-    if (name === 'description' && value.length > 500) return;
-    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
 
-  const handleImageUpload = ({ target: { files } }) => {
-    const file = files[0];
+  const [formData, setFormData] = useState(initialFormData);
+
+  const handleInputChange = ({ target: { name, value } }) => {
+    if (name === 'content' && value.length > 500) return;
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+
+    if (name === 'image_url') {
+      handleImageUpload(value);
+    }
+  };
+
+  const handleImageUpload = (imageUrl) => {
     setFormData((prevFormData) => ({
       ...prevFormData,
-      image: file,
-      imagePreview: URL.createObjectURL(file),
+      image_url: imageUrl,
+      imagePreview: imageUrl,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic
+    try {
+      const response = await axios.patch(
+        `${config.baseURL}/org/edit`,
+        formData,
+        { withCredentials: true }
+      );
+      console.log('Organization updated successfully:', response.data);
+      toast.success('Organization updated successfully');
+      setFormData(initialFormData);
+    } catch (error) {
+      console.error('Error updating organization:', error.response.data);
+      toast.error('Error updating organization');
+    }
   };
 
   return (
@@ -38,8 +60,14 @@ const AddOrganization = () => {
       </h1>
       <div className='flex flex-wrap -mx-4'>
         <div className='w-1/2 px-4'>
-          <ImagePreview imagePreview={formData.imagePreview} />
-          <ImageInput handleImageUpload={handleImageUpload} />
+          <ImagePreview image_url={formData.image_url} />
+          <InputField
+            label='Image URL'
+            name='image_url'
+            value={formData.image_url}
+            onChange={handleInputChange}
+            placeholder='Enter Image URL'
+          />
           <CategorySelection
             selectedCategory={formData.selectedCategory}
             handleCategoryChange={handleInputChange}
@@ -78,6 +106,13 @@ const AddOrganization = () => {
               onChange={handleInputChange}
               maxLength={500}
             />
+            <TextareaField
+              label='History'
+              name='history'
+              value={formData.history}
+              onChange={handleInputChange}
+              maxLength={500}
+            />
             <div className='flex items-center justify-between'>
               <Button
                 className='bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
@@ -102,29 +137,17 @@ const AddOrganization = () => {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
 
-const ImagePreview = ({ imagePreview }) => {
+const ImagePreview = ({ image_url }) => {
   return (
     <img
       className='border-4 border-gray-500 rounded-md mb-2'
-      src={imagePreview || 'https://via.placeholder.com/200'}
+      src={image_url || 'https://via.placeholder.com/200'}
       alt='Organization Preview'
-    />
-  );
-};
-
-const ImageInput = ({ handleImageUpload }) => {
-  return (
-    <input
-      className='shadow appearance-none border rounded w-2/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-      id='image'
-      type='file'
-      accept='image/*'
-      onChange={handleImageUpload}
-      required
     />
   );
 };
@@ -179,8 +202,7 @@ const RadioOption = ({ value, checked, onChange, children }) => {
   );
 };
 
-
-const InputField = ({ label, name, value, onChange }) => {
+const InputField = ({ label, name, value, onChange, placeholder }) => {
   return (
     <div className='mb-2'>
       <label className='block text-gray-700 font-bold mb-2'>{label}</label>
@@ -190,6 +212,7 @@ const InputField = ({ label, name, value, onChange }) => {
         name={name}
         value={value}
         onChange={onChange}
+        placeholder={placeholder}
         required
       />
     </div>
