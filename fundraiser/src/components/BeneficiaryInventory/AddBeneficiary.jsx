@@ -33,6 +33,13 @@ const AddBeneficiary = () => {
     try {
       const response = await axios.post(`${config.baseURL}/beneficiary`, requestData, {withCredentials: true});
       console.log('Beneficiary created:', response.data);
+      
+        setFormData({
+          name: '',
+          imageUrl: '',
+          receivedAmount: '',
+          imagePreview: '',
+        });
     } catch (error) {
       console.error(
         'Error creating beneficiary:',
