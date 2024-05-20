@@ -66,90 +66,92 @@ const AddOrganization = ({ onDetailsSubmit }) => {
   };
 
   return (
-    <div className='container mx-auto py-8'>
-      <h1 className='text-2xl font-bold mb-5 mx-auto text-center text-orange-700'>
-        ADD ORGANIZATION
-      </h1>
-      <div className='flex flex-wrap -mx-4'>
-        <div className='w-1/2 px-4'>
-          <ImagePreview image_url={formData.image_url} />
-          <InputField
-            label='Image URL'
-            name='image_url'
-            value={formData.image_url}
-            onChange={handleInputChange}
-            placeholder='Enter Image URL'
-          />
-          <CategorySelection
-            selectedCategory={formData.selectedCategory}
-            handleCategoryChange={handleInputChange}
-          />
+    <div className='bg-gray-700 p-10'>
+      <div className='container mx-auto p-8 bg-gray-100'>
+        <h1 className='text-2xl font-bold mb-5 mx-auto text-center text-orange-700'>
+          ADD ORGANIZATION
+        </h1>
+        <div className='flex flex-wrap -mx-4'>
+          <div className='w-1/2 px-4'>
+            <ImagePreview image_url={formData.image_url} />
+            <InputField
+              label='Image URL'
+              name='image_url'
+              value={formData.image_url}
+              onChange={handleInputChange}
+              placeholder='Enter Image URL'
+            />
+            <CategorySelection
+              selectedCategory={formData.selectedCategory}
+              handleCategoryChange={handleInputChange}
+            />
+          </div>
+          <div className='w-1/2 px-4 text-lg'>
+            <form onSubmit={handleSubmit}>
+              <InputField
+                label='Organization Name'
+                name='organizationName'
+                value={formData.organizationName}
+                onChange={handleInputChange}
+              />
+              <InputField
+                label='Contact Email'
+                name='contactEmail'
+                value={formData.contactEmail}
+                onChange={handleInputChange}
+              />
+              <InputField
+                label='Phone Number'
+                name='phoneNumber'
+                value={formData.phoneNumber}
+                onChange={handleInputChange}
+              />
+              <InputField
+                label='Website URL'
+                name='websiteURL'
+                value={formData.websiteURL}
+                onChange={handleInputChange}
+              />
+              <TextareaField
+                label='Description'
+                name='description'
+                value={formData.description}
+                onChange={handleInputChange}
+                maxLength={80}
+              />
+              <TextareaField
+                label='History'
+                name='history'
+                value={formData.history}
+                onChange={handleInputChange}
+                maxLength={800}
+              />
+              <div className='flex items-center justify-between'>
+                <Button
+                  className='bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                  type='button'
+                  onClick={() => {}}
+                >
+                  Cancel
+                </Button>
+                <Button
+                  className='bg-white hover:bg-orange-700 text-black text-lg font-bold py-1 px-4 rounded-md focus:outline-none focus:shadow-outline border-4 border-orange-500'
+                  type='submit'
+                >
+                  Save
+                </Button>
+                <Button
+                  className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                  type='submit'
+                >
+                  Save & Submit
+                </Button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div className='w-1/2 px-4 text-lg'>
-          <form onSubmit={handleSubmit}>
-            <InputField
-              label='Organization Name'
-              name='organizationName'
-              value={formData.organizationName}
-              onChange={handleInputChange}
-            />
-            <InputField
-              label='Contact Email'
-              name='contactEmail'
-              value={formData.contactEmail}
-              onChange={handleInputChange}
-            />
-            <InputField
-              label='Phone Number'
-              name='phoneNumber'
-              value={formData.phoneNumber}
-              onChange={handleInputChange}
-            />
-            <InputField
-              label='Website URL'
-              name='websiteURL'
-              value={formData.websiteURL}
-              onChange={handleInputChange}
-            />
-            <TextareaField
-              label='Description'
-              name='description'
-              value={formData.description}
-              onChange={handleInputChange}
-              maxLength={80}
-            />
-            <TextareaField
-              label='History'
-              name='history'
-              value={formData.history}
-              onChange={handleInputChange}
-              maxLength={800}
-            />
-            <div className='flex items-center justify-between'>
-              <Button
-                className='bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-                type='button'
-                onClick={() => {}}
-              >
-                Cancel
-              </Button>
-              <Button
-                className='bg-white hover:bg-orange-700 text-black text-lg font-bold py-1 px-4 rounded-md focus:outline-none focus:shadow-outline border-4 border-orange-500'
-                type='submit'
-              >
-                Save
-              </Button>
-              <Button
-                className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-                type='submit'
-              >
-                Save & Submit
-              </Button>
-            </div>
-          </form>
-        </div>
+        <ToastContainer />
       </div>
-      <ToastContainer />
     </div>
   );
 };
