@@ -60,8 +60,8 @@ const DonationAmount = () => {
 
   return (
     <div className='bg-gray-100 '>
-      <div className='bg-gray-700 h-1/4 p-16 mx-10 mb-2'>
-        <div className='container mx-auto border shadow-md mt-4 bg-gray-100 w-4/7 justify-center text-center p-4 pl-5'>
+      <div className='bg-gray-700 h-1/4 p-8 mx-10 mb-2'>
+        <div className='container mx-auto border shadow-md  bg-gray-100 w-4/7 justify-center text-center p-4 pl-5'>
       <h1 className='text-xl font-bold text-center mb-4 text-orange-700'>
         Donation Amount 
       </h1>
