@@ -160,7 +160,7 @@ const ImagePreview = ({ image_url }) => {
   return (
     <div
       className='border-4 border-gray-500 rounded-md mb-2 overflow-hidden'
-      style={{ width: '600px', height: '400px' }}
+      style={{ width: '400px', height: '300px' }}
     >
       <img
         className='object-cover w-full h-full'
