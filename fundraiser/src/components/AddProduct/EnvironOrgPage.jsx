@@ -9,7 +9,7 @@ import AddOrganization from './AddOrganizationPage';
 
 function EnvironmentalOrgPage() {
   const [selectedContent, setSelectedContent] = useState('details');
-  const [isDetailsSubmitted, setIsDetailsSubmitted] = useState(false);
+  // const [isDetailsSubmitted, setIsDetailsSubmitted] = useState(false);
 
   const handleContentChange = (content) => {
     setSelectedContent(content);
@@ -29,8 +29,8 @@ function EnvironmentalOrgPage() {
           >
             Add Details
           </Link>
-          {isDetailsSubmitted && (
-            <>
+          {/* {isDetailsSubmitted && ( */}
+            {/* <> */}
               <Link
                 to='#'
                 className={`mx-4 text-black font-bold text-lg ${
@@ -67,14 +67,14 @@ function EnvironmentalOrgPage() {
               >
                 Inventory
               </Link>
-            </>
-          )}
+            {/* </> */}
+          {/* )} */}
         </div>
-        {selectedContent === 'details' && <AddOrganization onDetailsSubmit={() => setIsDetailsSubmitted(true)} />}
-        {isDetailsSubmitted && selectedContent === 'donations' && <DonationAmount />}
-        {isDetailsSubmitted && selectedContent === 'create_stories' && <CreateBeneficiaryStory />}
-        {isDetailsSubmitted && selectedContent === 'add_beneficiary' && <AddBeneficiary />}
-        {isDetailsSubmitted && selectedContent === 'beneficiary_inventory' && <BeneficiaryInventory />}
+        {selectedContent === 'details' && <AddOrganization  />}
+        {selectedContent === 'donations' && <DonationAmount />}
+        {selectedContent === 'create_stories' && <CreateBeneficiaryStory />}
+        {selectedContent === 'add_beneficiary' && <AddBeneficiary />}
+        {selectedContent === 'beneficiary_inventory' && <BeneficiaryInventory />}
       </div>
     </div>
   );
