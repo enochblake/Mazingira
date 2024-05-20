@@ -66,22 +66,21 @@ const CreateBeneficiaryStory = () => {
 
 
   return (
-    <div className='bg-gray-700 mt-5 p-10 mx-10'>
-      <div className='container mx-auto py-8 bg-gray-100 rounded shadow-md p-5 mb-5 '>
+      <div className='container mx-auto py-8 bg-white rounded shadow-md p-5 mb-5 min-h-screen'>
         <h1 className='text-2xl font-bold mb-5 mx-auto text-center text-orange-700'>
           CREATE BENEFICIARY STORIES
         </h1>
-        <div className='flex flex-wrap -mx-4'>
+        <div className='flex flex-wrap -mx-4 mt-20'>
           <div className='w-1/2 px-4'>
             <ImagePreview imagePreview={formData.imagePreview} />
           </div>
-          <div className='w-1/2 px-4 text-lg'>
-            <form onSubmit={handleSubmit}>
+          <div className='w-1/2 px-4 text-lg mb-5'>
+            <form onSubmit={handleSubmit} className='mb-10'>
               <InputField
                 label='Title'
                 name='title'
                 value={formData.title}
-                onChange={handleInputChange}
+              onChange={handleInputChange}
               />
               <InputField
                 label='Content'
@@ -95,7 +94,7 @@ const CreateBeneficiaryStory = () => {
                 value={formData.image_url}
                 onChange={handleInputChange}
               />
-              <div className='flex items-center justify-between'>
+              <div className='flex items-center justify-between mt-10'>
                 <Button
                   className='bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
                   type='button'
@@ -104,7 +103,7 @@ const CreateBeneficiaryStory = () => {
                   Cancel
                 </Button>
                 <Button
-                  className='bg-white hover:bg-orange-700 text-black text-lg font-bold py-1 px-4 rounded-md focus:outline-none focus:shadow-outline border-4 border-orange-500'
+                  className='bg-white hover:bg-orange-400 text-black text-lg font-bold py-1 px-4 rounded-md focus:outline-none focus:shadow-outline border-4 border-orange-500'
                   type='submit'
                 >
                   Save
@@ -121,7 +120,6 @@ const CreateBeneficiaryStory = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
@@ -137,7 +135,7 @@ const ImagePreview = ({ imagePreview }) => {
 
 const InputField = ({ label, name, value, onChange, type = 'text' }) => {
   return (
-    <div className='mb-2'>
+    <div className='mb-8'>
       <label className='block text-gray-700 font-bold mb-2'>{label}</label>
       <input
         className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'

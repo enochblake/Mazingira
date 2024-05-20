@@ -66,8 +66,8 @@ const AddOrganization = ({ onDetailsSubmit }) => {
   };
 
   return (
-    <div className='bg-gray-700 p-10'>
-      <div className='container mx-auto p-8 bg-gray-100'>
+    // <div className='bg-gray-700 p-10'>
+      <div className='container p-8 border border-orange-100 bg-white '>
         <h1 className='text-2xl font-bold mb-5 mx-auto text-center text-orange-700'>
           ADD ORGANIZATION
         </h1>
@@ -152,7 +152,7 @@ const AddOrganization = ({ onDetailsSubmit }) => {
         </div>
         <ToastContainer />
       </div>
-    </div>
+    // </div>
   );
 };
 

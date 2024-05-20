@@ -49,12 +49,13 @@ const AddBeneficiary = () => {
   };
 
   return (
-    <div className='bg-gray-700 mt-5 p-10 mx-10 '>
-      <div className='container mx-auto py-8 bg-gray-100 rounded shadow-md p-5 mb-5 '>
+    <>
+    {/* <div className='bg-gray-700 mt-5 p-10 mx-10 '> */}
+      <div className='container mx-auto py-8 bg-white rounded shadow-md p-5 mb-5 min-h-screen  '>
         <h1 className='text-2xl font-bold mb-5 mx-auto text-center text-orange-700'>
           CREATE BENEFICIARY 
         </h1>
-        <div className='flex flex-wrap -mx-4'>
+        <div className='flex flex-wrap mt-20 justify-center'>
           <div className='w-1/2 px-4'>
             <ImagePreview imagePreview={formData.imagePreview} />
           </div>
@@ -104,7 +105,8 @@ const AddBeneficiary = () => {
           </div>
         </div>
       </div>
-    </div>
+      {/* </div> */}
+      </>
   );
 };
 
@@ -120,7 +122,7 @@ const ImagePreview = ({ imagePreview }) => {
 
 const InputField = ({ label, name, type = 'text', value, onChange }) => {
   return (
-    <div className='mb-2'>
+    <div className='mb-8'>
       <label className='block text-gray-700 font-bold mb-2'>{label}</label>
       <input
         className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'

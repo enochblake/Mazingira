@@ -1,24 +1,23 @@
-
-import React, { useState,useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
-import { Link, useNavigate } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom';
 import config from '../../config';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
 
 export default function Login({ onClose, onSignUpClick }) {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const { setAuthenticated } = useContext(AuthContext);
 
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    loginAs: 'donor',
+    role: 'donor',
   });
 
   const handleChange = (e) => {
@@ -29,50 +28,49 @@ export default function Login({ onClose, onSignUpClick }) {
     }));
   };
 
- const handleSubmit = async (e) => {
-   e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-   const requestData = {
-     email: formData.email,
-     password: formData.password,
-   };
+    const requestData = {
+      email: formData.email,
+      password: formData.password,
+    };
 
-   let loginEndpoint;
-   if (formData.loginAs === 'donor' || formData.loginAs === 'admin') {
-     loginEndpoint = `${config.baseURL}/login`;
-   } else if (formData.loginAs === 'organization') {
-     loginEndpoint = `${config.baseURL}/org/login`;
-   }
+    let loginEndpoint;
+    if (formData.role === 'donor' || formData.role === 'admin') {
+      loginEndpoint = `${config.baseURL}/login`;
+    } else if (formData.role === 'organization') {
+      loginEndpoint = `${config.baseURL}/org/login`;
+    }
 
-   try {
-     const response = await axios.post(loginEndpoint, requestData, {
-       withCredentials: true,
-     });
+    try {
+      const response = await axios.post(loginEndpoint, requestData, {
+        withCredentials: true,
+      });
 
-     if (response.data) {
-       toast.success('Login successful!');
-       handleClose();
-       setAuthenticated(true);
+      if (response.data) {
+        toast.success('Login successful!');
+        handleClose();
+        setAuthenticated(true);
 
-       if (formData.loginAs === 'admin') {
-         navigate('/admin-page');
-       } else if (formData.loginAs === 'organization') {
-         if (response.data.approval_status === false) {
-           navigate('/approvalPending-page');
-         } else {
-           navigate('/environmental_org');
-         }
-       } else {
-         navigate('/all_organizations');
-       }
-     } else {
-       toast.error('Login failed: ' + response.statusText);
-     }
-   } catch (error) {
-     toast.error('An error occurred: ' + error.message);
-   }
- };
-
+        if (formData.role === 'admin') {
+          navigate('/admin-page');
+        } else if (formData.role === 'organization') {
+          if (response.data.approval_status === false) {
+            navigate('/approvalPending-page');
+          } else {
+            navigate('/environmental_org');
+          }
+        } else {
+          navigate('/all_organizations');
+        }
+      } else {
+        toast.error('Login failed: ' + response.statusText);
+      }
+    } catch (error) {
+      toast.error('An error occurred: ' + error.message);
+    }
+  };
 
   const handleClose = () => {
     onClose();
@@ -102,8 +100,8 @@ export default function Login({ onClose, onSignUpClick }) {
           <div className='bg-white p-5 mt-10 rounded h-5/6'>
             <div className='mb-2'>
               <select
-                name='loginAs'
-                value={formData.loginAs}
+                name='role'
+                value={formData.role}
                 onChange={handleChange}
                 className='w-full border-b border-gray-300 focus:outline-none mt-5 text-lg text-black font-bold'
               >

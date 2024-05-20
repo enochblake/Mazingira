@@ -32,9 +32,10 @@ const BeneficiaryInventory = () => {
   };
 
   return (
-    <div className='bg-gray-100 '>
-      <div className='bg-gray-700   p-10 mx-10 mb-2'>
-        <div className='container mx-auto border shadow-md  bg-gray-100 w-4/7 justify-center text-center p-4 pl-5'>
+    <>
+    {/* <div className='bg-gray-100 '> */}
+      {/* <div className='bg-gray-700   p-10 mx-10 mb-2'> */}
+        <div className='container mx-auto border shadow-md  bg-white w-4/7 justify-center text-center p-4 pl-5 min-h-screen'>
           <h1 className='text-xl font-bold text-center mb-4 text-orange-700'>
             List of Beneficiaries
           </h1>
@@ -43,7 +44,7 @@ const BeneficiaryInventory = () => {
           </div>
           <div className='flex'>
             <div className='w-full'>
-              <div className='max-h-96 overflow-y-auto'>
+              <div className='max-h-screen overflow-y-auto'>
                 <ul className='w-3/4'>
                   {inventory.map((item, index) => (
                     <React.Fragment key={index}>
@@ -76,18 +77,19 @@ const BeneficiaryInventory = () => {
               </div>
             </div>
 
-            <div className='w-1/2 ml-6'>
-              <div className='total-Amount-container bg-white p-16 rounded shadow-lg mb-4'>
-                <h2 className='text-lg font-bold mx-auto text-center'>
+            <div className='w-1/2 ml-6  '>
+              <div className='total-Amount-container bg-white p-16 rounded shadow-lg mb-4 mt-40'>
+                <h2 className='text-xl font-bold mx-auto text-center'>
                   Total Amount
                 </h2>
-                <p className='text-2xl text-center'>${totalAmount}</p>
+                <p className='text-2xl text-center'>$ {totalAmount}</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      {/* </div> */}
+      {/* </div> */}
+      </>
   );
 };
 
