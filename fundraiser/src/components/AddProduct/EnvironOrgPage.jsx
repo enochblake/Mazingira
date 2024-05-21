@@ -24,7 +24,7 @@ function EnvironmentalOrgPage() {
         <div className='container mx-auto p-5 flex'>
           <div className='w-1/10 mr-5 bg-gray-200 p-5'>
             <img
-              src='https://images.unsplash.com/photo-1516214104703-d870798883c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA2fHxlbnZpcm9ubWVudHxlbnwwfHwwfHx8MA%3D%3D'
+              src='https://plus.unsplash.com/premium_photo-1661962984775-f8086e609650?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTk3fHxlbnZpcm9ubWVudHxlbnwwfHwwfHx8MA%3D%3D'
               alt=''
               className='h-1/4 '
             />

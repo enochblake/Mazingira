@@ -36,7 +36,7 @@ const BeneficiaryInventory = () => {
     {/* <div className='bg-gray-100 '> */}
       {/* <div className='bg-gray-700   p-10 mx-10 mb-2'> */}
         <div className='container mx-auto border shadow-md  bg-white w-4/7 justify-center text-center p-4 pl-5 min-h-screen'>
-          <h1 className='text-xl font-bold text-center mb-4 text-orange-700'>
+          <h1 className='text-2xl font-bold text-center mb-4 text-orange-700'>
             List of Beneficiaries
           </h1>
           <div className='flex mb-4 mt-7'>
