@@ -197,8 +197,8 @@ const handleDelete = async (id) => {
           </div>
         ))}
       </div>
-      <div className='mt-4 flex justify-center'>
-        <ul className='pagination flex '>
+      <div className='mt-4 flex justify-center '>
+        <ul className='pagination flex mb-10'>
           {Array.from(
             { length: Math.ceil(searchResults.length / organizationsPerPage) },
             (_, i) => (

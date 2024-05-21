@@ -28,49 +28,62 @@ export default function Login({ onClose, onSignUpClick }) {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
 
-    const requestData = {
-      email: formData.email,
-      password: formData.password,
-    };
 
-    let loginEndpoint;
-    if (formData.role === 'donor' || formData.role === 'admin') {
-      loginEndpoint = `${config.baseURL}/login`;
-    } else if (formData.role === 'organization') {
-      loginEndpoint = `${config.baseURL}/org/login`;
-    }
+ const handleSubmit = async (e) => {
+   e.preventDefault();
 
-    try {
-      const response = await axios.post(loginEndpoint, requestData, {
-        withCredentials: true,
-      });
+   const requestData = {
+     email: formData.email,
+     password: formData.password,
+   };
 
-      if (response.data) {
-        toast.success('Login successful!');
-        handleClose();
-        setAuthenticated(true);
+   let loginEndpoint = `${config.baseURL}/login`;
+   if (formData.role === 'org') {
+     loginEndpoint = `${config.baseURL}/org/login`;
+   }
 
-        if (formData.role === 'admin') {
-          navigate('/admin-page');
-        } else if (formData.role === 'organization') {
-          if (response.data.approval_status === false) {
-            navigate('/approvalPending-page');
-          } else {
-            navigate('/environmental_org');
-          }
-        } else {
-          navigate('/all_organizations');
-        }
-      } else {
-        toast.error('Login failed: ' + response.statusText);
-      }
-    } catch (error) {
-      toast.error('An error occurred: ' + error.message);
-    }
-  };
+   try {
+     const response = await axios.post(loginEndpoint, requestData, {
+       withCredentials: true,
+     });
+
+     if (response.data) {
+
+      //  console.log('Form role:', formData.role);
+      //  console.log('Backend role:', response.data.role);
+
+       if (response.data.role !== formData.role) {
+         toast.error('Login failed: Role mismatch');
+         return;
+       }
+
+       toast.success('Login successful!');
+       handleClose();
+       setAuthenticated(true);
+
+       if (response.data.role === 'admin') {
+         navigate('/admin-page');
+       } else if (response.data.role === 'org') {
+         if (response.data.approval_status === false) {
+           navigate('/approvalPending-page');
+         } else {
+           navigate('/environmental_org');
+         }
+       } else if (response.data.role === 'donor') {
+         navigate('/all_organizations');
+       } else {
+         toast.error('Login failed: Unknown role');
+       }
+     } else {
+       toast.error('Login failed: ' + response.statusText);
+     }
+   } catch (error) {
+     toast.error('An error occurred: ' + error.message);
+   }
+ };
+
+
 
   const handleClose = () => {
     onClose();
@@ -106,7 +119,7 @@ export default function Login({ onClose, onSignUpClick }) {
                 className='w-full border-b border-gray-300 focus:outline-none mt-5 text-lg text-black font-bold'
               >
                 <option value='donor'>DONOR</option>
-                <option value='organization'>ORGANIZATION</option>
+                <option value='org'>ORGANIZATION</option>
                 <option value='admin'>ADMIN</option>
               </select>
             </div>
