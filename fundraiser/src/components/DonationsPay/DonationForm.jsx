@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import PayPalPayment from './PayPalPayment';
 import DonorDetailsForm from './DonorDetailsForm';
 import { toast } from 'react-toastify'; 
+import Hero from '../StoriesFromUsers/Hero';
 
 function DonationForm() {
   const defaultAmount = 10;
@@ -43,9 +44,10 @@ function DonationForm() {
   };
 
   return (
-    <div className='container mx-auto mt-8  p-4'>
+    <div className=''>
+      <Hero/>
       <main className='flex flex-col justify-center'>
-        <div className='bg-gray-50 shadow-md rounded-lg p-8  w-full mx-auto'>
+        <div className='bg-white shadow-md rounded-lg p-8  w-1/2 mx-auto'>
           <h1 className='text-3xl font-bold mb-4 text-orange-500 text-center'>Donate Now</h1>
           <form className='flex flex-col justify-center'>
             <div className='mb-4'>

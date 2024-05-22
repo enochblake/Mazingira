@@ -32,10 +32,10 @@ const BeneficiaryStories = () => {
   return (
     <div className='bg-gray-100'>
       <div className='text-center text-red-500'>{error}</div>
-      <div className='bg-gray-700 mb-5 p-10 mx-5'>
-        <div className='grid grid-cols-1 rounded border shadow-md p-7 md:grid-cols-3 gap-6 bg-white '>
+      <div className='bg-gray-700 mb-5 p-10 mx-5 rounded-lg shadow-md'>
+        <div className='grid grid-cols-1 gap-6 md:grid-cols-3 bg-gray-100'>
           {currentStories.map((story) => (
-            <div key={story.id} className='flex flex-col'>
+            <div key={story.id} className='bg-white rounded-lg p-5'>
               <img
                 src={story.image_url}
                 alt={story.title}
@@ -49,51 +49,35 @@ const BeneficiaryStories = () => {
                     {story.time_to_read} min
                   </span>
                 </span>
-
-                <p className='text-gray-600 mb-4'>{story.content}</p>
+                <p className='text-md mt-4'>{story.content}</p>
                 <span className='text-sm mr-3 text-orange-600'>
-                  Created On:
-                  {new Date(story.created_at).toLocaleDateString()}
+                  Created On:{' '}
+                  <span className='text-gray-500'>
+                    {new Date(story.created_at).toLocaleDateString()}
+                  </span>
                 </span>
               </div>
             </div>
           ))}
         </div>
-        {stories.length > 0 && (
-          <Pagination
-            storiesPerPage={3}
-            totalStories={stories.length}
-            currentPage={currentPage}
-            paginate={paginate}
-          />
-        )}
+        <Pagination
+          currentPage={currentPage}
+          totalPages={Math.ceil(stories.length / 3)}
+          paginate={paginate}
+        />
       </div>
     </div>
   );
 };
 
-const Pagination = ({
-  storiesPerPage,
-  totalStories,
-  currentPage,
-  paginate,
-}) => {
-  const [visiblePageNumbers, setVisiblePageNumbers] = useState([1, 2, 3, 4]);
-  const totalPages = Math.ceil(totalStories / storiesPerPage);
+const Pagination = ({ currentPage, totalPages, paginate }) => {
+  const visiblePageNumbers = [];
 
-  useEffect(() => {
-    const updateVisiblePages = () => {
-      const start = Math.floor((currentPage - 1) / 4) * 4 + 1;
-      const end = Math.min(start + 3, totalPages);
-      const newVisiblePages = Array.from(
-        { length: end - start + 1 },
-        (_, i) => start + i
-      );
-      setVisiblePageNumbers(newVisiblePages);
-    };
-
-    updateVisiblePages();
-  }, [currentPage, totalPages]);
+  for (let i = 1; i <= totalPages; i++) {
+    if (i <= currentPage + 2 && i >= currentPage - 2) {
+      visiblePageNumbers.push(i);
+    }
+  }
 
   const handleNext = () => {
     if (currentPage < totalPages) {
@@ -114,15 +98,15 @@ const Pagination = ({
         className='bg-gray-300 hover:bg-gray-400 text-gray-700 font-bold px-2 rounded-l mb-2'
         disabled={currentPage === 1}
       >
-        Previous
+        Prev
       </button>
       {visiblePageNumbers.map((number) => (
         <button
           key={number}
           onClick={() => paginate(number)}
-          className={`bg-orange-500 hover:bg-orange-400 text-white font-bold text-xl py-1 px-5 m-2 rounded ${
-            currentPage === number ? 'bg-orange-700' : ''
-          }`}
+          className={`${
+            currentPage === number ? 'bg-orange-500' : 'bg-gray-300'
+          } hover:bg-gray-400 text-white font-bold px-2 mx-1 rounded-md mb-2`}
         >
           {number}
         </button>

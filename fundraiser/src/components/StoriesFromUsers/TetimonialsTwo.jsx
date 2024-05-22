@@ -97,7 +97,7 @@ function TestimonialsTwo() {
   }, []);
 
   return (
-    <div className='bg-gray-700 min-h-screen'>
+    <div className='bg-gray-700 '>
       <div className='py-8 relative'>
         <Swiper
           className='swiper-container'
@@ -110,7 +110,7 @@ function TestimonialsTwo() {
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
               <Container>
-                <div className='bg-gray-100 border border-gray-200 p-4 rounded-lg shadow-md flex mx-auto items-center mr-5'>
+                <div className='bg-gray-100 border border-gray-200 p-4 rounded-lg shadow-md flex mx-auto items-center mr-5 m-h-screen'>
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}

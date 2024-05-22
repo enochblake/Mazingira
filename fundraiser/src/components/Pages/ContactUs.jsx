@@ -75,7 +75,7 @@ function ContactUs() {
       //   backgroundPosition: 'center',
       //   backgroundRepeat: 'no-repeat',
       // }}
-      className='flex justify-center items-center min-h-screen relative'
+      className='flex justify-center items-center min-h-screen relative bg-gray-100'
     >
       <div className='w-1/2'>
         <div id='contact'>
@@ -145,7 +145,7 @@ function ContactUs() {
         <div className='mx-auto text-center p-6 relative z-0'>
           <form
             onSubmit={handleSubmit}
-            className='p-5 h-1/2 mt-5 bg-gray-200 relative z-0 rounded-lg pb-6 '
+            className='p-5 h-1/2 mt-5 bg-gray-700 relative z-0 rounded-lg pb-6 '
           >
             <div className='bg-white p-5 mt-10 rounded '>
               <div className='mb-10 mt-5 grid grid-cols-2 gap-4'>

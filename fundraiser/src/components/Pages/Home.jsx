@@ -5,10 +5,10 @@ import Cards from '../StoriesFromUsers/Cards';
 
 function Home() {
   return (
-    <>
+    <div className='bg-gray-100'>
       <Hero />
       <Cards/>
-      </>
+      </div>
   );
 }
 
