@@ -7,6 +7,8 @@ import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import config from '../../config';
+import Hero from '../StoriesFromUsers/Hero'
+
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -64,13 +66,15 @@ function ContactUs() {
   };
 
   return (
+    <>
+    <Hero/>
     <div
-      style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1713494500139-a0d182b60cb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
+      // style={{
+      //   backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1713494500139-a0d182b60cb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D')`,
+      //   backgroundSize: 'cover',
+      //   backgroundPosition: 'center',
+      //   backgroundRepeat: 'no-repeat',
+      // }}
       className='flex justify-center items-center min-h-screen relative'
     >
       <div className='w-1/2'>
@@ -78,41 +82,41 @@ function ContactUs() {
           <div className='contact-container'>
             <div className='row'>
               <div className='contact-left p-5'>
-                <h1 className='font-bold text-4xl text-white'>
+                <h1 className='font-bold text-4xl text-black'>
                   Get in Touch With Us
                 </h1>
-                <p className='text-xl text-white mt-3 italic mb-5'>
+                <p className='text-xl text-black mt-3 italic mb-5'>
                   Reach out to Mazingira, our platform for positive change! Your
                   donations fuel our mission to create a greener, brighter
                   future. Join us today in making a difference for our planet.
                 </p>
-                <p className='font-bold text-2xl text-white'>
+                <p className='font-bold text-2xl text-black'>
                   <FontAwesomeIcon
                     icon={faLocationPin}
                     className='text-3xl text-orange-500 mr-3'
                   />
                   Find us at the office
-                  <p className='text-lg text-gray-100 ml-10'>
+                  <p className='text-lg text-gray-700 ml-10'>
                     ~ Bld Mihail Kogalniceanu, nr. 8
                   </p>
-                  <p className='text-lg text-gray-100 ml-10'>
+                  <p className='text-lg text-gray-700 ml-10'>
                     ~ 7652 Bucharest
                   </p>
-                  <p className='text-lg text-gray-100 ml-10'> ~ Romania</p>
+                  <p className='text-lg text-gray-700 ml-10'> ~ Romania</p>
                 </p>
-                <p className='font-bold text-2xl text-white mt-5 '>
+                <p className='font-bold text-2xl text-black mt-5 '>
                   <FontAwesomeIcon
                     icon={faPhone}
-                    className='text-3xl text-orange-500'
+                    className='text-3xl text-orange-500 mr-5'
                   />
                   Give us a ring
-                  <p className='text-lg text-gray-100 ml-10'>
+                  <p className='text-lg text-gray-700 ml-10'>
                     ~ Michael Jordan
                   </p>
-                  <p className='text-lg text-gray-100 ml-10'>
+                  <p className='text-lg text-gray-700 ml-10'>
                     ~ +40 762 321 762{' '}
                   </p>
-                  <p className='text-lg text-gray-100 ml-10'>
+                  <p className='text-lg text-gray-700 ml-10'>
                     ~ Mon - Fri, 8:00-22:00
                   </p>
                 </p>
@@ -196,6 +200,7 @@ function ContactUs() {
       </div>
       <ToastContainer />
     </div>
+    </>
   );
 }
 

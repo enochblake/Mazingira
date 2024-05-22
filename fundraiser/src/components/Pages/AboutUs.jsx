@@ -6,9 +6,13 @@ import {
   faComments,
   faHandDots,
 } from '@fortawesome/free-solid-svg-icons';
+import Hero from '../StoriesFromUsers/Hero'
 
 const AboutUs = () => {
   return (
+    <>
+          <Hero/>
+
     <div
       // style={{
       //   backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1713494500139-a0d182b60cb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D')`,
@@ -130,6 +134,7 @@ const AboutUs = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
