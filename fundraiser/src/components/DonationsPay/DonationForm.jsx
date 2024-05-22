@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import Hero from '../StoriesFromUsers/Hero';
 
 function DonationForm() {
-  const defaultAmount = 10;
+  const defaultAmount = 200;
   const [repeatDonation, setRepeatDonation] = useState(false);
   const [anonymousDonation, setAnonymousDonation] = useState(false);
   const [donorDetails, setDonorDetails] = useState(null);

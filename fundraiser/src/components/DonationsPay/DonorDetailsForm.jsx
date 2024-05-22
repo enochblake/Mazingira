@@ -47,7 +47,7 @@ function DonorDetailsForm({ onSubmit }) {
   return (
     <form onSubmit={handleSubmit} className='mt-4'>
       <div className=' p-5  rounded'>
-        <div className='mb-10 mt-5 grid grid-cols-2 gap-4'>
+        {/* <div className='mb-10 mt-5 grid grid-cols-2 gap-4'>
           <input
             type='text'
             name='firstName'
@@ -64,8 +64,8 @@ function DonorDetailsForm({ onSubmit }) {
             placeholder='Last Name'
             className='w-full border-b border-gray-300 focus:outline-none text-lg'
           />
-        </div>
-        <div className='mb-2'>
+        </div> */}
+        {/* <div className='mb-2'>
           <input
             type='email'
             name='email'
@@ -74,8 +74,8 @@ function DonorDetailsForm({ onSubmit }) {
             placeholder='Email'
             className='w-full border-b border-gray-300 focus:outline-none mt-5 text-lg'
           />
-        </div>
-        <div className='mb-2'>
+        </div> */}
+        {/* <div className='mb-2'>
           <input
             type='text'
             name='address'
@@ -84,8 +84,8 @@ function DonorDetailsForm({ onSubmit }) {
             placeholder='Address'
             className='w-full border-b border-gray-300 focus:outline-none mt-5 text-lg'
           />
-        </div>
-        <div className='mb-2'>
+        </div> */}
+        {/* <div className='mb-2'>
           <textarea
             name='message'
             value={formData.message}
@@ -94,7 +94,7 @@ function DonorDetailsForm({ onSubmit }) {
             rows='4'
             className='w-full border-b border-gray-300 focus:outline-none mt-7 text-lg'
           />
-        </div>
+        </div> */}
         <div className='mb-4'>
           <label
             htmlFor='amount'
