@@ -32,20 +32,28 @@ const BeneficiaryStories = () => {
   return (
     <div className='bg-gray-100'>
       <div className='text-center text-red-500'>{error}</div>
-      <div className='bg-gray-700 mb-5 pt-10 mx-10'>
-        <div className='grid grid-cols-1 rounded border shadow-md p-7 md:grid-cols-3 gap-6 bg-white w-3/4 mx-auto justify-center'>
+      <div className='bg-gray-700 mb-5 p-10 mx-5'>
+        <div className='grid grid-cols-1 rounded border shadow-md p-7 md:grid-cols-3 gap-6 bg-white '>
           {currentStories.map((story) => (
             <div key={story.id} className='flex flex-col'>
               <img
                 src={story.image_url}
                 alt={story.title}
-                className='rounded mb-4'
+                className='rounded w-full h-48 object-cover mb-4'
               />
               <div className='pr-7'>
                 <h3 className='text-lg font-bold mb-2'>{story.title}</h3>
+                <span className='text-md text-orange-500'>
+                  Time to read:{' '}
+                  <span style={{ marginLeft: '0.5rem' }}>
+                    {story.time_to_read} min
+                  </span>
+                </span>
+
                 <p className='text-gray-600 mb-4'>{story.content}</p>
-                <span className='text-sm mr-3 text-orange-600'> Created On: 
-                   {new Date(story.created_at).toLocaleDateString()}
+                <span className='text-sm mr-3 text-orange-600'>
+                  Created On:
+                  {new Date(story.created_at).toLocaleDateString()}
                 </span>
               </div>
             </div>

@@ -10,12 +10,12 @@ import {
 const AboutUs = () => {
   return (
     <div
-      style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1713494500139-a0d182b60cb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
+      // style={{
+      //   backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1713494500139-a0d182b60cb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D')`,
+      //   backgroundSize: 'cover',
+      //   backgroundPosition: 'center',
+      //   backgroundRepeat: 'no-repeat',
+      // }}
       className='flex justify-center items-center min-h-screen relative'
     >
       <div className=' mx-10  p-2 mb-5 h-1/2 '>
@@ -32,10 +32,10 @@ const AboutUs = () => {
                         className='text-3xl text-orange-500 mr-3'
                       />
                     </p>
-                    <h2 className='mt-4 text-2xl mb-3 text-white font-bold'>
+                    <h2 className='mt-4 text-2xl mb-3 text-black font-bold'>
                       Fully integrated
                     </h2>
-                    <p className='text-gray-100 text-lg'>
+                    <p className='text-gray-700 text-lg'>
                       We get insulted by others, lose trust for those We get
                       back freezes
                     </p>
@@ -50,10 +50,10 @@ const AboutUs = () => {
                         className='text-3xl text-orange-500 mr-3'
                       />
                     </p>
-                    <h2 className='mt-4 text-2xl mb-3 text-white font-bold'>
+                    <h2 className='mt-4 text-2xl mb-3 text-black font-bold'>
                       Fully integrated
                     </h2>
-                    <p className='text-gray-100 text-lg'>
+                    <p className='text-gray-700 text-lg'>
                       We get insulted by others, lose trust for those We get
                       back freezes
                     </p>
@@ -71,10 +71,10 @@ const AboutUs = () => {
                         className='text-3xl text-orange-500 mr-3'
                       />
                     </p>
-                    <h2 className='mt-4 text-2xl mb-3 text-white font-bold'>
+                    <h2 className='mt-4 text-2xl mb-3 text-black font-bold'>
                       Fully integrated
                     </h2>
-                    <p className='text-gray-100 text-lg'>
+                    <p className='text-gray-700 text-lg'>
                       We get insulted by others, lose trust for those We get
                       back freezes
                     </p>
@@ -89,10 +89,10 @@ const AboutUs = () => {
                         className='text-3xl text-orange-500 mr-3'
                       />
                     </p>
-                    <h2 className='mt-4 text-2xl mb-3 text-white font-bold'>
+                    <h2 className='mt-4 text-2xl mb-3 text-black font-bold'>
                       Fully integrated
                     </h2>
-                    <p className='text-gray-100 text-lg'>
+                    <p className='text-gray-700 text-lg'>
                       We get insulted by others, lose trust for those We get
                       back freezes
                     </p>

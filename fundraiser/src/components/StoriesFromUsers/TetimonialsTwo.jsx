@@ -98,7 +98,6 @@ function TestimonialsTwo() {
 
   return (
     <div className='bg-gray-700 min-h-screen'>
-      <Hero />
       <div className='py-8 relative'>
         <Swiper
           className='swiper-container'
