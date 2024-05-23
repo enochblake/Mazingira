@@ -4,7 +4,7 @@ import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 
 function PayPalPayment({ defaultAmount = 0, onSuccess, onCancel }) {
   const paypalOptions = {
-    'client-id': 'ARJKA_kyUZQ2rbZXuQ3Rv4D5LCh-sno6t8tIhcWPij5RRnTaaE9UA7QH4kKZ2WczLy4U5ruLNSkBGmcE', 
+    'client-id': 'Ad1HQW9v7ZswtKfhytUZHZ6XFoDPmUgM23iPtpZUgflbzYtyiy36oJG-qnUj0NQ0q7jOg15xY1vZnLBS', 
     currency: 'USD',
   };
 

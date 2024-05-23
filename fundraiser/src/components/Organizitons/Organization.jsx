@@ -50,14 +50,12 @@ function Organization() {
             Donate to a Cause
           </h1>
           <p className='mx-auto text-center text-lg'>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
-            soluta molestiae itaque eveniet delectus, dolore possimus
-            repellendus enim nulla sit reprehenderit natus corrupti nisi veniam
-            adipisci quo laborum cum qui? Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Necessitatibus excepturi quidem
-            minima suscipit molestiae! Neque, aliquam dolorem obcaecati dicta
-            perspiciatis illum, quisquam ab excepturi nihil sit sed, vitae
-            alias. Eaque.
+            Environmental degradation poses a significant threat to our planet,
+            leading to the destruction of ecosystems, loss of biodiversity, and
+            adverse impacts on human health. By supporting our platform, you can
+            contribute to organizations dedicated to combating these issues. Set
+            up regular donations to help preserve our air, water, and soil, and
+            ensure a sustainable future for generations to come.
           </p>
           <div className='flex flex-wrap justify-center gap-4 mb-4 mt-3'>
             {filteredOrganizations.map((organization, index) => (
