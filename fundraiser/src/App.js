@@ -2,7 +2,7 @@
 import './App.css';
 import Donor from './components/Organizitons/Organization';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import DonationPage from './components/DonationPage/DonationPage';
 import OrganizationDetails from './components/Organizitons/OrganizationDetails';
 import PayPage from './components/DonationsPay/PayPage';
