@@ -69,7 +69,7 @@ const AddOrganization = ({ onDetailsSubmit }) => {
     // <div className='bg-gray-700 p-10'>
       <div className='container p-8 border border-orange-100 bg-white '>
         <h1 className='text-2xl font-bold mb-5 mx-auto text-center text-orange-700'>
-          ADD ORGANIZATION
+          EDIT ORGANIZATION DETAILS
         </h1>
         <div className='flex flex-wrap -mx-4'>
           <div className='w-1/2 px-4'>

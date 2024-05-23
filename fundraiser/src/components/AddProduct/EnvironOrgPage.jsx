@@ -7,7 +7,7 @@ import BeneficiaryInventory from '../BeneficiaryInventory/BeneficiaryInventory';
 import AddOrganization from './AddOrganizationPage';
 
 function EnvironmentalOrgPage() {
-  const [selectedContent, setSelectedContent] = useState('details');
+  const [selectedContent, setSelectedContent] = useState('donations');
 
   const handleContentChange = (content) => {
     setSelectedContent(content);
@@ -87,13 +87,13 @@ function EnvironmentalOrgPage() {
             </div>
           </div>
           <div className='w-full pl-4'>
-            {selectedContent === 'details' && <AddOrganization />}
             {selectedContent === 'donations' && <DonationAmount />}
             {selectedContent === 'create_stories' && <CreateBeneficiaryStory />}
             {selectedContent === 'add_beneficiary' && <AddBeneficiary />}
             {selectedContent === 'beneficiary_inventory' && (
               <BeneficiaryInventory />
             )}
+            {selectedContent === 'details' && <AddOrganization />}
           </div>
         </div>
       </div>
