@@ -29,17 +29,7 @@ function EnvironmentalOrgPage() {
               className='h-1/4 '
             />
             <div className='flex flex-col my-10'>
-              <Link
-                to='#'
-                className={`py-2 text-black font-bold text-lg mb-5 ${
-                  selectedContent === 'details'
-                    ? 'text-orange-500 border-b-2 border-orange-500'
-                    : 'text-gray-800 hover:text-orange-500 hover:border-orange-500'
-                } px-2 py-1 pt-4 rounded-md transition duration-300 ease-in-out`}
-                onClick={() => handleContentChange('details')}
-              >
-                Add Details
-              </Link>
+          
               <Link
                 to='#'
                 className={`py-2 text-black font-bold text-lg mb-5 ${
@@ -83,6 +73,17 @@ function EnvironmentalOrgPage() {
                 onClick={() => handleContentChange('beneficiary_inventory')}
               >
                 Inventory
+              </Link>
+                  <Link
+                to='#'
+                className={`py-2 text-black font-bold text-lg mb-5 ${
+                  selectedContent === 'details'
+                    ? 'text-orange-500 border-b-2 border-orange-500'
+                    : 'text-gray-800 hover:text-orange-500 hover:border-orange-500'
+                } px-2 py-1 pt-4 rounded-md transition duration-300 ease-in-out`}
+                onClick={() => handleContentChange('details')}
+              >
+                Edit Details
               </Link>
             </div>
           </div>
