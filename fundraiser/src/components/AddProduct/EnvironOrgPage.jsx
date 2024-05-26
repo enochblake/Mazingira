@@ -64,7 +64,7 @@ function EnvironmentalOrgPage() {
               </Link>
               <Link
                 to='#'
-                className={`py-2 text-black font-bold text-lg mb-5${
+                className={`py-2 text-black font-bold text-lg mb-5 ${
                   selectedContent === 'beneficiary_inventory'
                     ? 'text-orange-500 border-b-2 border-orange-500'
                     : 'text-gray-800 hover:text-orange-500 hover:border-orange-500'

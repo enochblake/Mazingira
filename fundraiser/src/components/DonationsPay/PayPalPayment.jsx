@@ -1,4 +1,3 @@
-//components/DonationsPay/PayPalPayment.jsx
 import React from 'react';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 

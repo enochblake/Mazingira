@@ -1,4 +1,3 @@
-// Components/DonationPay/DonationForm.jsx
 import React, { useState } from 'react';
 import PayPalPayment from './PayPalPayment';
 import DonorDetailsForm from './DonorDetailsForm';
@@ -78,13 +77,13 @@ function DonationForm() {
               onSuccess={handlePaymentSuccess}
               onCancel={handlePaymentCancel}
             />
-            {/* <button
+            <button
               type='submit'
               className='w-[130px]  bg-orange-500 hover:bg-orange-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline'
               disabled={!paymentMade} 
             >
               Submit
-            </button> */}
+            </button>
           </form>
         </div>
       </main>

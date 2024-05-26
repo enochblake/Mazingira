@@ -1,4 +1,3 @@
-// src/components/Cards.js
 import React from 'react';
 import Card from './Card';
 

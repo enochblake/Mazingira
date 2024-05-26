@@ -1,4 +1,3 @@
-// App.js
 import './App.css';
 import Donor from './components/Organizitons/Organization';
 import React from 'react';

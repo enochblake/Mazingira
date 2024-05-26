@@ -1,4 +1,3 @@
-//components/storiesFromUs/TestimonialsTwo
 import { useRef, useEffect, useState } from 'react';
 import axios from 'axios'; 
 import SwiperCore from 'swiper';

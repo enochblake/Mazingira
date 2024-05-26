@@ -1,5 +1,3 @@
-//components/pages/Header.jsx
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 

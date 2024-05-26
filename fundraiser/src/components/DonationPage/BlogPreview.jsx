@@ -1,4 +1,3 @@
-//components/DonationPage/BlogPreview.jsx
 import React, { useState } from 'react';
 import '../../index.css';
 
