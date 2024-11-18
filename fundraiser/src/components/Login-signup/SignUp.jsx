@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import GoogleIcon from '@mui/icons-material/Google';
+// import FacebookIcon from '@mui/icons-material/Facebook';
+// import GitHubIcon from '@mui/icons-material/GitHub';
+// import GoogleIcon from '@mui/icons-material/Google';
 import { Link, useNavigate } from 'react-router-dom';
 import config from '../../config';
 
@@ -90,7 +90,7 @@ export default function SignUp({ onClose, onLoginClick }) {
     <div className='main-container p-1 mx-auto rounded-lg w-[90vh] h-[80vh] flex justify-center items-center relative overflow-hidden mt-10'>
       <div className='details-container absolute top-0 left-1/2 transform -translate-x-1/2 bg-orange-400 rounded-lg mb-2 text-center z-10 w-1/2'>
         <h4 className='text-white font-bold mt-1 mb-2 font-3xl'>SIGN UP</h4>
-        <div className='mt-1 mb-2'>
+        {/* <div className='mt-1 mb-2'>
           <a href='#' className='text-white mr-5'>
             <FacebookIcon />
           </a>
@@ -100,7 +100,7 @@ export default function SignUp({ onClose, onLoginClick }) {
           <a href='#' className='text-white'>
             <GoogleIcon />
           </a>
-        </div>
+        </div> */}
       </div>
       <div className='mx-auto text-center p-6 relative z-0'>
         <form
